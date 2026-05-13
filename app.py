@@ -29,7 +29,8 @@ TROUBLE_FLOW = """
 def generate_mock_response(question: str, relevant_articles: list) -> str:
     q = question.lower()
 
-    if any(w in q for w in ["absent", "not home", "no one", "no answer", "not there", "not reply", "no reply", "not responding"]):
+    if any(w in q for w in ["absent", "not home", "no one", "no answer", "not there", "not reply", "no reply", "not responding",
+                             "不在", "来ない", "戻ってこない", "いない", "応答ない", "返事ない", "待った", "待ってい", "出てこない", "開けない"]):
         return textwrap.dedent("""\
             **Customer is not home — here's what to do:**
 
@@ -46,7 +47,7 @@ def generate_mock_response(question: str, relevant_articles: list) -> str:
             *Source: CaSy Zendesk — お客様がご不在の時 / Trouble Flow Guide*
         """)
 
-    elif any(w in q for w in ["cancel", "cancellation"]):
+    elif any(w in q for w in ["cancel", "cancellation", "キャンセル", "取り消し"]):
         return textwrap.dedent("""\
             **Cancellation procedure:**
 
@@ -70,7 +71,8 @@ def generate_mock_response(question: str, relevant_articles: list) -> str:
             *Source: Trouble Flow Guide — キャンセル*
         """)
 
-    elif any(w in q for w in ["lost", "address", "wrong address", "can't find", "cannot find", "where", "room", "floor", "building"]):
+    elif any(w in q for w in ["lost", "address", "wrong address", "can't find", "cannot find", "where", "room", "floor", "building",
+                              "道に迷", "住所", "見つからない", "場所", "何階", "号室", "部屋番号"]):
         return textwrap.dedent("""\
             **Cannot find the address / getting lost:**
 
@@ -89,7 +91,7 @@ def generate_mock_response(question: str, relevant_articles: list) -> str:
             *Source: Training Booklet Day 1 / Zendesk — 道に迷った時*
         """)
 
-    elif any(w in q for w in ["key", "locked", "no key", "don't have key", "dont have key"]):
+    elif any(w in q for w in ["key", "locked", "no key", "don't have key", "dont have key", "鍵", "カギ", "入れない", "開かない"]):
         return textwrap.dedent("""\
             **No key / locked out:**
 
@@ -104,7 +106,7 @@ def generate_mock_response(question: str, relevant_articles: list) -> str:
             *Source: CaSy Zendesk — サービスの仕組み*
         """)
 
-    elif any(w in q for w in ["damage", "broke", "broken", "accident", "property"]):
+    elif any(w in q for w in ["damage", "broke", "broken", "accident", "property", "物損", "壊", "割れ", "傷", "破損"]):
         return textwrap.dedent("""\
             **Property damage — what to do:**
 
@@ -137,7 +139,7 @@ def generate_mock_response(question: str, relevant_articles: list) -> str:
             *Source: JollyCast operating rules / Trouble Flow Guide*
         """)
 
-    elif any(w in q for w in ["qr", "voucher", "scan", "code"]):
+    elif any(w in q for w in ["qr", "voucher", "scan", "code", "バウチャー", "スキャン", "紙"]):
         return textwrap.dedent("""\
             **QR code / Voucher:**
 
@@ -148,7 +150,7 @@ def generate_mock_response(question: str, relevant_articles: list) -> str:
             *Source: Training Booklet Day 18 — Completing Service*
         """)
 
-    elif any(w in q for w in ["schedule", "change", "time", "reschedule", "change time"]):
+    elif any(w in q for w in ["schedule", "change", "time", "reschedule", "change time", "日程", "時間変更", "スケジュール", "変更"]):
         return textwrap.dedent("""\
             **Schedule change request from customer:**
 
@@ -159,7 +161,8 @@ def generate_mock_response(question: str, relevant_articles: list) -> str:
             *Source: Zendesk — 定期サービスの日程変更*
         """)
 
-    elif any(w in q for w in ["visit", "go to house", "go to their house", "go into their house", "go to their home", "stop by", "outside service", "in person", "hand me"]):
+    elif any(w in q for w in ["visit", "go to house", "go to their house", "go into their house", "go to their home", "stop by", "outside service", "in person", "hand me",
+                              "訪問", "家に行", "渡す", "受け取り", "サービス外"]):
         return textwrap.dedent("""\
             **Visiting outside of service hours:**
 
