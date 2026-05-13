@@ -159,7 +159,7 @@ def generate_mock_response(question: str, relevant_articles: list) -> str:
             *Source: Zendesk — 定期サービスの日程変更*
         """)
 
-    elif any(w in q for w in ["visit", "go to house", "go to their house", "outside service"]):
+    elif any(w in q for w in ["visit", "go to house", "go to their house", "go into their house", "go to their home", "stop by", "outside service", "in person", "hand me"]):
         return textwrap.dedent("""\
             **Visiting outside of service hours:**
 
