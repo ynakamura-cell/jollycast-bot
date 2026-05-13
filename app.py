@@ -51,8 +51,13 @@ def generate_mock_response(question: str, relevant_articles: list) -> str:
             **Cancellation procedure:**
 
             **If the customer wants to cancel:**
-            - Ask the customer to cancel through the app themselves
-            - If they have not cancelled, you should still visit
+
+            - *More than 2 days before service (before 18:00):*
+              Ask the customer to cancel through the app themselves. If they have not cancelled, still visit.
+
+            - *Less than 2 days before service (after 18:00, 2 days prior):*
+              This is a **paid cancellation**. Inform the customer that a cancellation fee applies.
+              If they have not cancelled in the app, still visit.
 
             **If you need to cancel (cast-initiated):**
             1. Send a chat message to the customer immediately
