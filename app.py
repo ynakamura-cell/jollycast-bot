@@ -184,12 +184,15 @@ NOTE: JollyCast casts are employees. Disciplinary actions follow 就業規則 (e
 - Rude customers: remain calm, do not argue; if safety is at risk, contact HQ
 
 === AFTER SERVICE / BETWEEN SERVICES ===
-- Go directly to next service — no need to report to office between services
-- Lunch break: 45 minutes allowed between services (cannot exceed 45 min)
-- If work hours remain but no next service: go to the Meguro office (目黒オフィス) to study Japanese using Duolingo. This is a JollyCast-specific rule — studying Japanese during remaining work hours IS part of the job. Do NOT go home while on the clock.
-- If work hours are fully over after the last service: you may go home directly.
-- Incidents must be reported via inquiry form AFTER leaving (do not delay departure for this)
-- Cannot extend service time: if a customer asks you to stay longer, say "I'm sorry, I have another service scheduled." You cannot add extra time even if asked.
+- After your LAST service of the day: go home directly. No need to go to the office.
+- Between two services (on a 2-service day):
+  - You may take a break for the gap time MINUS travel time to the next service
+  - Labor law (労働基準法) requires AT LEAST 45 minutes of break for a 6-hour shift — this is MANDATORY minimum, not a maximum
+  - Example: 90-min gap with 30-min travel → 60 min free; you must take at least 45 min as break
+  - No need to go to the office between services
+- Cannot extend service time: if a customer asks to stay longer, politely decline: "I'm sorry, I have another appointment." This applies even if you have no next service — time extension must go through CaSy.
+- Incidents must be reported via inquiry form AFTER leaving the service location (do not delay departure for this).
+- For unusual situations (unexpected free time, schedule question): contact HQ via inquiry form or 050-3183-8835.
 
 === RECORU (勤怠管理システム) — HOW JOLLYCAST CASTS USE IT ===
 Source: Confluence — ジョリーキャストの休暇申請フロー / 戦略特区_勤怠チェックリスト補足
@@ -299,8 +302,12 @@ Note: Month-end deadline — CaSy must submit to the ward by the 10th of the fol
 
 WARD-SPECIFIC DIFFERENCES:
 - 葛飾区: Some vouchers require the child's name written by the customer — check and ask customer to fill in if missing.
-- 台東区: Some customers use QR code instead of paper vouchers. Cast shows QR code on check-in screen → customer scans. If scanning fails, enter code 91374493 manually.
-- 豊島区: Uses 実施報告票 (service report form) + customer signature instead of individual vouchers.
+- 台東区 (since 2026/1/5): Two methods are used simultaneously — paper vouchers OR QR code.
+  - QR method: Cast shows QR code on their app's check-in screen → customer scans it with their smartphone.
+  - If customer cannot scan QR: guide them to tap "こちら" (red text) on their scan screen and manually enter the code 91374493.
+  - If customer has no smartphone or cannot enter code at all: proceed with service normally, then report to HQ immediately after — CaSy will notify the ward.
+  - If cast's app QR code is not showing: try refreshing the check-in screen. If still missing, report to HQ (050-3183-8835).
+- 豊島区: Uses 実施報告票 (service report form) + customer signature instead of individual vouchers. Bring the form and sample (＜記入例＞) to the service; have customer fill in and sign before you leave.
 
 PROBLEM SITUATIONS:
 - Voucher expired → Return to customer. Customer pays full regular price. Report via inquiry form (25: 自治体案件について).
