@@ -51,10 +51,11 @@ This support number is correct and appropriate for JollyCast casts to use.
 === 110 EMERGENCY BUTTON (110番通報ボタン) ===
 - Located at the TOP of the cast app home screen
 - Visible from 10 minutes BEFORE service start to 30 minutes AFTER service end
-- How to use: Press button → swipe "Swipe to complete report" → CaSy HQ immediately calls 110 (police) on cast's behalf
-- After police are notified, HQ will also call the cast
-- Use when: physical violence, sexual harassment, stalking, any criminal act
-- Cast should keep smartphone accessible (use strap or armband, NOT pocket) to avoid accidental press
+- How to use: Press button → swipe "Swipe to complete report" → CaSy HQ immediately calls 110 (police) on cast's behalf. HQ then calls the cast.
+- Use when: physical violence, sexual harassment, stalking, any criminal act by customer
+- IMPORTANT: The cast manual does NOT instruct casts to call 110 directly themselves. Always use the in-app button so HQ handles the police call.
+- If the button is unavailable: exit immediately and call HQ at 050-3183-8835
+- Cast should keep smartphone accessible (use strap or armband, NOT pocket)
 - Keep belongings near the entrance so you can exit quickly if needed
 
 === INQUIRY FORM (お問い合わせフォーム) ===
@@ -91,6 +92,26 @@ CASE C — Minor damage, customer waived compensation:
 NOTE: Even if the customer forgives the damage, ALWAYS report to HQ. HQ will follow up with the customer directly.
 NOTE: Do NOT offer to pay the customer directly. Do NOT say "our insurance will cover it" — let HQ handle compensation.
 Disciplinary threshold: 3+ incidents in 6 months → skills review session
+
+=== UNSANITARY / UNSAFE ENVIRONMENT ===
+Source: 指差しシート (Irregular Cases IC)
+If the customer's home is unsanitary (pest infestation, feces/urine left out, no floor space to walk) or unsafe:
+- The cast is NOT required to push through. This falls under "CaSy service prohibited conditions."
+- Say: "I am very sorry. I am unable to continue with the service under the current circumstances. I will need to leave. CaSy Customer Support will contact you shortly."
+- Exit the premises. Report to HQ via inquiry form after leaving.
+- DO NOT call HQ during service and ask them to decide — the cast can exit immediately based on the policy.
+Other exit-required conditions (from 指差しシート): physical/sexual/psychological harassment, drunken customer, unleashed pets (if customer refuses to cage them)
+
+=== COOKING SERVICE — FEWER DISHES THAN PLANNED ===
+Source: 指差しシート (Communication Sheets for cooking)
+If fewer dishes were prepared than promised (due to late arrival, time shortage, or service issue):
+1. Apologize sincerely — do not argue
+2. Explain honestly what could not be completed and why (time, complexity, etc.)
+3. Inform the customer a partial REFUND will be issued (e.g., 50% if half the dishes were completed)
+   - Say: "I sincerely apologize. Due to [reason], I was only able to prepare X dishes. A partial refund will be issued by HQ."
+4. HQ will contact the customer about the refund — do not handle money directly
+5. Report via inquiry form after service
+If the customer becomes upset: stay calm, use the 指差しシート communication cards if language is a barrier
 
 === DISCIPLINARY RULES (JollyCast-specific) ===
 NOTE: JollyCast casts are employees. Disciplinary actions follow 就業規則 (employment rules/懲戒), NOT the freelance cast contract termination process.
