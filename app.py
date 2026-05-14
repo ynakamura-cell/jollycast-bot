@@ -79,8 +79,9 @@ CASE A — Life-impacting damage (broken toilet, water leak, major appliance):
 CASE B — Non-life-impacting damage (scratched floor, broken glass, minor item):
 1. Apologize sincerely to customer; tell them you will report to HQ after service
 2. Continue service as scheduled
-3. After service: submit inquiry form with PHOTO attached (select: トラブル → 物損)
-   - Include: maker name, model number, photo of damage, service ID, date/time
+3. After service: submit inquiry form with PHOTO attached
+   - 属性: キャストとして働いている方 / 項目: 9: トラブルが起きた / トラブルの内容: 4: 物損
+   - Include: service ID, date/time, customer name, description, maker/model number, photo
 4. Write daily report noting "reported to support via inquiry form"
 
 CASE C — Minor damage, customer waived compensation:
@@ -91,7 +92,9 @@ CASE C — Minor damage, customer waived compensation:
 
 NOTE: Even if the customer forgives the damage, ALWAYS report to HQ. HQ will follow up with the customer directly.
 NOTE: Do NOT offer to pay the customer directly. Do NOT say "our insurance will cover it" — let HQ handle compensation.
-Disciplinary threshold: 3+ incidents in 6 months → skills review session
+NOTE: For housing fixtures (water pipes, wall damage): customer should contact repair company or building management themselves.
+Cast liability cap: ¥3,000 per incident. Exceptions (cast may owe more): intentional/gross negligence, marble surface non-standard cleaning, disposer operation.
+Gross negligence examples: using steel wool on stainless steel, leaving vacuum cleaner propped up unattended, leaving oil on open flame unattended.
 
 === UNSANITARY / UNSAFE ENVIRONMENT (退出基準) ===
 Source: CaSy Zendesk — 退出基準 / Service Policy
@@ -128,16 +131,35 @@ STEP 2: If customer refuses or situation cannot be improved → exit.
 
 IMPORTANT: In all exit situations, the service fee is paid IN FULL.
 
-=== COOKING SERVICE — FEWER DISHES THAN PLANNED ===
-Source: 指差しシート (Communication Sheets for cooking)
-If fewer dishes were prepared than promised (due to late arrival, time shortage, or service issue):
-1. Apologize sincerely — do not argue
-2. Explain honestly what could not be completed and why (time, complexity, etc.)
-3. Inform the customer a partial REFUND will be issued (e.g., 50% if half the dishes were completed)
-   - Say: "I sincerely apologize. Due to [reason], I was only able to prepare X dishes. A partial refund will be issued by HQ."
-4. HQ will contact the customer about the refund — do not handle money directly
-5. Report via inquiry form after service
-If the customer becomes upset: stay calm, use the 指差しシート communication cards if language is a barrier
+=== COOKING SERVICE — LATE ARRIVAL (遅刻) ===
+Source: CaSy Zendesk — パッケージ料理サービス遅刻時の対応
+Service time is NEVER extended at the end to compensate for late arrival.
+
+RULE BY DELAY LENGTH:
+- Less than 30 minutes late → prepare ALL 8 dishes as normal (no refund)
+- 30 minutes to under 90 minutes late → prepare 4 dishes only; 50% REFUND issued by HQ
+- 90 minutes or more late → service CANCELLED; FULL REFUND issued by HQ
+  (Same rule applies if customer requests to shorten the service end time)
+
+When 30–90 min late, say to customer:
+"I sincerely apologize for keeping you waiting. Due to the delay, I will prepare the specified 4 dishes and HQ will issue a 50% refund. Which 4 dishes would you prefer — Set 1 or Set 2? Please choose."
+
+ALWAYS report late arrival to HQ via inquiry form after service. HQ handles the refund and apology to customer.
+
+=== COOKING SERVICE — QUALITY ISSUES & CUSTOMER COMPLAINTS ===
+Source: CaSy Zendesk — トラブル/サービス品質不良を起こした際の対応方法
+
+If service quality fell short of what was promised (e.g., fewer dishes than planned due to time running out, burned food, poor result):
+1. Sincerely apologize — do not argue or make excuses
+2. Do NOT attempt to redo or extend service on your own judgment
+3. Tell customer: "I sincerely apologize. HQ will contact you to resolve this properly."
+4. After service: report via inquiry form (select: 9: トラブルが起きた)
+
+IMPORTANT on refunds:
+- Partial refund for fewer dishes: only applies when the shortfall is due to cast's late arrival or cast's fault — HQ determines and processes. Cast does NOT promise a specific refund amount.
+- "Food doesn't taste good": this is a quality/satisfaction issue, NOT an automatic basis for a refund. Apologize sincerely, ask for feedback, report to HQ. HQ will follow up.
+- Customer wants FULL refund for completed service: do not agree on the spot — tell them HQ will contact them.
+- NEVER handle money or refunds directly with the customer.
 
 === DISCIPLINARY RULES (JollyCast-specific) ===
 NOTE: JollyCast casts are employees. Disciplinary actions follow 就業規則 (employment rules/懲戒), NOT the freelance cast contract termination process.
@@ -181,6 +203,7 @@ If a cast cannot attend a service due to sudden illness or emergency on the day:
    - Do NOT fill in the Google Form for sudden absences — Recoru only.
 4. A CaSy attendance manager will approve the leave in Recoru.
 NOTE: Salary is DEDUCTED for sudden sick/absence days (no paid sick leave unless you have accrued 有給休暇). Paid leave (有給) is available after 6 months of employment.
+NOTE: Medical certificate (診断書) submitted to HQ → cancellation penalty can be waived. Submit photo via inquiry form (12: 契約・報酬について).
 
 === PLANNED VACATION / SCHEDULED ABSENCE (計画的な休暇) ===
 For pre-planned days off (confirmed the month before):
@@ -205,10 +228,65 @@ Source: CaSy Zendesk "お客様からチップやお品物をいただいた"
 - If you forgot to check out: contact HQ via support phone or inquiry form to correct it
 - If the app crashes and you lose your service record: contact HQ at 050-3183-8835
 
-=== SCHEDULE CHANGES ===
-- Cast cannot arrange schedule changes directly — all changes must go through CaSy app/support
-- Contact CaSy support: 050-3183-8835 or inquiry form
-- Customer requesting different cast: handled by CaSy support, not the cast
+=== CANCELLATION POLICY (キャンセルポリシー) ===
+Source: CaSy Zendesk — お客様からキャンセルをしたいと言われた / キャンセル数の制限について
+
+CUSTOMER-INITIATED CANCELLATION:
+- Before 2 days 18:00: Free cancellation. Ask customer to cancel in the app themselves.
+- After 2 days 18:00: Full paid cancellation (100% fee). Inform customer and ask them to cancel in the app.
+- IMPORTANT: Even if customer told you verbally or via chat they want to cancel, if they have NOT processed it in the app → you MUST still visit as scheduled. If you skip the visit on your own judgment → it is treated as FREE cancellation (you receive no pay).
+- At-the-door cancellation (customer cancels when you arrive): Inform them the full cancellation fee applies, then leave. Report via inquiry form (select: 5: 開始時刻を過ぎたサービスのキャンセルをしたい).
+
+CAST-INITIATED CANCELLATION PENALTIES:
+- "直前キャンセル" = cancellation the day before or day of service
+- 3+ 直前キャンセル in 90 days → ¥1,000 penalty deducted per additional cancellation
+- 6+ total cancellations (any type) in 90 days → 1-month ban from applying for bonus-reward services
+- Medical certificate (診断書) submitted → cancellation count and penalty can be waived. Submit via inquiry form (12: 契約・報酬について).
+
+=== SCHEDULE CHANGES (日程変更) ===
+Source: CaSy Zendesk — お客様から日程変更をお願いされたが応じられない
+
+CUSTOMER REQUESTS RESCHEDULE:
+- Before 2 days 18:00: Cast cannot accommodate → offer customer 2 options:
+  ① Find a different/substitute cast (only possible if no key deposit arrangement)
+  ② Cancel the service (free cancellation)
+- After 2 days 18:00: Cancellation policy applies. Customer should either proceed as scheduled or cancel (full cancellation fee).
+- Cast MAY choose to accommodate the change as a goodwill gesture (optional, cast's decision only).
+  WARNING: If cast accepts the change and customer then cancels before 2-day deadline → treated as FREE cancellation (cast receives NO pay).
+
+JOLLYCAST-SPECIFIC NOTE: JollyCast casts CANNOT offer to reschedule to another date — other services are already booked for alternative time slots. Rescheduling is not possible. The service will be cancelled.
+
+CAST requests schedule change: Process through the CaSy app. Contact CaSy support: 050-3183-8835 or inquiry form.
+
+=== MUNICIPAL VOUCHERS (自治体案件・利用券) ===
+Source: CaSy Zendesk — 自治体案件とは / 墨田区 / 葛飾区 / 台東区 / 豊島区
+
+WHAT IT IS: Government-subsidized cleaning/cooking services for families with pregnant women or children under 3. The customer holds 利用券 (vouchers) from their local ward to cover part of the service cost.
+
+Covered wards (as of 2026/04/01): 墨田区・葛飾区・台東区・豊島区・国分寺市・中野区・港区・渋谷区・文京区・武蔵野市
+- Services: cleaning, cooking, shopping proxy (no house cleaning / organization services)
+- Customer must be HOME during service (no key deposit)
+- Jobs appear in the app with "自治体案件" label
+
+STANDARD VOUCHER PROCESS (most wards: 墨田区・葛飾区):
+1. BEFORE service: Bring the "利用券送付用封筒" (voucher mailing envelope) — sent to you by CaSy when you apply for a municipal job.
+2. DURING service: Receive the 利用券 from the customer — one voucher per hour of service.
+3. AFTER service: Fill in the back of each voucher (date, time slot, service type, customer name, your name). Put them in the envelope, write your cast name on the back, and mail it. No stamp or address needed. Mail by end of service day or next day at the latest.
+Note: Month-end deadline — CaSy must submit to the ward by the 10th of the following month.
+
+WARD-SPECIFIC DIFFERENCES:
+- 葛飾区: Some vouchers require the child's name written by the customer — check and ask customer to fill in if missing.
+- 台東区: Some customers use QR code instead of paper vouchers. Cast shows QR code on check-in screen → customer scans. If scanning fails, enter code 91374493 manually.
+- 豊島区: Uses 実施報告票 (service report form) + customer signature instead of individual vouchers.
+
+PROBLEM SITUATIONS:
+- Voucher expired → Return to customer. Customer pays full regular price. Report via inquiry form (25: 自治体案件について).
+- Customer lost their voucher → Customer pays full regular price. Tell them and report via inquiry form.
+- Cast forgot to collect voucher → Report via inquiry form immediately. 3 such incidents → first warning, then suspended from municipal jobs.
+- Cast lost received voucher → Report via inquiry form immediately (same penalty as above).
+- No mailing envelope yet (arrived late) → Mail when envelope arrives. If not received 1 week after service, contact via inquiry form.
+- Vouchers not enough to cover full service time → Send only what you received; note the shortfall. HQ will contact customer.
+- Service not labeled "自治体案件" but customer hands you voucher → Check expiry. If valid AND municipal coupon is registered in the app → process normally. If not registered → return to customer, charge regular price.
 
 === CONTACT CHANNELS (連絡手段) ===
 Source: HR Policy Manual (人事制度説明スライド) — JollyCast employees use 4 channels:
