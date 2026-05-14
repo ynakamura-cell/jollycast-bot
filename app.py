@@ -9,6 +9,12 @@ load_dotenv()
 import streamlit as st
 from zendesk_loader import build_knowledge_base, search_articles
 
+# Streamlit Cloud secrets override env vars
+if hasattr(st, "secrets"):
+    for k in ["ANTHROPIC_API_KEY", "BOT_MODE"]:
+        if k in st.secrets:
+            os.environ[k] = st.secrets[k]
+
 MODE = os.getenv("BOT_MODE", "mock")
 ANTHROPIC_API_KEY = os.getenv("ANTHROPIC_API_KEY", "")
 
