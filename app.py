@@ -94,13 +94,29 @@ NOTE: Do NOT offer to pay the customer directly. Do NOT say "our insurance will 
 Disciplinary threshold: 3+ incidents in 6 months → skills review session
 
 === UNSANITARY / UNSAFE ENVIRONMENT ===
-Source: 指差しシート (Irregular Cases IC)
-If the customer's home is unsanitary (pest infestation, feces/urine left out, no floor space to walk) or unsafe:
-- The cast is NOT required to push through. This falls under "CaSy service prohibited conditions."
-- Say: "I am very sorry. I am unable to continue with the service under the current circumstances. I will need to leave. CaSy Customer Support will contact you shortly."
-- Exit the premises. Report to HQ via inquiry form after leaving.
-- DO NOT call HQ during service and ask them to decide — the cast can exit immediately based on the policy.
-Other exit-required conditions (from 指差しシート): physical/sexual/psychological harassment, drunken customer, unleashed pets (if customer refuses to cage them)
+Source: CaSy Service Policy / Training video (退出基準)
+
+THREE CATEGORIES that may require stopping service:
+1. Unsanitary environment (不衛生な環境): extreme clutter/hoarding with no floor space to walk, pest infestation (cockroaches, rats), feces/urine present, severe mold or odor
+2. Risk of injury or health damage (怪我・健康被害): extreme heat with no AC, unleashed aggressive pets, broken glass or hazards on floor
+3. Other safety or legal compliance concerns: harassment, drunken customer, any dangerous or illegal conditions
+
+TWO-STEP APPROACH — always try Step 1 first:
+
+STEP 1: Ask the customer to improve the situation if possible.
+  - "Could you please turn on the air conditioner?"
+  - "Could you please put your pet in a cage?"
+  - "Could you please clear a path so I can walk safely?"
+  If the customer fixes the issue → service can continue.
+
+STEP 2: If improvement is not possible or customer refuses → exit.
+  - Say: "I am very sorry. I am unable to provide the service today." (サービスを提供できません、と挨拶して退室)
+  - Exit the premises calmly.
+  - Report to HQ via inquiry form AFTER leaving. Do NOT call HQ to ask permission — you can decide to exit yourself.
+  - Your personal safety is the top priority (ご自身の身の安全が最優先).
+
+NOTE: For physical violence, sexual harassment, or immediate danger → use the 110 button in the app immediately (do not wait for Step 1).
+NOTE: These exit criteria are part of CaSy Service Policy defined in the customer's Terms of Use.
 
 === COOKING SERVICE — FEWER DISHES THAN PLANNED ===
 Source: 指差しシート (Communication Sheets for cooking)
@@ -142,10 +158,23 @@ NOTE: JollyCast casts are employees. Disciplinary actions follow 就業規則 (e
 
 === SUDDEN SICK DAY / UNEXPECTED ABSENCE (体調不良・突発欠勤) ===
 If a cast cannot attend a service due to sudden illness or emergency on the day:
-1. Message the customer via in-app chat — apologize and inform them you cannot come. Ask whether they prefer to cancel or have a different cast assigned.
-2. Submit the inquiry form: select 属性→キャストとして働いている方 / 項目→2:サービスのキャンセルをしたい (or 5: if service start time has already passed)
-3. Apply for leave in Recoru (勤怠管理システム) — no need to fill in the Google Form for sudden absences.
-Note: Pre-planned vacations use a different process (Google Form submitted by the 15th each month).
+1. Message the customer via in-app chat IMMEDIATELY — apologize and inform them you cannot come. Ask whether they prefer to cancel or have a different cast assigned.
+2. Submit the inquiry form RIGHT AFTER contacting the customer:
+   - 属性 (Role): キャストとして働いている方
+   - 項目 (Category): 2: サービスのキャンセルをしたい
+   - If the service start time has already passed: select 5: 開始時刻を過ぎたサービスのキャンセルをしたい
+3. Apply for leave in Recoru (勤怠管理システム) immediately after submitting the inquiry form.
+   - Select the appropriate type: 遅刻 (late), 早退 (early leave), or 欠勤 (absence)
+   - Do NOT fill in the Google Form for sudden absences — Recoru only.
+4. A CaSy attendance manager will approve the leave in Recoru.
+
+=== PLANNED VACATION / SCHEDULED ABSENCE (計画的な休暇) ===
+For pre-planned days off (confirmed the month before):
+1. Message the relevant customers via in-app chat by the 15th of the PREVIOUS month — inform them of the absence and ask if they want to cancel or have a different cast assigned.
+2. Wait for the Google Form to be distributed by CaSy (distributed by the 10th each month).
+3. Submit the Google Form with your planned absence dates between the 10th and 15th of the month.
+   - Do NOT use Recoru for planned vacations — only the Google Form is required from the cast's side.
+Note: This is different from a sudden sick day. Pre-planned vacations = Google Form only. Sudden absences = Recoru only.
 
 === TIPS / GIFTS FROM CUSTOMERS ===
 Source: CaSy Zendesk "お客様からチップやお品物をいただいた"
