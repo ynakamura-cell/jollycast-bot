@@ -9,14 +9,14 @@ load_dotenv()
 import streamlit as st
 from zendesk_loader import build_knowledge_base, search_articles
 
-# Streamlit Cloud secrets override env vars
-if hasattr(st, "secrets"):
-    for k in ["ANTHROPIC_API_KEY", "BOT_MODE"]:
-        if k in st.secrets:
-            os.environ[k] = st.secrets[k]
+def _secret(key, default=""):
+    try:
+        return st.secrets[key]
+    except Exception:
+        return os.getenv(key, default)
 
-MODE = os.getenv("BOT_MODE", "mock")
-ANTHROPIC_API_KEY = os.getenv("ANTHROPIC_API_KEY", "")
+MODE = _secret("BOT_MODE", os.getenv("BOT_MODE", "mock"))
+ANTHROPIC_API_KEY = _secret("ANTHROPIC_API_KEY", os.getenv("ANTHROPIC_API_KEY", ""))
 
 TROUBLE_FLOW = """
 | Type | Condition | Cast Action 1 | Cast Action 2 |
