@@ -66,11 +66,31 @@ This support number is correct and appropriate for JollyCast casts to use.
 - Include: Service ID, date/time, description of what happened
 
 === PROPERTY DAMAGE REPORTING PROCEDURE ===
-1. Tell customer you will report to HQ after service (apologize sincerely)
+
+CASE A — Life-impacting damage (broken toilet, water leak, major appliance):
+1. Apologize sincerely to customer
+2. Call HQ IMMEDIATELY at 050-3183-8835 during service (do not wait until after)
+3. Take photos of the damage (with customer's permission) — include maker name, model number
+4. Send photo + details to HQ (by email or inquiry form)
+5. Continue service (add extra time for the interruption)
+6. Write daily report noting "called and reported to support"
+
+CASE B — Non-life-impacting damage (scratched floor, broken glass, minor item):
+1. Apologize sincerely to customer; tell them you will report to HQ after service
 2. Continue service as scheduled
-3. Submit inquiry form after service (select: トラブル → 物損)
-4. Also note it in your daily report, including "already reported to support"
-- If damage is life-impacting (e.g. broke toilet, caused water leak, broke major appliance): call HQ IMMEDIATELY at 050-3183-8835 during service
+3. After service: submit inquiry form with PHOTO attached (select: トラブル → 物損)
+   - Include: maker name, model number, photo of damage, service ID, date/time
+4. Write daily report noting "reported to support via inquiry form"
+
+CASE C — Minor damage, customer waived compensation:
+1. Apologize sincerely; tell customer you will still report to HQ
+2. Continue service as scheduled
+3. After service: submit inquiry form (even if customer said it's OK — always report)
+4. Write daily report noting "reported to support"
+
+NOTE: Even if the customer forgives the damage, ALWAYS report to HQ. HQ will follow up with the customer directly.
+NOTE: Do NOT offer to pay the customer directly. Do NOT say "our insurance will cover it" — let HQ handle compensation.
+Disciplinary threshold: 3+ incidents in 6 months → skills review session
 
 === DISCIPLINARY RULES (JollyCast-specific) ===
 NOTE: JollyCast casts are employees. Disciplinary actions follow 就業規則 (employment rules/懲戒), NOT the freelance cast contract termination process.
@@ -95,16 +115,25 @@ NOTE: JollyCast casts are employees. Disciplinary actions follow 就業規則 (e
 === AFTER SERVICE / BETWEEN SERVICES ===
 - Go directly to next service — no need to report to office between services
 - Lunch break: 45 minutes allowed between services (cannot exceed 45 min)
-- If no service (gap between services or end of day with time remaining): go to the Meguro office to study Japanese using Duolingo. This is a JollyCast-specific rule — Japanese study during work hours is considered part of your job.
-- If last service is done and work hours are over: you may go home directly.
+- If work hours remain but no next service: go to the Meguro office (目黒オフィス) to study Japanese using Duolingo. This is a JollyCast-specific rule — studying Japanese during remaining work hours IS part of the job. Do NOT go home while on the clock.
+- If work hours are fully over after the last service: you may go home directly.
 - Incidents must be reported via inquiry form AFTER leaving (do not delay departure for this)
 
+=== SUDDEN SICK DAY / UNEXPECTED ABSENCE (体調不良・突発欠勤) ===
+If a cast cannot attend a service due to sudden illness or emergency on the day:
+1. Message the customer via in-app chat — apologize and inform them you cannot come. Ask whether they prefer to cancel or have a different cast assigned.
+2. Submit the inquiry form: select 属性→キャストとして働いている方 / 項目→2:サービスのキャンセルをしたい (or 5: if service start time has already passed)
+3. Apply for leave in Recoru (勤怠管理システム) — no need to fill in the Google Form for sudden absences.
+Note: Pre-planned vacations use a different process (Google Form submitted by the 15th each month).
+
 === TIPS / GIFTS FROM CUSTOMERS ===
+Source: CaSy Zendesk "お客様からチップやお品物をいただいた"
 - Cash: NEVER accepted (strictly prohibited)
-- Gift cards, vouchers, high-value items (branded goods, electronics, etc.): NEVER accepted
-- Small consumables (drinks, snacks — roughly 100-200 yen equivalent): acceptable, with gratitude
-- If unsure: do not accept. Politely say: "Thank you, but company rules do not allow me to accept this."
-- Always report to HQ if offered something significant
+- Gift cards /商品券 / vouchers: NEVER accepted
+- High-value items (branded goods, electronics, etc.): NEVER accepted
+- Small consumables on the spot (drinks, snacks — roughly 100-200 yen): MAY be accepted with gratitude
+- If unsure: decline politely — "Thank you, but company rules do not allow me to accept this. I appreciate your kindness."
+- If offered something you're unsure about: consult HQ at 050-3183-8835
 
 === APP OPERATIONS (チェックイン・チェックアウト・日報) ===
 - For detailed app operation steps (check-in, check-out, daily report, schedule viewing), refer to the training video: https://casy.zendesk.com/hc/ja/articles/31405614157209
