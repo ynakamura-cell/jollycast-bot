@@ -153,7 +153,9 @@ NOTE: JollyCast casts are employees. Disciplinary actions follow 就業規則 (e
 - Never exchange personal contact information with customers
 - Never accept direct hiring offers from customers (refer them to CaSy)
 - Never bring friends or helpers to a service
-- Never take photos inside customer's home
+- Never take photos inside customer's home (or post anything on SNS about customers or service locations)
+- Never charge your phone or devices at a customer's home
+- Never leak or share customer personal information
 - Valuables (cash, jewelry) found: do not touch, do not move — report to HQ via inquiry form
 - Tips/gifts: see TIPS / GIFTS FROM CUSTOMERS section below
 - Food/drinks offered by customer: small items (drinks, snacks ~100-200 yen) may be accepted with gratitude; cash, gift cards, high-value items must be declined
@@ -165,6 +167,7 @@ NOTE: JollyCast casts are employees. Disciplinary actions follow 就業規則 (e
 - If work hours remain but no next service: go to the Meguro office (目黒オフィス) to study Japanese using Duolingo. This is a JollyCast-specific rule — studying Japanese during remaining work hours IS part of the job. Do NOT go home while on the clock.
 - If work hours are fully over after the last service: you may go home directly.
 - Incidents must be reported via inquiry form AFTER leaving (do not delay departure for this)
+- Cannot extend service time: if a customer asks you to stay longer, say "I'm sorry, I have another service scheduled." You cannot add extra time even if asked.
 
 === SUDDEN SICK DAY / UNEXPECTED ABSENCE (体調不良・突発欠勤) ===
 If a cast cannot attend a service due to sudden illness or emergency on the day:
@@ -177,6 +180,7 @@ If a cast cannot attend a service due to sudden illness or emergency on the day:
    - Select the appropriate type: 遅刻 (late), 早退 (early leave), or 欠勤 (absence)
    - Do NOT fill in the Google Form for sudden absences — Recoru only.
 4. A CaSy attendance manager will approve the leave in Recoru.
+NOTE: Salary is DEDUCTED for sudden sick/absence days (no paid sick leave unless you have accrued 有給休暇). Paid leave (有給) is available after 6 months of employment.
 
 === PLANNED VACATION / SCHEDULED ABSENCE (計画的な休暇) ===
 For pre-planned days off (confirmed the month before):
@@ -205,6 +209,54 @@ Source: CaSy Zendesk "お客様からチップやお品物をいただいた"
 - Cast cannot arrange schedule changes directly — all changes must go through CaSy app/support
 - Contact CaSy support: 050-3183-8835 or inquiry form
 - Customer requesting different cast: handled by CaSy support, not the cast
+
+=== CONTACT CHANNELS (連絡手段) ===
+Source: HR Policy Manual (人事制度説明スライド) — JollyCast employees use 4 channels:
+
+1. CaSy Cast App (キャストアプリ) — for service-related questions, incidents, customer communication
+   - Inquiry form: for cancellations, property damage, trouble reports
+   - In-app chat: to contact customers (preferred over emergency phone)
+   - Emergency phone: only when lost, customer is absent, or urgent
+   - 110 button: for physical threats / criminal acts
+
+2. GTN App — for daily life support in Japan (housing, banking, daily questions)
+   - NOT for CaSy work questions
+
+3. Recoru (勤怠管理) — for attendance records ONLY
+   - Log check-in/out, apply for 遅刻・早退・欠勤 (sudden absences only; NOT planned vacations)
+   - Access: PC or app → Recoru login
+
+4. Slack — for company-wide announcements and internal communication
+   - Training-period Q&A was on Google Chat — after training, use Slack instead
+
+NOTE: Google Chat is for the training period only. After training, switch to Slack for company communication.
+
+=== SALARY & BENEFITS (給与・福利厚生) ===
+Source: HR Policy Manual (人事制度説明スライド) — for JollyCast employees only
+
+SALARY:
+- Monthly gross: ¥211,380 (基本給 ¥198,450 + 地域手当 ¥12,930)
+- Paid by bank transfer on the 10th of the following month
+- Salary is deducted for absent days (欠勤控除)
+- Overtime pay applies for work beyond scheduled hours
+
+PAID LEAVE (有給休暇):
+- Eligible after 6 months of continuous employment
+- 10 days granted after 6 months; increases each year
+- Cannot use paid leave during the first 6 months
+
+BONUSES / INCENTIVES:
+- High Drive Bonus: ¥500/3 months for perfect attendance (no absences or late arrivals)
+- Jolly DAY: ¥1,200/month gift card (Jollibee chicken — given monthly to all cast)
+- Japanese PASS: Pass JLPT N3 → ¥20,000; N2 → ¥20,000; N1 → ¥20,000 (one-time per level)
+
+APRON CHALLENGE (rank system):
+- Blue Apron (entry) → Gray Apron → Black Apron
+- Promotion based on evaluation stars earned
+
+CONTRACT:
+- Initial contract: 3 years
+- Maximum total: 5 years (employment ends after 5 years maximum)
 """
 
 # ── 回答生成関数（UI より先に定義） ───────────────────────────
