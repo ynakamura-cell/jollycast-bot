@@ -322,6 +322,29 @@ QUESTION: {question}"""
         return f"Error connecting to Claude API: {e}\n\nPlease check your API key.\n\n📞 CaSy Support: **050-3183-8835**"
 
 
+# ── パスワード認証 ────────────────────────────────────────────
+
+def check_password() -> bool:
+    APP_PASSWORD = _secret("APP_PASSWORD", "")
+    if not APP_PASSWORD:
+        return True  # パスワード未設定なら認証スキップ
+    if st.session_state.get("authenticated"):
+        return True
+
+    st.set_page_config(page_title="JollyCast Support Bot", page_icon="🧹", layout="centered")
+    st.title("🧹 JollyCast Support Bot")
+    st.markdown("Please enter the password to access the support bot.")
+    pw = st.text_input("Password", type="password", key="pw_input")
+    if st.button("Login"):
+        if pw == APP_PASSWORD:
+            st.session_state["authenticated"] = True
+            st.rerun()
+        else:
+            st.error("Incorrect password. Please try again.")
+    st.stop()
+
+check_password()
+
 # ── ページ設定 ────────────────────────────────────────────────
 
 st.set_page_config(page_title="JollyCast Support Bot", page_icon="🧹", layout="centered")
