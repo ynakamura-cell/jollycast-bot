@@ -4,6 +4,8 @@ MODE: "mock"  -> runs without API key
 MODE: "claude" -> requires ANTHROPIC_API_KEY in .env
 """
 import os, textwrap
+from dotenv import load_dotenv
+load_dotenv()
 import streamlit as st
 from zendesk_loader import build_knowledge_base, search_articles
 
@@ -13,15 +15,101 @@ ANTHROPIC_API_KEY = os.getenv("ANTHROPIC_API_KEY", "")
 TROUBLE_FLOW = """
 | Type | Condition | Cast Action 1 | Cast Action 2 |
 |---|---|---|---|
-| Property damage (life impact) | - | Call HQ during service | Report via inquiry form |
+| Property damage (life impact) | - | Call HQ during service | Report via inquiry form after |
 | Property damage (no life impact) | - | Apologize, continue service | Report via inquiry form after |
 | Customer absent | Contact within 30 min | Call customer (emergency phone) | Wait; if 30+ min no reply → leave, report |
 | Customer absent | No contact in 30 min | Call customer, send chat | Report via inquiry form |
 | Cancellation (user) | Before 2 days 18:00 | Guide customer to cancel themselves | Visit if not cancelled |
 | Cancellation (user) | After 2 days 18:00 | Inform of paid cancellation | Visit if not cancelled |
 | Lost / late | Running late | Call customer (emergency phone) | Ask people nearby |
-| Incident (danger) | Physical risk | Call 110 from app | Exit immediately |
+| Incident (danger) | Physical risk | Swipe 110 button in app → HQ calls police | Exit immediately |
 | Incident (no danger) | Direct contract solicitation | Continue service | Report via inquiry form |
+"""
+
+KNOWLEDGE = """
+=== ABOUT JOLLYCAST ===
+JollyCast (ジョリーキャスト) cast members are EMPLOYEES of CaSy (株式会社CaSy), not freelance contractors.
+CaSy operates the cleaning/cooking service platform. JollyCast is CaSy's employed cast program.
+CaSy Support number: 050-3183-8835 (available 9:00-18:00, weekdays and weekends/holidays)
+This support number is correct and appropriate for JollyCast casts to use.
+
+=== EMERGENCY PHONE (緊急電話) ===
+- Used ONLY in emergencies: when lost, customer is absent, or urgent situations
+- For normal communication, always use in-app chat
+- Available time window: 2 hours BEFORE service start to 3 hours AFTER service end
+- The customer CANNOT see the cast's personal phone number (it is hidden/masked)
+- Customer callbacks come from a 050 number
+- How to call: App MENU → Schedule → Upcoming → tap the service time (blue) → Customer Info → Phone → "Show phone number" → "Make call"
+- If the feature doesn't work (non-registered device or feature phone): contact HQ directly at 050-3183-8835
+
+=== 110 EMERGENCY BUTTON (110番通報ボタン) ===
+- Located at the TOP of the cast app home screen
+- Visible from 10 minutes BEFORE service start to 30 minutes AFTER service end
+- How to use: Press button → swipe "Swipe to complete report" → CaSy HQ immediately calls 110 (police) on cast's behalf
+- After police are notified, HQ will also call the cast
+- Use when: physical violence, sexual harassment, stalking, any criminal act
+- Cast should keep smartphone accessible (use strap or armband, NOT pocket) to avoid accidental press
+- Keep belongings near the entrance so you can exit quickly if needed
+
+=== INQUIRY FORM (お問い合わせフォーム) ===
+- URL: https://casy.zendesk.com/hc/ja/requests/new?ticket_form_id=900000114666
+- When submitting, select:
+  - 属性 (Role): キャストとして働いている方
+  - 項目 (Category): 9：トラブルが起きた
+  - トラブルの内容 (Type): 4：物損 (for property damage), or appropriate category
+- Include: Service ID, date/time, description of what happened
+
+=== PROPERTY DAMAGE REPORTING PROCEDURE ===
+1. Tell customer you will report to HQ after service (apologize sincerely)
+2. Continue service as scheduled
+3. Submit inquiry form after service (select: トラブル → 物損)
+4. Also note it in your daily report, including "already reported to support"
+- If damage is life-impacting (e.g. broke toilet, caused water leak, broke major appliance): call HQ IMMEDIATELY at 050-3183-8835 during service
+
+=== DISCIPLINARY RULES (JollyCast-specific) ===
+NOTE: JollyCast casts are employees. Disciplinary actions follow 就業規則 (employment rules/懲戒), NOT the freelance cast contract termination process.
+- Property damage (furniture/appliances): 3+ incidents in 6 months → disciplinary review
+- Key loss: Serious incident (Level 2) → disciplinary action per 就業規則
+- Cancellations (3+ in 90 days): disciplinary action per 就業規則
+- Direct contract solicitation: first warning, then disciplinary action if repeated
+- Direct personal contact exchange: first warning, then disciplinary action
+- Visiting customer home outside service hours: prohibited (住居侵入 risk)
+
+=== RULES FOR CAST BEHAVIOR ===
+- Never visit customer's home outside scheduled service time (prohibited — legal risk)
+- Never exchange personal contact information with customers
+- Never accept direct hiring offers from customers (refer them to CaSy)
+- Never bring friends or helpers to a service
+- Never take photos inside customer's home
+- Valuables (cash, jewelry) found: do not touch, do not move — report to HQ via inquiry form
+- Tips/gifts: see TIPS / GIFTS FROM CUSTOMERS section below
+- Food/drinks offered by customer: small items (drinks, snacks ~100-200 yen) may be accepted with gratitude; cash, gift cards, high-value items must be declined
+- Rude customers: remain calm, do not argue; if safety is at risk, contact HQ
+
+=== AFTER SERVICE / BETWEEN SERVICES ===
+- Go directly to next service — no need to report to office between services
+- Lunch break: 45 minutes allowed between services (cannot exceed 45 min)
+- If no service (gap between services or end of day with time remaining): go to the Meguro office to study Japanese using Duolingo. This is a JollyCast-specific rule — Japanese study during work hours is considered part of your job.
+- If last service is done and work hours are over: you may go home directly.
+- Incidents must be reported via inquiry form AFTER leaving (do not delay departure for this)
+
+=== TIPS / GIFTS FROM CUSTOMERS ===
+- Cash: NEVER accepted (strictly prohibited)
+- Gift cards, vouchers, high-value items (branded goods, electronics, etc.): NEVER accepted
+- Small consumables (drinks, snacks — roughly 100-200 yen equivalent): acceptable, with gratitude
+- If unsure: do not accept. Politely say: "Thank you, but company rules do not allow me to accept this."
+- Always report to HQ if offered something significant
+
+=== APP OPERATIONS (チェックイン・チェックアウト・日報) ===
+- For detailed app operation steps (check-in, check-out, daily report, schedule viewing), refer to the training video: https://casy.zendesk.com/hc/ja/articles/31405614157209
+- If the app is not working or you cannot check in: call HQ immediately at 050-3183-8835
+- If you forgot to check out: contact HQ via support phone or inquiry form to correct it
+- If the app crashes and you lose your service record: contact HQ at 050-3183-8835
+
+=== SCHEDULE CHANGES ===
+- Cast cannot arrange schedule changes directly — all changes must go through CaSy app/support
+- Contact CaSy support: 050-3183-8835 or inquiry form
+- Customer requesting different cast: handled by CaSy support, not the cast
 """
 
 # ── 回答生成関数（UI より先に定義） ───────────────────────────
@@ -207,6 +295,9 @@ def generate_claude_response(question: str, context: str) -> str:
         prompt = f"""You are a support assistant for JollyCast (ジョリーキャスト), helping Filipino cast members in Japan.
 Always respond in English. Be concise and action-oriented — cast members are often mid-service.
 Number steps clearly. Always end with CaSy support number if urgent: 050-3183-8835.
+
+KNOWLEDGE BASE:
+{KNOWLEDGE}
 
 TROUBLE FLOW:
 {TROUBLE_FLOW}
