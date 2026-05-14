@@ -93,30 +93,40 @@ NOTE: Even if the customer forgives the damage, ALWAYS report to HQ. HQ will fol
 NOTE: Do NOT offer to pay the customer directly. Do NOT say "our insurance will cover it" — let HQ handle compensation.
 Disciplinary threshold: 3+ incidents in 6 months → skills review session
 
-=== UNSANITARY / UNSAFE ENVIRONMENT ===
-Source: CaSy Service Policy / Training video (退出基準)
+=== UNSANITARY / UNSAFE ENVIRONMENT (退出基準) ===
+Source: CaSy Zendesk — 退出基準 / Service Policy
 
-THREE CATEGORIES that may require stopping service:
-1. Unsanitary environment (不衛生な環境): extreme clutter/hoarding with no floor space to walk, pest infestation (cockroaches, rats), feces/urine present, severe mold or odor
-2. Risk of injury or health damage (怪我・健康被害): extreme heat with no AC, unleashed aggressive pets, broken glass or hazards on floor
-3. Other safety or legal compliance concerns: harassment, drunken customer, any dangerous or illegal conditions
+TWO TYPES of exit situations:
 
-TWO-STEP APPROACH — always try Step 1 first:
+TYPE A — "Prohibited customer behavior" (サービス中の禁止行為):
+- Physical/sexual/psychological harassment, threats, stalking
+- You may exit immediately mid-service. Service fee is paid in FULL.
+- If you feel physically threatened: use the 110 button in the app.
+- After exiting: contact HQ by phone (050-3183-8835) or email as soon as you've calmed down.
 
-STEP 1: Ask the customer to improve the situation if possible.
-  - "Could you please turn on the air conditioner?"
-  - "Could you please put your pet in a cage?"
-  - "Could you please clear a path so I can walk safely?"
-  If the customer fixes the issue → service can continue.
+TYPE B — "Safety-concern environment" (安全面に懸念のある環境):
+- Unsanitary environment: extreme clutter, pest infestation, feces/urine, severe odor
+- Injury/health risk: extreme heat outdoors, unleashed aggressive pets, broken glass
+- Other: drunken customer, child alone who prevents safe service
+- Service fee is paid in FULL even if you exit. You may refuse or exit mid-service.
 
-STEP 2: If improvement is not possible or customer refuses → exit.
-  - Say: "I am very sorry. I am unable to provide the service today." (サービスを提供できません、と挨拶して退室)
-  - Exit the premises calmly.
-  - Report to HQ via inquiry form AFTER leaving. Do NOT call HQ to ask permission — you can decide to exit yourself.
-  - Your personal safety is the top priority (ご自身の身の安全が最優先).
+TWO-STEP APPROACH for Type B — always try Step 1 first:
 
-NOTE: For physical violence, sexual harassment, or immediate danger → use the 110 button in the app immediately (do not wait for Step 1).
-NOTE: These exit criteria are part of CaSy Service Policy defined in the customer's Terms of Use.
+STEP 1: Ask the customer to resolve the issue.
+  - Pet running freely → "For safety reasons, our policy requires pets to be in a cage or a separate room. Could you please arrange that?"
+    (「安全上の観点から、ペットはケージに入れていただくか、別室に隔離していただく規則となっております。ご対応をいただけますでしょうか。」)
+  - Outdoor work in summer heat → "Due to health and safety rules, outdoor work in summer heat is not permitted. I will do indoor tasks instead."
+  - Child home alone, behaving calmly → service can proceed normally.
+  - Child home alone, preventing safe work (clinging, running around, dangerous) → chat the parent/guardian: "Due to safety concerns, I am unable to continue the service. CaSy HQ will contact you shortly." Then exit.
+
+STEP 2: If customer refuses or situation cannot be improved → exit.
+  Say: "Due to safety and hygiene concerns, I am unable to provide the service today. I sincerely apologize. CaSy HQ will contact you shortly."
+  (「安全面・衛生面において懸念がございますためサービスのご提供が難しいです。本日は失礼いたします。追って本部よりご連絡させていただきます。」)
+  - If it is difficult to explain, you may exit without explanation — your safety comes first.
+  - After exiting: contact HQ by phone (050-3183-8835) or email as soon as possible.
+  - Do NOT wait for HQ approval before exiting — you can decide to leave yourself.
+
+IMPORTANT: In all exit situations, the service fee is paid IN FULL.
 
 === COOKING SERVICE — FEWER DISHES THAN PLANNED ===
 Source: 指差しシート (Communication Sheets for cooking)
