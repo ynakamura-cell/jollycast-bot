@@ -108,16 +108,29 @@ TYPE A — "Prohibited customer behavior" (サービス中の禁止行為):
 - After exiting: contact HQ by phone (050-3183-8835) or email as soon as you've calmed down.
 
 TYPE B — "Safety-concern environment" (安全面に懸念のある環境):
-- Unsanitary environment: pest infestation (cockroaches, rats), feces/urine smell, extreme clutter blocking movement
-- Injury/health risk: aggressive unleashed pet, broken glass, cast feeling physically ill from conditions
-- Other: drunken customer, child alone who prevents safe service, extreme outdoor heat
+SEVERE conditions — EXIT IMMEDIATELY without asking customer to fix it first:
+  - Pest infestation: cockroaches, rats (any visible infestation)
+  - Feces/urine smell or extreme unsanitary conditions
+  - Extreme clutter blocking safe movement
+  - Cast feeling physically ill due to the environment
+  - Broken glass or physical hazards on the floor
+  - Drunken customer (posing a risk)
+  - Aggressive unleashed pet
+
+MINOR conditions — you MAY ask for a fix before deciding to exit (see SPECIAL CASES below):
+  - Non-aggressive pet running freely
+  - Outdoor summer heat (can switch to indoor tasks)
+  - Child alone who is calm and not dangerous
+
+CRITICAL RULE: For SEVERE Type B conditions, do NOT ask the customer to clean up or fix the issue before you exit. Exit directly.
+Do NOT add a "Step 1: ask customer to improve the situation" for pest infestations, feces smell, broken glass, physical illness, or other severe hazards. These are immediate exit situations.
 
 EXIT PROCEDURE for Type B:
 1. Tell the customer calmly: "Due to safety and hygiene concerns, I am unable to provide the service today. I sincerely apologize. CaSy HQ will contact you shortly."
    (「安全面・衛生面において懸念がございますためサービスのご提供が難しいです。本日は失礼いたします。追って本部よりご連絡させていただきます。」)
    - You do NOT need HQ approval before exiting — you can decide to leave yourself
    - If it is difficult to explain, you may exit without explanation — your safety comes first
-2. After exiting: contact HQ by phone (050-3183-8835) or inquiry form (9: トラブルが起きた) as soon as possible
+2. After exiting: submit the inquiry form (9: トラブルが起きた) as soon as possible. Phone HQ at 050-3183-8835 if urgent.
 
 SPECIAL CASES (where asking for a fix first makes sense before exiting):
   - Pet running freely but not aggressive → politely ask: "Our policy requires pets in a cage or separate room. Could you please arrange that?" Exit only if refused.
@@ -180,12 +193,28 @@ NOTE: JollyCast casts are employees. Disciplinary actions follow 就業規則 (e
 - Rude customers: remain calm, do not argue; if safety is at risk, contact HQ
 
 === AFTER SERVICE / BETWEEN SERVICES ===
-- After your LAST service of the day: go home directly. No need to go to the office.
-- Between two services (on a 2-service day):
-  - You may take a break for the gap time MINUS travel time to the next service
-  - Labor law (労働基準法) requires AT LEAST 45 minutes of break for a 6-hour shift — this is MANDATORY minimum, not a maximum
-  - Example: 90-min gap with 30-min travel → 60 min free; you must take at least 45 min as break
-  - No need to go to the office between services
+
+AFTER YOUR LAST SERVICE OF THE DAY:
+- Go home directly. NEVER go to any CaSy office unless HQ specifically instructs you to.
+- There is NO requirement to report to an office or perform any task after your last service.
+- There is NO language study (Duolingo or otherwise) required during or after work hours.
+
+IF YOU HAVE NO AFTERNOON SERVICES (or schedule is cancelled):
+- You may go home. No office visit required. No specific task required.
+- If unsure what to do: contact HQ via inquiry form or 050-3183-8835.
+
+IF A SERVICE ENDS EARLIER THAN SCHEDULED:
+- You may leave once the service is complete. Do not wait at the customer's home until the original end time.
+- Do not wait at any office for the remaining time.
+
+BETWEEN TWO SERVICES (gap time):
+- You may use the gap time freely (rest, eat, use a café, etc.) MINUS travel time to the next service.
+- Labor law (労働基準法) requires AT LEAST 45 minutes of break for a 6-hour shift — this is a MANDATORY MINIMUM, not a maximum. You may take a longer break if the gap allows.
+- Example: 90-min gap, 30-min travel → 60 min free time; you must take at least 45 min as break.
+- NEVER go to a CaSy office between services unless HQ specifically instructs you to.
+- NO language study or specific activity is required during break time.
+
+OTHER RULES:
 - Cannot extend service time: if a customer asks to stay longer, politely decline: "I'm sorry, I have another appointment." This applies even if you have no next service — time extension must go through CaSy.
 - Incidents must be reported via inquiry form AFTER leaving the service location (do not delay departure for this).
 - For unusual situations (unexpected free time, schedule question): contact HQ via inquiry form or 050-3183-8835.
@@ -256,8 +285,17 @@ Source: CaSy Zendesk "お客様からチップやお品物をいただいた"
 Source: CaSy Zendesk — お客様からキャンセルをしたいと言われた / キャンセル数の制限について
 
 CUSTOMER-INITIATED CANCELLATION:
-- Before 2 days 18:00: Free cancellation. Ask customer to cancel in the app themselves.
-- After 2 days 18:00: Full paid cancellation (100% fee). Inform customer and ask them to cancel in the app.
+- Before 2 days 18:00 (前々日18:00まで): FREE cancellation. Ask customer to cancel in the app themselves.
+- At or after 2 days 18:00 (前々日18:00以降): FULL paid cancellation (100% fee charged to customer). Inform customer and ask them to cancel in the app.
+
+TIMING RULE — HOW TO COUNT "2 days before":
+  "2 days before" = 前々日 = the day-before-yesterday relative to the service date.
+  Example: Service is on Wednesday.
+    → Monday 17:59 = BEFORE the deadline → FREE cancellation
+    → Monday 18:00 = AT the deadline → PAID (full amount)
+    → Monday 18:05 = AFTER the deadline → PAID (full amount)
+  Another example: If customer contacts you 2 days before at 17:50 → that is BEFORE 18:00 → FREE cancellation.
+
 - IMPORTANT: Even if customer told you verbally or via chat they want to cancel, if they have NOT processed it in the app → you MUST still visit as scheduled. If you skip the visit on your own judgment → it is treated as FREE cancellation (you receive no pay).
 - At-the-door cancellation (customer cancels when you arrive): Inform them the full cancellation fee applies, then leave. Report via inquiry form (select: 5: 開始時刻を過ぎたサービスのキャンセルをしたい).
 
@@ -296,16 +334,23 @@ Covered wards (as of 2026/04/01): 墨田区・葛飾区・台東区・豊島区�
 STANDARD VOUCHER PROCESS (most wards: 墨田区・葛飾区):
 1. BEFORE service: Bring the "利用券送付用封筒" (voucher mailing envelope) — sent to you by CaSy when you apply for a municipal job.
 2. DURING service: Receive the 利用券 from the customer — one voucher per hour of service.
-3. AFTER service: Fill in the back of each voucher (date, time slot, service type, customer name, your name). Put them in the envelope, write your cast name on the back, and mail it. No stamp or address needed. Mail by end of service day or next day at the latest.
+3. AFTER service:
+   - THE CAST fills in the back of each voucher: write the date, time slot (e.g., 10:00-11:00 / 11:00-12:00 / 12:00-13:00), service type, customer name, and your own (cast) name.
+   - NOTE: It is the CAST who writes on the back of the voucher, not the customer.
+   - Put them in the mailing envelope, write your cast name on the back of the envelope, and drop it in a mailbox. No stamp or address needed.
+   - Mail by end of service day or next day at the latest.
 Note: Month-end deadline — CaSy must submit to the ward by the 10th of the following month.
 
 WARD-SPECIFIC DIFFERENCES:
-- 葛飾区: Some vouchers require the child's name written by the customer — check and ask customer to fill in if missing.
-- 台東区 (since 2026/1/5): Two methods are used simultaneously — paper vouchers OR QR code.
+- 葛飾区: Some vouchers require the child's name — ask customer to fill in the child's name if missing. (Only the child's name is filled by the customer; everything else is filled by the cast.)
+- 台東区 (since 2026/1/5): QR code method is available IN ADDITION TO paper vouchers. QR questions (Q59-Q64 type) refer to this 台東区 context.
   - QR method: Cast shows QR code on their app's check-in screen → customer scans it with their smartphone.
   - If customer cannot scan QR: guide them to tap "こちら" (red text) on their scan screen and manually enter the code 91374493.
   - If customer has no smartphone or cannot enter code at all: proceed with service normally, then report to HQ immediately after — CaSy will notify the ward.
   - If cast's app QR code is not showing: try refreshing the check-in screen. If still missing, report to HQ (050-3183-8835).
+  - If QR scan fails (error shown): try the manual code entry first; if that also fails, report to HQ.
+  - If cast accidentally scanned QR themselves instead of customer: report to HQ via inquiry form (25: 自治体案件について).
+  - If customer accidentally scanned twice: report to HQ via inquiry form (25: 自治体案件について).
 - 豊島区: Uses 実施報告票 (service report form) + customer signature instead of individual vouchers. Bring the form and sample (＜記入例＞) to the service; have customer fill in and sign before you leave.
 
 PROBLEM SITUATIONS:
