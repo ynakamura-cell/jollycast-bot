@@ -108,28 +108,24 @@ TYPE A — "Prohibited customer behavior" (サービス中の禁止行為):
 - After exiting: contact HQ by phone (050-3183-8835) or email as soon as you've calmed down.
 
 TYPE B — "Safety-concern environment" (安全面に懸念のある環境):
-- Unsanitary environment: extreme clutter, pest infestation, feces/urine, severe odor
-- Injury/health risk: extreme heat outdoors, unleashed aggressive pets, broken glass
-- Other: drunken customer, child alone who prevents safe service
-- Service fee is paid in FULL even if you exit. You may refuse or exit mid-service.
+- Unsanitary environment: pest infestation (cockroaches, rats), feces/urine smell, extreme clutter blocking movement
+- Injury/health risk: aggressive unleashed pet, broken glass, cast feeling physically ill from conditions
+- Other: drunken customer, child alone who prevents safe service, extreme outdoor heat
 
-TWO-STEP APPROACH for Type B — always try Step 1 first:
+EXIT PROCEDURE for Type B:
+1. Tell the customer calmly: "Due to safety and hygiene concerns, I am unable to provide the service today. I sincerely apologize. CaSy HQ will contact you shortly."
+   (「安全面・衛生面において懸念がございますためサービスのご提供が難しいです。本日は失礼いたします。追って本部よりご連絡させていただきます。」)
+   - You do NOT need HQ approval before exiting — you can decide to leave yourself
+   - If it is difficult to explain, you may exit without explanation — your safety comes first
+2. After exiting: contact HQ by phone (050-3183-8835) or inquiry form (9: トラブルが起きた) as soon as possible
 
-STEP 1: Ask the customer to resolve the issue.
-  - Pet running freely → "For safety reasons, our policy requires pets to be in a cage or a separate room. Could you please arrange that?"
-    (「安全上の観点から、ペットはケージに入れていただくか、別室に隔離していただく規則となっております。ご対応をいただけますでしょうか。」)
-  - Outdoor work in summer heat → "Due to health and safety rules, outdoor work in summer heat is not permitted. I will do indoor tasks instead."
-  - Child home alone, behaving calmly → service can proceed normally.
-  - Child home alone, preventing safe work (clinging, running around, dangerous) → chat the parent/guardian: "Due to safety concerns, I am unable to continue the service. CaSy HQ will contact you shortly." Then exit.
+SPECIAL CASES (where asking for a fix first makes sense before exiting):
+  - Pet running freely but not aggressive → politely ask: "Our policy requires pets in a cage or separate room. Could you please arrange that?" Exit only if refused.
+  - Outdoor work in summer heat → do indoor tasks instead; no need to exit entirely
+  - Child home alone, behaving calmly → service can proceed normally
+  - Child home alone and dangerous (running into hazards, clinging) → chat parent and exit
 
-STEP 2: If customer refuses or situation cannot be improved → exit.
-  Say: "Due to safety and hygiene concerns, I am unable to provide the service today. I sincerely apologize. CaSy HQ will contact you shortly."
-  (「安全面・衛生面において懸念がございますためサービスのご提供が難しいです。本日は失礼いたします。追って本部よりご連絡させていただきます。」)
-  - If it is difficult to explain, you may exit without explanation — your safety comes first.
-  - After exiting: contact HQ by phone (050-3183-8835) or email as soon as possible.
-  - Do NOT wait for HQ approval before exiting — you can decide to leave yourself.
-
-IMPORTANT: In all exit situations, the service fee is paid IN FULL.
+IMPORTANT: Customer-caused exit (unsanitary/unsafe conditions) does NOT count as cast 欠勤. No Recoru application or salary deduction applies in these cases.
 
 === COOKING SERVICE — LATE ARRIVAL (遅刻) ===
 Source: CaSy Zendesk — パッケージ料理サービス遅刻時の対応
@@ -227,8 +223,10 @@ If a cast cannot attend a service due to sudden illness or emergency on the day:
    - Select the appropriate type: 遅刻 (late), 早退 (early leave), or 欠勤 (absence)
    - Do NOT fill in the Google Form for sudden absences — Recoru only.
 4. A CaSy attendance manager will approve the leave in Recoru.
-NOTE: Salary is DEDUCTED for sudden sick/absence days (no paid sick leave unless you have accrued 有給休暇). Paid leave (有給) is available after 6 months of employment.
-NOTE: Medical certificate (診断書) submitted to HQ → cancellation penalty can be waived. Submit photo via inquiry form (12: 契約・報酬について).
+NOTE on salary: 欠勤 (cast-caused absence) = salary deducted per 就業規則第27条. Paid leave (有給) is available after 6 months of employment and can cover absences without deduction.
+NOTE on customer-caused cancellation: If a service is cancelled due to CUSTOMER reasons (customer absent, cast forced to exit due to unsanitary conditions, etc.) → this does NOT count as cast 欠勤 and no salary deduction applies.
+NOTE on medical certificate: If absent 7+ consecutive days due to illness/injury, submit a 診断書 (medical certificate) to HQ via inquiry form. This is an administrative requirement, not a penalty waiver (the penalty waiver rule is for freelance casts only, not JollyCast employees).
+NOTE on child's illness: If your child is suddenly sick, you may be eligible for 子の看護休暇 (nursing leave for sick child, available under the employment rules — ask HQ for details).
 
 === PLANNED VACATION / SCHEDULED ABSENCE (計画的な休暇) ===
 Source: Confluence — ジョリーキャストの休暇申請フロー
@@ -263,11 +261,12 @@ CUSTOMER-INITIATED CANCELLATION:
 - IMPORTANT: Even if customer told you verbally or via chat they want to cancel, if they have NOT processed it in the app → you MUST still visit as scheduled. If you skip the visit on your own judgment → it is treated as FREE cancellation (you receive no pay).
 - At-the-door cancellation (customer cancels when you arrive): Inform them the full cancellation fee applies, then leave. Report via inquiry form (select: 5: 開始時刻を過ぎたサービスのキャンセルをしたい).
 
-CAST-INITIATED CANCELLATION PENALTIES:
+CAST-INITIATED CANCELLATION — JollyCast rules (employed cast):
 - "直前キャンセル" = cancellation the day before or day of service
-- 3+ 直前キャンセル in 90 days → ¥1,000 penalty deducted per additional cancellation
-- 6+ total cancellations (any type) in 90 days → 1-month ban from applying for bonus-reward services
-- Medical certificate (診断書) submitted → cancellation count and penalty can be waived. Submit via inquiry form (12: 契約・報酬について).
+- JollyCast casts are EMPLOYEES — disciplinary action follows 就業規則 (employment rules), not monetary penalty deductions
+- 3+ 直前キャンセル in 90 days → disciplinary review per 就業規則 (warning → further action)
+- NOTE: The ¥1,000-per-cancellation penalty and "診断書 waives penalty" rules apply to FREELANCE (業務委託) casts only — NOT JollyCast employees
+- Customer-caused cancellation (customer absent, customer cancelled via app in time, unsanitary exit) = does NOT count toward cast's cancellation record
 
 === SCHEDULE CHANGES (日程変更) ===
 Source: CaSy Zendesk — お客様から日程変更をお願いされたが応じられない
