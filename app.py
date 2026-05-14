@@ -191,14 +191,36 @@ NOTE: JollyCast casts are employees. Disciplinary actions follow 就業規則 (e
 - Incidents must be reported via inquiry form AFTER leaving (do not delay departure for this)
 - Cannot extend service time: if a customer asks you to stay longer, say "I'm sorry, I have another service scheduled." You cannot add extra time even if asked.
 
+=== RECORU (勤怠管理システム) — HOW JOLLYCAST CASTS USE IT ===
+Source: Confluence — ジョリーキャストの休暇申請フロー / 戦略特区_勤怠チェックリスト補足
+
+IMPORTANT: JollyCast casts do NOT manually clock in or out in Recoru.
+- Work schedules/shifts are pre-registered in Recoru by CaSy staff
+- Casts use Recoru ONLY to apply for irregular leave: 遅刻 (late), 早退 (early leave), 欠勤 (absence)
+- Recoru URL: https://app.recoru.in/ap/?c=252284
+
+WHAT CASTS DO IN RECORU:
+- Sudden late arrival → apply for 遅刻 in Recoru
+- Leaving early → apply for 早退 in Recoru
+- Absent all day → apply for 欠勤 in Recoru
+- A CaSy attendance manager then approves the application in Recoru
+
+WHAT CASTS DO NOT DO IN RECORU:
+- Do NOT clock in/out daily (not required)
+- Do NOT enter check-in or check-out times
+- Do NOT register planned vacations (that's via Google Form only — CaSy staff handles Recoru for planned leave)
+
+For questions about work hours, overtime, or attendance corrections → contact HQ via inquiry form or 050-3183-8835.
+
 === SUDDEN SICK DAY / UNEXPECTED ABSENCE (体調不良・突発欠勤) ===
+Source: Confluence — ジョリーキャストの休暇申請フロー (updated 2026/04/30)
 If a cast cannot attend a service due to sudden illness or emergency on the day:
-1. Message the customer via in-app chat IMMEDIATELY — apologize and inform them you cannot come. Ask whether they prefer to cancel or have a different cast assigned.
+1. Message the customer via in-app chat IMMEDIATELY — apologize and inform them you cannot come. Inform them they can cancel or have a different cast assigned (rescheduling to another date is NOT possible for JollyCast).
 2. Submit the inquiry form RIGHT AFTER contacting the customer:
    - 属性 (Role): キャストとして働いている方
    - 項目 (Category): 2: サービスのキャンセルをしたい
    - If the service start time has already passed: select 5: 開始時刻を過ぎたサービスのキャンセルをしたい
-3. Apply for leave in Recoru (勤怠管理システム) immediately after submitting the inquiry form.
+3. Apply for leave in Recoru immediately after submitting the inquiry form.
    - Select the appropriate type: 遅刻 (late), 早退 (early leave), or 欠勤 (absence)
    - Do NOT fill in the Google Form for sudden absences — Recoru only.
 4. A CaSy attendance manager will approve the leave in Recoru.
@@ -206,12 +228,13 @@ NOTE: Salary is DEDUCTED for sudden sick/absence days (no paid sick leave unless
 NOTE: Medical certificate (診断書) submitted to HQ → cancellation penalty can be waived. Submit photo via inquiry form (12: 契約・報酬について).
 
 === PLANNED VACATION / SCHEDULED ABSENCE (計画的な休暇) ===
+Source: Confluence — ジョリーキャストの休暇申請フロー
 For pre-planned days off (confirmed the month before):
-1. Message the relevant customers via in-app chat by the 15th of the PREVIOUS month — inform them of the absence and ask if they want to cancel or have a different cast assigned.
+1. Message the relevant customers via in-app chat by the 15th of the PREVIOUS month — inform them of the absence and ask if they want to cancel or have a different cast assigned (rescheduling NOT possible).
 2. Wait for the Google Form to be distributed by CaSy (distributed by the 10th each month).
 3. Submit the Google Form with your planned absence dates between the 10th and 15th of the month.
-   - Do NOT use Recoru for planned vacations — only the Google Form is required from the cast's side.
-Note: This is different from a sudden sick day. Pre-planned vacations = Google Form only. Sudden absences = Recoru only.
+   - Do NOT use Recoru for planned vacations — CaSy staff handles Recoru registration on your behalf.
+Note: Pre-planned vacations = Google Form only (cast side). Sudden absences = Recoru only (cast side).
 
 === TIPS / GIFTS FROM CUSTOMERS ===
 Source: CaSy Zendesk "お客様からチップやお品物をいただいた"
