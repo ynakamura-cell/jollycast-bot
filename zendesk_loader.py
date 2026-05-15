@@ -1,42 +1,52 @@
 """
 Fetches and caches articles from the CaSy Zendesk help center.
-Crawls from the home page — no guessed article IDs needed.
+
+Authentication: Uses Zendesk REST API with email + API token.
+Set in .env:
+  ZENDESK_EMAIL=your@email.com
+  ZENDESK_API_TOKEN=your_api_token
+
+API token generation: Zendesk Admin > Profile (bottom-left) > API token
+
+Falls back to the existing cache if credentials are not set.
 """
-import json, time, re
+import json, time, re, os, base64
 from pathlib import Path
 import urllib.request
 
 BASE = "https://casy.zendesk.com"
-HOME = f"{BASE}/hc/ja"
 CACHE = Path(__file__).parent / "zendesk_cache.json"
 
 
-def _fetch(url: str) -> str:
+def _get_auth_header() -> dict:
+    email = os.getenv("ZENDESK_EMAIL", "")
+    token = os.getenv("ZENDESK_API_TOKEN", "")
+    if not email or not token:
+        return {}
+    credentials = f"{email}/token:{token}"
+    encoded = base64.b64encode(credentials.encode()).decode()
+    return {"Authorization": f"Basic {encoded}"}
+
+
+def _fetch_api(url: str) -> dict | None:
+    """Fetch a Zendesk API endpoint (JSON). Returns parsed dict or None on error."""
+    headers = {
+        "User-Agent": "Mozilla/5.0",
+        "Accept": "application/json",
+        **_get_auth_header(),
+    }
     try:
-        req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
-        with urllib.request.urlopen(req, timeout=10) as r:
-            return r.read().decode("utf-8", errors="replace")
-    except Exception:
-        return ""
-
-
-def _extract_links(html: str, pattern: str) -> list[str]:
-    found = re.findall(pattern, html)
-    seen, out = set(), []
-    for href in found:
-        url = href if href.startswith("http") else BASE + href
-        if url not in seen:
-            seen.add(url)
-            out.append(url)
-    return out
+        req = urllib.request.Request(url, headers=headers)
+        with urllib.request.urlopen(req, timeout=15) as r:
+            return json.loads(r.read().decode("utf-8"))
+    except Exception as e:
+        print(f"  [API error] {url}: {e}")
+        return None
 
 
 def _html_to_text(html: str) -> str:
-    # Remove script/style blocks
     html = re.sub(r"<(script|style)[^>]*>.*?</\1>", "", html, flags=re.DOTALL)
-    # Remove tags
     text = re.sub(r"<[^>]+>", " ", html)
-    # Collapse whitespace
     text = re.sub(r"\s+", " ", text).strip()
     return text
 
@@ -47,58 +57,59 @@ def build_knowledge_base(force_refresh: bool = False) -> list[dict]:
         if data:
             return data
 
-    print("Fetching Zendesk articles...")
+    email = os.getenv("ZENDESK_EMAIL", "")
+    token = os.getenv("ZENDESK_API_TOKEN", "")
+
+    if not email or not token:
+        print(
+            "WARNING: ZENDESK_EMAIL / ZENDESK_API_TOKEN not set in .env.\n"
+            "  Cannot refresh Zendesk cache. Using existing cache if available.\n"
+            "  To enable: add credentials to .env and restart."
+        )
+        if CACHE.exists():
+            return json.loads(CACHE.read_text(encoding="utf-8"))
+        return []
+
+    print("Fetching Zendesk articles via API...")
     articles = []
 
-    # Step 1: Get category links from home page
-    home_html = _fetch(HOME)
-    category_links = _extract_links(home_html, r'href="(/hc/ja/categories/[^"]+)"')
-    print(f"  Found {len(category_links)} categories")
+    # Paginate through all articles
+    url = f"{BASE}/api/v2/help_center/ja/articles.json?per_page=100&sort_by=created_at&sort_order=asc"
+    page = 1
+    while url:
+        print(f"  Page {page}...", flush=True)
+        data = _fetch_api(url)
+        if not data:
+            break
 
-    # Step 2: Get section links from each category
-    section_links = []
-    for cat_url in category_links:
-        cat_html = _fetch(cat_url)
-        sections = _extract_links(cat_html, r'href="(/hc/ja/sections/[^"]+)"')
-        section_links.extend(sections)
-        time.sleep(0.2)
-    print(f"  Found {len(section_links)} sections")
+        for art in data.get("articles", []):
+            if not art.get("draft", False):  # skip drafts
+                body_html = art.get("body", "") or ""
+                content = _html_to_text(body_html)[:8000]
+                if len(content) > 80:
+                    articles.append({
+                        "url": f"{BASE}/hc/ja/articles/{art['id']}",
+                        "title": art.get("title", ""),
+                        "content": content,
+                    })
+                    print(f"    + {art.get('title', '')[:60]}")
 
-    # Step 3: Get article links from each section
-    article_urls = set()
-    for sec_url in section_links:
-        sec_html = _fetch(sec_url)
-        arts = _extract_links(sec_html, r'href="(/hc/ja/articles/[^"#]+)"')
-        article_urls.update(arts)
-        time.sleep(0.2)
-    print(f"  Found {len(article_urls)} article URLs")
+        url = data.get("next_page")  # None when last page
+        page += 1
+        if url:
+            time.sleep(0.3)
 
-    # Step 4: Fetch each article (no arbitrary cap — fetch all found articles)
-    for url in list(article_urls):
-        html = _fetch(url)
-        if not html:
-            continue
-        title_m = re.search(r"<h1[^>]*>(.*?)</h1>", html, re.DOTALL)
-        title = re.sub(r"<[^>]+>", "", title_m.group(1)).strip() if title_m else url
+    if articles:
+        CACHE.write_text(json.dumps(articles, ensure_ascii=False, indent=2), encoding="utf-8")
+        print(f"  Saved {len(articles)} articles.")
+    else:
+        print("  No articles fetched. Check credentials and Zendesk permissions.")
 
-        # Extract article body only; 8000 chars covers most full articles
-        body_m = re.search(r'<article[^>]*>(.*?)</article>', html, re.DOTALL)
-        body_html = body_m.group(1) if body_m else html
-        content = _html_to_text(body_html)[:8000]
-
-        if len(content) > 80:
-            articles.append({"url": url, "title": title, "content": content})
-            print(f"    + {title[:50]}")
-        time.sleep(0.25)
-
-    CACHE.write_text(json.dumps(articles, ensure_ascii=False, indent=2), encoding="utf-8")
-    print(f"  Saved {len(articles)} articles.")
     return articles
 
 
 def search_articles(query: str, articles: list[dict], top_k: int = 3) -> list[dict]:
     q = query.lower()
-    # Also check English keywords mapped to Japanese terms
     keyword_map = {
         "absent": "不在", "not home": "不在", "damage": "物損", "broke": "物損",
         "cancel": "キャンセル", "lost": "道迷い", "address": "住所",
