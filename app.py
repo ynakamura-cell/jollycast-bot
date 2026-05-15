@@ -41,6 +41,16 @@ CaSy operates the cleaning/cooking service platform. JollyCast is CaSy's employe
 CaSy Support number: 050-3183-8835 (available 9:00-18:00, weekdays and weekends/holidays)
 This support number is correct and appropriate for JollyCast casts to use.
 
+HQ CONTACT — 2 PATTERNS (CRITICAL RULE):
+1. CALL 050-3183-8835 — EMERGENCY ONLY (3 situations):
+   a) Safety or hygiene danger during service (injury risk, fire, gas leak, etc.)
+   b) Property damage that seriously affects the customer's daily life (e.g., broken essential appliance)
+   c) Serious on-site trouble with the customer during service
+2. INQUIRY FORM — ALL OTHER SITUATIONS:
+   App issues, QR/voucher problems, schedule questions, reporting after the fact, forgetting a procedure, etc.
+   Do NOT call HQ for non-emergency issues — it overloads the phone line.
+   To submit: Cast App → Inquiry Form (問い合わせフォーム)
+
 === EMERGENCY PHONE (緊急電話) ===
 - Used ONLY in emergencies: when lost, customer is absent, or urgent situations
 - For normal communication, always use in-app chat
@@ -380,11 +390,12 @@ WARD-SPECIFIC DIFFERENCES:
 - 台東区 (since 2026/1/5): QR code method is available IN ADDITION TO paper vouchers. QR questions (Q59-Q64 type) refer to this 台東区 context.
   - QR method: Cast shows QR code on their app's check-in screen → customer scans it with their smartphone.
   - If customer cannot scan QR: guide them to tap "こちら" (red text) on their scan screen and manually enter the code 91374493.
-  - If customer has no smartphone or cannot enter code at all: proceed with service normally, then report to HQ immediately after — CaSy will notify the ward.
-  - If cast's app QR code is not showing: try refreshing the check-in screen. If still missing, report to HQ (050-3183-8835).
-  - If QR scan fails (error shown): try the manual code entry first; if that also fails, report to HQ.
-  - If cast accidentally scanned QR themselves instead of customer: report to HQ via inquiry form (25: 自治体案件について).
-  - If customer accidentally scanned twice: report to HQ via inquiry form (25: 自治体案件について).
+  - If customer has no smartphone or cannot enter the manual code at all: proceed with service normally, then report via inquiry form (25: 自治体案件について) after service — CaSy will notify the ward.
+  - If cast forgot to scan QR at check-in: treat the same as "customer could not scan" → report via inquiry form (25: 自治体案件について) after service.
+  - If cast's app QR code is not showing: try refreshing the check-in screen. If still missing, proceed with service normally and report via inquiry form (25: 自治体案件について) after service.
+  - If QR scan fails (error shown): try the manual code entry first; if that also fails, report via inquiry form (25: 自治体案件について).
+  - If cast accidentally scanned QR themselves instead of customer: report via inquiry form (25: 自治体案件について).
+  - If customer accidentally scanned twice: report via inquiry form (25: 自治体案件について).
 - 豊島区: Uses 実施報告票 (service report form) + customer signature instead of individual vouchers. Bring the form and sample (＜記入例＞) to the service; have customer fill in and sign before you leave.
 
 PROBLEM SITUATIONS:
@@ -400,9 +411,9 @@ PROBLEM SITUATIONS:
 Source: HR Policy Manual (人事制度説明スライド) — JollyCast employees use 4 channels:
 
 1. CaSy Cast App (キャストアプリ) — for service-related questions, incidents, customer communication
-   - Inquiry form: for cancellations, property damage, trouble reports
+   - Inquiry form: DEFAULT for all non-emergency reports (QR/voucher issues, app problems, schedule questions, post-incident reports, etc.)
    - In-app chat: to contact customers (preferred over emergency phone)
-   - Emergency phone: only when lost, customer is absent, or urgent
+   - Emergency phone (050-3183-8835): ONLY for 3 emergencies — safety/hygiene danger, serious property damage affecting daily life, serious on-site trouble with customer
    - 110 button: for physical threats / criminal acts
 
 2. GTN App — for daily life support in Japan (housing, banking, daily questions)
@@ -634,14 +645,23 @@ def generate_claude_response(question: str, articles: list[dict]):
 
         system_text = f"""You are a support assistant for JollyCast (ジョリーキャスト) cast members working in Japan.
 
-CRITICAL RULES — FOLLOW THESE STRICTLY:
+RESPONSE RULES:
+
+【TYPE A — Work procedure questions】
+Anything related to CaSy/JollyCast operations: cancellations, vouchers, app usage, incidents, schedules, Recoru, payments, customer trouble, etc.
 1. Answer ONLY from the KNOWLEDGE BASE, TROUBLE FLOW, and ZENDESK MANUAL provided below.
-2. Do NOT use general knowledge, assumptions, or invent procedures not written in these materials.
-3. If the situation is not covered in the materials below, respond exactly with:
-   "This situation is not covered in my manual. Please contact CaSy HQ immediately: 📞 050-3183-8835"
-4. Always respond in English. Be concise — cast members are often mid-service.
-5. Number steps clearly. Include 050-3183-8835 when the situation is urgent.
-6. When materials conflict, prioritize: KNOWLEDGE BASE > TROUBLE FLOW > ZENDESK MANUAL.
+2. Do NOT use general knowledge or invent procedures not written in these materials.
+3. If not covered in the materials: respond with "This situation is not covered in my manual. Please report via the inquiry form or contact CaSy HQ: 📞 050-3183-8835"
+
+【TYPE B — Japan daily life / common sense questions】
+Navigation, train directions, room/floor numbering, Japanese customs, addresses, general etiquette — things a foreign worker in Japan might not know.
+4. You MAY use your general knowledge to answer helpfully and concisely.
+5. End your answer with: *(General knowledge — not CaSy policy)*
+
+【ALL questions】
+6. Always respond in English. Be concise — cast members are often mid-service.
+7. Number steps clearly. For urgent work situations (safety, serious damage, on-site emergency), include 📞 050-3183-8835.
+8. When materials conflict, prioritize: KNOWLEDGE BASE > TROUBLE FLOW > ZENDESK MANUAL.
 
 === KNOWLEDGE BASE (JollyCast-specific curated rules) ===
 {KNOWLEDGE}
