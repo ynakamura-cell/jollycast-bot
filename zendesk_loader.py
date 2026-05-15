@@ -73,18 +73,18 @@ def build_knowledge_base(force_refresh: bool = False) -> list[dict]:
         time.sleep(0.2)
     print(f"  Found {len(article_urls)} article URLs")
 
-    # Step 4: Fetch each article
-    for url in list(article_urls)[:50]:
+    # Step 4: Fetch each article (no arbitrary cap — fetch all found articles)
+    for url in list(article_urls):
         html = _fetch(url)
         if not html:
             continue
         title_m = re.search(r"<h1[^>]*>(.*?)</h1>", html, re.DOTALL)
         title = re.sub(r"<[^>]+>", "", title_m.group(1)).strip() if title_m else url
 
-        # Extract article body only
+        # Extract article body only; 8000 chars covers most full articles
         body_m = re.search(r'<article[^>]*>(.*?)</article>', html, re.DOTALL)
         body_html = body_m.group(1) if body_m else html
-        content = _html_to_text(body_html)[:2500]
+        content = _html_to_text(body_html)[:8000]
 
         if len(content) > 80:
             articles.append({"url": url, "title": title, "content": content})

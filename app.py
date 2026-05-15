@@ -30,6 +30,8 @@ TROUBLE_FLOW = """
 | Lost / late | Running late | Call customer (emergency phone) | Ask people nearby |
 | Incident (danger) | Physical risk | Swipe 110 button in app → HQ calls police | Exit immediately |
 | Incident (no danger) | Direct contract solicitation | Continue service | Report via inquiry form |
+| Double booking | Other cast is Japanese | Defer to Japanese cast; do not enter | Report via inquiry form after |
+| Double booking | Other cast is JollyCast | Ask customer: proceed with 2 casts or 1? If 1: later hire date cast stays | Report via inquiry form; HQ checks booking history |
 """
 
 KNOWLEDGE = """
@@ -306,6 +308,33 @@ CAST-INITIATED CANCELLATION — JollyCast rules (employed cast):
 - NOTE: The ¥1,000-per-cancellation penalty and "診断書 waives penalty" rules apply to FREELANCE (業務委託) casts only — NOT JollyCast employees
 - Customer-caused cancellation (customer absent, customer cancelled via app in time, unsanitary exit) = does NOT count toward cast's cancellation record
 
+=== DOUBLE BOOKING (ダブルブッキング) ===
+Source: CaSy Trouble Flow — ダブルブッキング
+
+Situation: You arrive at the customer's home and another cast is already there.
+This can happen when a customer made two separate bookings (different service IDs) at the same time.
+
+CASE A — The other cast is Japanese (non-JollyCast):
+- Do NOT enter the home.
+- Let the Japanese cast handle the situation — defer to them.
+- Do not argue with the other cast or the customer.
+- After the situation resolves: report to HQ via inquiry form.
+
+CASE B — The other cast is also a JollyCast cast:
+1. Explain to the customer that two casts have been assigned and ask:
+   "Two casts have arrived. Would you like both of us to proceed, or just one?"
+2. If customer agrees to 2 casts: both perform the service together.
+   Note: 2-cast service fee will apply — HQ will confirm with the customer.
+3. If customer says only 1 cast is needed:
+   - Regular (定期) vs Spot (スポット) booking: the regular (定期) cast stays.
+   - Both regular (定期): the cast with the later hire date (higher employee number) stays.
+   - Both spot: the cast with the later hire date stays.
+   - The other cast leaves without performing the service.
+4. After service: report to HQ via inquiry form. HQ will check the booking operation history.
+5. HQ will confirm if the customer made 2 separate bookings — if so, 2-cast fee applies.
+
+IMPORTANT: Do not try to resolve this yourself beyond asking the customer's preference. HQ handles billing and history confirmation.
+
 === SCHEDULE CHANGES (日程変更) ===
 Source: CaSy Zendesk — お客様から日程変更をお願いされたが応じられない
 
@@ -516,14 +545,14 @@ def generate_mock_response(question: str, relevant_articles: list) -> str:
         return textwrap.dedent("""\
             **After finishing / between services:**
 
-            - Go **directly to your next service** — no need to report to the office
-            - If there was an incident, report via the **inquiry form** after service
-            - If you have no afternoon service: study Japanese at the **Meguro office**
-            - You can take a **45-minute lunch break** between services
+            - After your **last service**: go home directly. No need to go to any office.
+            - Between services: free time (rest, eat, etc.) minus travel time to next service.
+            - Labor law requires **at least 45 minutes break** for a 6-hour shift.
+            - If unsure what to do: contact HQ at **050-3183-8835**
 
             📞 CaSy Support: **050-3183-8835**
 
-            *Source: JollyCast operating rules / Trouble Flow Guide*
+            *Source: JollyCast operating rules*
         """)
 
     elif any(w in q for w in ["qr", "voucher", "scan", "code", "バウチャー", "スキャン", "紙"]):
@@ -587,32 +616,52 @@ def generate_mock_response(question: str, relevant_articles: list) -> str:
             """)
 
 
-def generate_claude_response(question: str, context: str) -> str:
+def generate_claude_response(question: str, articles: list[dict]):
+    """Streams response text chunks. Uses ALL Zendesk articles + KNOWLEDGE as context."""
     try:
         import anthropic
         client = anthropic.Anthropic(api_key=ANTHROPIC_API_KEY)
-        prompt = f"""You are a support assistant for JollyCast (ジョリーキャスト), helping Filipino cast members in Japan.
-Always respond in English. Be concise and action-oriented — cast members are often mid-service.
-Number steps clearly. Always end with CaSy support number if urgent: 050-3183-8835.
 
-KNOWLEDGE BASE:
+        zendesk_content = "\n\n".join(
+            f"=== {a['title']} ===\n{a['content']}"
+            for a in articles
+        )
+
+        system_text = f"""You are a support assistant for JollyCast (ジョリーキャスト) cast members working in Japan.
+
+CRITICAL RULES — FOLLOW THESE STRICTLY:
+1. Answer ONLY from the KNOWLEDGE BASE, TROUBLE FLOW, and ZENDESK MANUAL provided below.
+2. Do NOT use general knowledge, assumptions, or invent procedures not written in these materials.
+3. If the situation is not covered in the materials below, respond exactly with:
+   "This situation is not covered in my manual. Please contact CaSy HQ immediately: 📞 050-3183-8835"
+4. Always respond in English. Be concise — cast members are often mid-service.
+5. Number steps clearly. Include 050-3183-8835 when the situation is urgent.
+6. When materials conflict, prioritize: KNOWLEDGE BASE > TROUBLE FLOW > ZENDESK MANUAL.
+
+=== KNOWLEDGE BASE (JollyCast-specific curated rules) ===
 {KNOWLEDGE}
 
-TROUBLE FLOW:
+=== TROUBLE FLOW ===
 {TROUBLE_FLOW}
 
-MANUAL EXCERPTS:
-{context}
+=== ZENDESK MANUAL ({len(articles)} articles) ===
+{zendesk_content}"""
 
-QUESTION: {question}"""
-        message = client.messages.create(
+        with client.messages.stream(
             model="claude-sonnet-4-6",
             max_tokens=800,
-            messages=[{"role": "user", "content": prompt}]
-        )
-        return message.content[0].text
+            system=[{
+                "type": "text",
+                "text": system_text,
+                "cache_control": {"type": "ephemeral"}
+            }],
+            messages=[{"role": "user", "content": question}]
+        ) as stream:
+            for text in stream.text_stream:
+                yield text
+
     except Exception as e:
-        return f"Error connecting to Claude API: {e}\n\nPlease check your API key.\n\n📞 CaSy Support: **050-3183-8835**"
+        yield f"Error connecting to Claude API: {e}\n\nPlease contact CaSy Support: 📞 **050-3183-8835**"
 
 
 # ── パスワード認証 ────────────────────────────────────────────
@@ -697,23 +746,22 @@ if prompt := st.chat_input("Type your question here (English OK)..."):
     with st.chat_message("user"):
         st.markdown(prompt)
 
-    relevant = search_articles(prompt, articles, top_k=3)
-    context_text = "\n\n---\n\n".join(
-        f"[{a['title']}]\n{a['content'][:600]}" for a in relevant
-    )
-    sources = [{"title": a["title"], "url": a["url"]} for a in relevant]
-
     with st.chat_message("assistant"):
         if MODE == "mock":
+            relevant = search_articles(prompt, articles, top_k=3)
             response = generate_mock_response(prompt, relevant)
+            st.markdown(response)
         else:
-            response = generate_claude_response(prompt, context_text)
+            # Streaming: show text as it generates
+            placeholder = st.empty()
+            chunks = []
+            for chunk in generate_claude_response(prompt, articles):
+                chunks.append(chunk)
+                placeholder.markdown("".join(chunks) + "▌")
+            response = "".join(chunks)
+            placeholder.markdown(response)
 
-        st.markdown(response)
-
-        if sources:
-            with st.expander("📖 Sources from Zendesk", expanded=False):
-                for s in sources:
-                    st.markdown(f"- [{s['title']}]({s['url']})")
+            with st.expander("📖 Source", expanded=False):
+                st.markdown(f"Based on CaSy Zendesk manual ({len(articles)} articles) + JollyCast KNOWLEDGE")
 
     st.session_state.messages.append({"role": "assistant", "content": response})
