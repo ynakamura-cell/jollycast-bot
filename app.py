@@ -320,24 +320,25 @@ BILLING RULE (most important):
 - HQ handles all billing — do not discuss fees directly with the customer beyond informing them that 2 bookings were made.
 
 CASE A — The other cast is Japanese (non-JollyCast cast):
-★ JollyCast-specific rule: defer entirely to the Japanese cast.
-- Do NOT enter the home.
-- Let the Japanese cast handle the customer interaction — do not take the lead.
+★ JollyCast-specific rule: defer to the Japanese cast.
+- Let the Japanese cast take the lead on customer interaction.
+- Inform the customer: "Two casts have arrived. Since both bookings were made by you, a 2-cast fee will apply regardless of how many casts work today."
 - Do not argue with the other cast or the customer.
 - After the situation resolves: report to HQ via inquiry form.
 
 CASE B — The other cast is also a JollyCast cast:
 (Follow standard CaSy Zendesk procedure)
-1. Inform the customer that 2 casts have arrived and ask their preference:
-   "Two casts have arrived. Would you like both of us to work, or just one?"
+1. Inform the customer that 2 casts have arrived and that a 2-cast fee applies:
+   "Two casts have arrived. Since 2 bookings were made, a 2-cast fee will apply regardless of how many casts work. Would you like both of us to work, or just one?"
 2. If customer wants 2 casts: both perform the service together.
 3. If customer wants only 1 cast:
    - Regular (定期) booking vs Spot (スポット): the regular (定期) cast stays.
    - Both regular (定期): the cast with the later hire date stays; the earlier hire leaves.
    - Both spot: the cast with the later hire date stays.
+   - Remind the customer again: the 2-cast fee still applies even with only 1 cast working.
 4. After service: report to HQ via inquiry form. HQ checks booking history and handles billing.
 
-IMPORTANT: Regardless of how many casts work, if the customer made 2 bookings, HQ will charge 2-cast fee. Do not promise the customer a refund or fee reduction — that is HQ's decision.
+IMPORTANT: In ALL cases, clearly inform the customer upfront that a 2-cast fee will apply if they made 2 bookings. This prevents disputes later. Do not promise a refund or fee reduction — that is HQ's decision.
 
 === SCHEDULE CHANGES (日程変更) ===
 Source: CaSy Zendesk — お客様から日程変更をお願いされたが応じられない
