@@ -227,7 +227,7 @@ BETWEEN TWO SERVICES (gap time):
 - NO language study or specific activity is required during break time.
 
 OTHER RULES:
-- Cannot extend service time: if a customer asks to stay longer, politely decline: "I'm sorry, I have another appointment." This applies even if you have no next service — time extension must go through CaSy.
+- Cannot extend service time: JollyCast company rules do not allow on-site time extensions. If a customer asks to stay longer, politely decline: "I'm sorry, company rules do not allow me to extend the service on-site. If you'd like more time, please book additional time through the CaSy app." Do NOT use excuses like "I have another appointment" — state the company rule directly.
 - Incidents must be reported via inquiry form AFTER leaving the service location (do not delay departure for this).
 - For unusual situations (unexpected free time, schedule question): contact HQ via inquiry form or 050-3183-8835.
 
@@ -397,6 +397,10 @@ WARD-SPECIFIC DIFFERENCES:
   - If cast accidentally scanned QR themselves instead of customer: report via inquiry form (25: 自治体案件について).
   - If customer accidentally scanned twice: report via inquiry form (25: 自治体案件について).
 - 豊島区: Uses 実施報告票 (service report form) + customer signature instead of individual vouchers. Bring the form and sample (＜記入例＞) to the service; have customer fill in and sign before you leave.
+- 武蔵野市: NO paper vouchers to collect. Service itself is completely normal (nothing special before or during service).
+  AFTER service: At the start of the following month, CaSy will forward an email from 武蔵野市 containing a 実施報告書 (service report). Respond promptly by signing electronically via クラウドサイン (cloud signature). Failing to sign means the municipal subsidy will not be applied and the customer will be charged full price.
+  Voucher expiry: Check validity before service. If expired → return to customer, charge regular price. Report via inquiry form (25: 自治体案件について).
+- 中野区・港区・渋谷区・文京区・国分寺市: Follow the same standard voucher process as 墨田区/葛飾区 unless otherwise specified.
 
 PROBLEM SITUATIONS:
 - Voucher expired → Return to customer. Customer pays full regular price. Report via inquiry form (25: 自治体案件について).
