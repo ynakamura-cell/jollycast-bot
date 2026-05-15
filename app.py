@@ -309,31 +309,35 @@ CAST-INITIATED CANCELLATION — JollyCast rules (employed cast):
 - Customer-caused cancellation (customer absent, customer cancelled via app in time, unsanitary exit) = does NOT count toward cast's cancellation record
 
 === DOUBLE BOOKING (ダブルブッキング) ===
-Source: CaSy Trouble Flow — ダブルブッキング
+Source: CaSy Zendesk manual + Trouble Flow (JollyCast-specific note added)
 
 Situation: You arrive at the customer's home and another cast is already there.
-This can happen when a customer made two separate bookings (different service IDs) at the same time.
+This happens when a customer made two separate bookings (different service IDs) at the same time.
 
-CASE A — The other cast is Japanese (non-JollyCast):
+BILLING RULE (most important):
+- If HQ confirms the customer made 2 bookings by their own operation → 2-cast fee applies NO MATTER WHAT.
+- This means even if only 1 cast ends up doing the work, the customer is still charged for 2 casts.
+- HQ handles all billing — do not discuss fees directly with the customer beyond informing them that 2 bookings were made.
+
+CASE A — The other cast is Japanese (non-JollyCast cast):
+★ JollyCast-specific rule: defer entirely to the Japanese cast.
 - Do NOT enter the home.
-- Let the Japanese cast handle the situation — defer to them.
+- Let the Japanese cast handle the customer interaction — do not take the lead.
 - Do not argue with the other cast or the customer.
 - After the situation resolves: report to HQ via inquiry form.
 
 CASE B — The other cast is also a JollyCast cast:
-1. Explain to the customer that two casts have been assigned and ask:
-   "Two casts have arrived. Would you like both of us to proceed, or just one?"
-2. If customer agrees to 2 casts: both perform the service together.
-   Note: 2-cast service fee will apply — HQ will confirm with the customer.
-3. If customer says only 1 cast is needed:
-   - Regular (定期) vs Spot (スポット) booking: the regular (定期) cast stays.
-   - Both regular (定期): the cast with the later hire date (higher employee number) stays.
+(Follow standard CaSy Zendesk procedure)
+1. Inform the customer that 2 casts have arrived and ask their preference:
+   "Two casts have arrived. Would you like both of us to work, or just one?"
+2. If customer wants 2 casts: both perform the service together.
+3. If customer wants only 1 cast:
+   - Regular (定期) booking vs Spot (スポット): the regular (定期) cast stays.
+   - Both regular (定期): the cast with the later hire date stays; the earlier hire leaves.
    - Both spot: the cast with the later hire date stays.
-   - The other cast leaves without performing the service.
-4. After service: report to HQ via inquiry form. HQ will check the booking operation history.
-5. HQ will confirm if the customer made 2 separate bookings — if so, 2-cast fee applies.
+4. After service: report to HQ via inquiry form. HQ checks booking history and handles billing.
 
-IMPORTANT: Do not try to resolve this yourself beyond asking the customer's preference. HQ handles billing and history confirmation.
+IMPORTANT: Regardless of how many casts work, if the customer made 2 bookings, HQ will charge 2-cast fee. Do not promise the customer a refund or fee reduction — that is HQ's decision.
 
 === SCHEDULE CHANGES (日程変更) ===
 Source: CaSy Zendesk — お客様から日程変更をお願いされたが応じられない
