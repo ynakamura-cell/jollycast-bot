@@ -35,6 +35,15 @@ TROUBLE_FLOW = """
 """
 
 KNOWLEDGE = """
+=== GTN (GLOBAL TRUST NETWORKS) ===
+GTN supports JollyCast cast members with non-work daily life matters in Japan.
+For questions about banking, money transfers, SIM cards, housing, resident registration,
+or other personal life admin — direct the cast to GTN, not HQ.
+Cast members can contact GTN via chat or phone through their JollyCast app (they already know how).
+Example response: "For this kind of question, please contact GTN through your app (chat or phone)."
+Do NOT try to answer banking procedures, housing contracts, or admin paperwork yourself.
+GTN is the correct resource for these topics — HQ is for CaSy service issues only.
+
 === ABOUT JOLLYCAST ===
 JollyCast (ジョリーキャスト) cast members are EMPLOYEES of CaSy (株式会社CaSy), not freelance contractors.
 CaSy operates the cleaning/cooking service platform. JollyCast is CaSy's employed cast program.
@@ -85,7 +94,7 @@ CASE A — Life-impacting damage (broken toilet, water leak, major appliance):
 2. Call HQ IMMEDIATELY at 050-3183-8835 during service (do not wait until after)
 3. Take photos of the damage (with customer's permission) — include maker name, model number
 4. Send photo + details to HQ (by email or inquiry form)
-5. Continue service (add extra time for the interruption)
+5. Continue service as scheduled (do NOT add extra time — extensions require a CaSy booking)
 6. Write daily report noting "called and reported to support"
 
 CASE B — Non-life-impacting damage (scratched floor, broken glass, minor item):
@@ -204,6 +213,31 @@ NOTE: JollyCast casts are employees. Disciplinary actions follow 就業規則 (e
 - Food/drinks offered by customer: small items (drinks, snacks ~100-200 yen) may be accepted with gratitude; cash, gift cards, high-value items must be declined
 - Rude customers: remain calm, do not argue; if safety is at risk, contact HQ
 
+=== KEY BOX (キーボックス) ACCESS ===
+Some customers use a physical key box (combination lock box) outside their home instead of the official 鍵預かりオプション.
+- Before service: the customer should have provided the combination/code in advance via in-app chat.
+- If you cannot open the box or don't have the code: contact the customer via emergency phone or in-app chat immediately.
+- After service: return the key to the box and make sure it is locked.
+- If any issue (lost key, broken box, etc.): report via inquiry form after service.
+- Note: CaSy does not officially recommend key handover outside of 鍵預かりオプション — if the customer insists on non-standard methods, inform HQ via inquiry form.
+
+=== CUSTOMER ABSENT (お客様不在) ===
+- Wait up to 30 minutes from the scheduled start time
+- BEFORE leaving, try BOTH of these steps:
+  1. Call the customer using the emergency phone (App MENU → Schedule → tap service time → Customer Info → Phone → "Show phone number" → "Make call")
+  2. Send a chat message via the app
+- Only if still no response after 30 min AND after trying phone + chat: leave and report via inquiry form
+  - 属性: キャストとして働いている方 / 項目: 9: トラブルが起きた
+- This is a customer-caused cancellation — does NOT count as 欠勤, no salary deduction applies
+- Do NOT call HQ (050-3183-8835) — customer absent is NOT an emergency, use inquiry form
+
+=== OUT-OF-SCOPE CUSTOMER REQUESTS ===
+If a customer asks you to do something outside your service scope (e.g., teach cleaning techniques, give personal advice, stay longer without an extension booking, etc.):
+- Politely decline and continue your normal scheduled service
+- No need to contact HQ — this is not an emergency situation
+- Example: "I'm here to clean for you today, so let me focus on providing the best service!"
+- If the customer becomes persistent or aggressive: note it in your daily report and submit an inquiry form after service
+
 === AFTER SERVICE / BETWEEN SERVICES ===
 
 AFTER YOUR LAST SERVICE OF THE DAY:
@@ -212,7 +246,7 @@ AFTER YOUR LAST SERVICE OF THE DAY:
 - There is NO language study (Duolingo or otherwise) required during or after work hours.
 
 IF YOU HAVE NO AFTERNOON SERVICES (or schedule is cancelled):
-- You may go home. No office visit required. No specific task required.
+- Basically go to the CaSy office. Do NOT go home unless HQ specifically tells you to.
 - If unsure what to do: contact HQ via inquiry form or 050-3183-8835.
 
 IF A SERVICE ENDS EARLIER THAN SCHEDULED:
@@ -251,6 +285,12 @@ WHAT CASTS DO NOT DO IN RECORU:
 - Do NOT register planned vacations (that's via Google Form only — CaSy staff handles Recoru for planned leave)
 
 For questions about work hours, overtime, or attendance corrections → contact HQ via inquiry form or 050-3183-8835.
+
+=== DAILY REPORT CORRECTION (日報修正) ===
+- Cast CAN edit a submitted daily report directly in the cast app.
+- How: open the report → tap "内容を編集する" (Edit content) button.
+- Deadline: within 24 hours of submission.
+- If outside the 24-hour window: contact HQ via inquiry form.
 
 === SUDDEN SICK DAY / UNEXPECTED ABSENCE (体調不良・突発欠勤) ===
 Source: Confluence — ジョリーキャストの休暇申請フロー (updated 2026/04/30)
@@ -391,15 +431,15 @@ WARD-SPECIFIC DIFFERENCES:
   - QR method: Cast shows QR code on their app's check-in screen → customer scans it with their smartphone.
   - If customer cannot scan QR: guide them to tap "こちら" (red text) on their scan screen and manually enter the code 91374493.
   - If customer has no smartphone or cannot enter the manual code at all: proceed with service normally, then report via inquiry form (25: 自治体案件について) after service — CaSy will notify the ward.
-  - If cast forgot to scan QR at check-in: treat the same as "customer could not scan" → report via inquiry form (25: 自治体案件について) after service.
+  - If cast forgot to scan QR at check-in: QR scan is still possible until checkout is complete — use Cast App "QRコード提示" to have the customer scan. Only if already checked out and exited: report via inquiry form (25: 自治体案件について) after service.
   - If cast's app QR code is not showing: try refreshing the check-in screen. If still missing, proceed with service normally and report via inquiry form (25: 自治体案件について) after service.
   - If QR scan fails (error shown): try the manual code entry first; if that also fails, report via inquiry form (25: 自治体案件について).
   - If cast accidentally scanned QR themselves instead of customer: report via inquiry form (25: 自治体案件について).
   - If customer accidentally scanned twice: report via inquiry form (25: 自治体案件について).
 - 豊島区: Uses 実施報告票 (service report form) + customer signature instead of individual vouchers. Bring the form and sample (＜記入例＞) to the service; have customer fill in and sign before you leave.
-- 武蔵野市: NO paper vouchers to collect. Service itself is completely normal (nothing special before or during service).
+- 武蔵野市: NO paper vouchers — do NOT accept or process any physical vouchers from 武蔵野市 customers. Service itself is completely normal (nothing special before or during service).
   AFTER service: At the start of the following month, CaSy will forward an email from 武蔵野市 containing a 実施報告書 (service report). Respond promptly by signing electronically via クラウドサイン (cloud signature). Failing to sign means the municipal subsidy will not be applied and the customer will be charged full price.
-  Voucher expiry: Check validity before service. If expired → return to customer, charge regular price. Report via inquiry form (25: 自治体案件について).
+  If a customer hands you a physical voucher in 武蔵野市: politely explain the system is electronic only, return the voucher, and continue service normally.
 - 中野区・港区・渋谷区・文京区・国分寺市: Follow the same standard voucher process as 墨田区/葛飾区 unless otherwise specified.
 
 PROBLEM SITUATIONS:

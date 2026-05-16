@@ -1,0 +1,274 @@
+"""
+JollyCast Bot 150問フルテスト
+Q1-Q150 全問テスト — 現在のKNOWLEDGEによる通算評価
+Excel: jollycast_bot_test_results_v2.xlsx に "Round7（150問フル）" タブを追加
+"""
+import os, time, sys, re
+from pathlib import Path
+from collections import Counter, defaultdict
+from openpyxl import load_workbook
+from openpyxl.styles import Font, PatternFill, Alignment, Border, Side
+from openpyxl.utils import get_column_letter
+
+sys.stdout.reconfigure(encoding="utf-8", errors="replace")
+
+base = Path(__file__).parent
+
+for line in (base / ".env").read_text(encoding="utf-8-sig").splitlines():
+    if "=" in line and not line.startswith("#"):
+        k, v = line.split("=", 1)
+        os.environ[k.strip()] = v.strip()
+
+ANTHROPIC_API_KEY = os.getenv("ANTHROPIC_API_KEY", "")
+if not ANTHROPIC_API_KEY:
+    print("ERROR: ANTHROPIC_API_KEY not found"); sys.exit(1)
+
+import anthropic
+client = anthropic.Anthropic(api_key=ANTHROPIC_API_KEY)
+
+src = (base / "app.py").read_text(encoding="utf-8")
+KNOWLEDGE = re.search(r'KNOWLEDGE = """(.+?)"""', src, re.DOTALL).group(1)
+TROUBLE_FLOW = re.search(r'TROUBLE_FLOW = """(.+?)"""', src, re.DOTALL).group(1)
+
+
+def get_bot_response(question: str) -> str:
+    prompt = f"""You are a support assistant for JollyCast (ジョリーキャスト), helping Filipino cast members in Japan.
+Always respond in English. Be concise and action-oriented — cast members are often mid-service.
+Number steps clearly. Always end with CaSy support number if urgent: 050-3183-8835.
+
+KNOWLEDGE BASE:
+{KNOWLEDGE}
+
+TROUBLE FLOW:
+{TROUBLE_FLOW}
+
+QUESTION: {question}"""
+    msg = client.messages.create(
+        model="claude-sonnet-4-6",
+        max_tokens=600,
+        messages=[{"role": "user", "content": prompt}]
+    )
+    return msg.content[0].text
+
+
+def evaluate_response(question: str, response: str, category: str) -> tuple[str, str]:
+    # カテゴリごとの追加コンテキスト
+    cat_context = {
+        "Recoru・勤怠管理": """
+Key facts about JollyCast Recoru usage:
+- Casts do NOT manually clock in or out (no daily check-in/check-out required)
+- Shifts are pre-registered in Recoru by CaSy staff
+- Casts only use Recoru to apply for: 遅刻 (late arrival), 早退 (early leave), 欠勤 (absence)
+- Planned vacations use Google Form only — CaSy staff updates Recoru (casts don't touch Recoru for planned leave)
+- Questions about "forgetting to log attendance" or "entering wrong check-in time" have false premises""",
+        "自治体バウチャー": """
+Key facts about municipal vouchers (自治体バウチャー):
+- Supported wards: 墨田区, 葛飾区, 台東区, 豊島区 (others not supported)
+- Paper vouchers: customer fills in details, hands to cast at end of service; cast keeps it and submits to CaSy HQ
+- Digital vouchers (QR): cast scans QR code in the JollyCast app during or after service
+- If voucher is expired: cannot accept it, customer must pay by regular method
+- Lost voucher: immediately report to HQ via inquiry form (050-3183-8835)
+- Cast cannot accept partial payments (voucher + cash) unless CaSy confirms it's allowed
+- Cast does NOT sign or stamp vouchers themselves""",
+        "キャンセル詳細": """
+Key facts about JollyCast cancellation policy:
+- Cast cancellation limit: 3 times per quarter (3ヶ月に3回まで) before disciplinary action
+- Same-day cast cancellation: cast MUST contact customer directly first, then submit form, then apply in Recoru
+- Customer cancellation with less than 24h notice: cast receives 50% compensation (補償あり)
+- Customer cancellation 24h+ before: no compensation for cast
+- "At-door" cancellation (customer not home): cast waits 10 min, contacts via app chat, calls HQ
+- Verbal notice of cancellation is NOT valid — must go through proper channels""",
+        "不衛生・退出判断": """
+Key facts about unsanitary/unsafe conditions exit:
+- Two types: Type A (can clean and continue), Type B (must exit immediately)
+- Type B conditions: cockroach infestation, severe feces/urine odor, aggressive animals, hoarding blocking movement, visible pest infestation
+- Exit procedure: 1) Politely explain cannot continue, 2) Leave service, 3) Report to HQ immediately via inquiry form
+- Do NOT argue with customer — just calmly explain and leave
+- Cast gets paid for time already worked before exit""",
+        "料理サービス・返金": """
+Key facts about cooking service:
+- Late arrival thresholds: <30min late = provide 8 dishes (full), 30-90min late = 4 dishes + 50% refund, 90min+ late = cancel + full refund
+- Taste complaints do NOT qualify for refund — quality/taste is subjective
+- Refunds are processed by CaSy HQ, not by cast directly
+- Cast should not promise refunds on their own""",
+    }
+
+    extra = cat_context.get(category, "")
+
+    prompt = f"""You are evaluating a support bot response for JollyCast cast members working for CaSy in Japan.
+JollyCast is CaSy's employed cast program — CaSy support number (050-3183-8835) is correct and appropriate.
+{extra}
+
+Evaluation criteria:
+◎ = Accurate, specific, immediately actionable
+○ = Mostly correct but missing some details
+△ = Partially correct but could mislead or missing key steps
+✕ = Wrong, irrelevant, or unable to answer
+
+QUESTION: {question}
+
+BOT RESPONSE:
+{response}
+
+Reply in this exact format (2 lines only):
+RATING: [◎ or ○ or △ or ✕]
+COMMENT: [1-2 sentences in Japanese explaining the rating]"""
+    msg = client.messages.create(
+        model="claude-sonnet-4-6",
+        max_tokens=200,
+        messages=[{"role": "user", "content": prompt}]
+    )
+    text = msg.content[0].text.strip()
+    rating, comment = "", ""
+    for line in text.splitlines():
+        if line.startswith("RATING:"):
+            rating = line.replace("RATING:", "").strip()
+        elif line.startswith("COMMENT:"):
+            comment = line.replace("COMMENT:", "").strip()
+    return rating, comment
+
+
+def style_header(ws, headers, color="2E4057"):
+    thin = Side(style="thin", color="CCCCCC")
+    border = Border(left=thin, right=thin, top=thin, bottom=thin)
+    ws.append(headers)
+    for col in range(1, len(headers) + 1):
+        cell = ws.cell(row=1, column=col)
+        cell.fill = PatternFill("solid", start_color=color, end_color=color)
+        cell.font = Font(name="Arial", bold=True, color="FFFFFF", size=10)
+        cell.alignment = Alignment(horizontal="center", vertical="center", wrap_text=True)
+        cell.border = border
+    ws.row_dimensions[1].height = 30
+
+
+def apply_row_style(ws, row_idx, cat, rating, num_cols):
+    category_colors = {
+        "お客様不在": "DDEEFF", "物損・事故": "FFE4E4", "キャンセル": "FFF3CD",
+        "道に迷う・住所": "E4FFE4", "鍵・入室トラブル": "F0E4FF", "スケジュール変更": "FFE4F0",
+        "QR・バウチャー": "E4FFFF", "サービス後・移動": "FFFAE4", "安全・緊急事態": "FFE8E8",
+        "アプリ操作・報告": "E8F4FF", "その他ルール・マナー": "F0FFE8",
+        "不衛生・退出判断": "FFE4CC", "自治体バウチャー": "CCF0FF", "Recoru・勤怠管理": "E8E8FF",
+        "キャンセル詳細": "FFF0E0", "体調不良・突発欠勤": "EEFFEE", "料理サービス・返金": "FFF0F8",
+    }
+    rating_colors = {"◎": "D4EDDA", "○": "D1ECF1", "△": "FFF3CD", "✕": "F8D7DA"}
+    thin = Side(style="thin", color="CCCCCC")
+    border = Border(left=thin, right=thin, top=thin, bottom=thin)
+    cat_color = category_colors.get(cat, "FFFFFF")
+    r_color = rating_colors.get(rating, "FFFFFF")
+    for col in range(1, num_cols + 1):
+        cell = ws.cell(row=row_idx, column=col)
+        fill_color = r_color if col == 6 else cat_color
+        cell.fill = PatternFill("solid", start_color=fill_color, end_color=fill_color)
+        cell.font = Font(name="Arial", size=9)
+        cell.border = border
+        cell.alignment = Alignment(vertical="top", wrap_text=True)
+    ws.cell(row=row_idx, column=1).alignment = Alignment(horizontal="center", vertical="top")
+    if num_cols >= 6:
+        ws.cell(row=row_idx, column=6).alignment = Alignment(horizontal="center", vertical="top")
+    ws.row_dimensions[row_idx].height = 80
+
+
+def set_col_widths(ws, widths):
+    for col, width in enumerate(widths, 1):
+        ws.column_dimensions[get_column_letter(col)].width = width
+
+
+def main():
+    questions_file = base / "jollycast_bot_test_questions.xlsx"
+    results_file = base / "jollycast_bot_test_results_v2.xlsx"
+
+    wb_q = load_workbook(questions_file)
+    ws_q = wb_q.active
+    all_rows = []
+    for row in ws_q.iter_rows(min_row=2, values_only=True):
+        num, cat, q_en = row[0], row[1], row[2]
+        q_ja = row[3] if len(row) > 3 else ""
+        if num and q_en:
+            all_rows.append((int(num), cat, q_en, q_ja or ""))
+
+    # Q1-Q150 全問
+    all_rows.sort(key=lambda x: x[0])
+    print(f"テスト対象: {len(all_rows)}問 (Q1-Q150)")
+
+    wb = load_workbook(results_file)
+
+    for sheet_name in ["Round7（150問フル）", "Round7カテゴリ別"]:
+        if sheet_name in wb.sheetnames:
+            del wb[sheet_name]
+
+    ws7 = wb.create_sheet("Round7（150問フル）")
+    headers = ["#", "カテゴリ", "質問（English）", "質問（日本語）", "ボットの回答", "AI評価", "AI評価コメント", "担当者評価", "担当者コメント"]
+    style_header(ws7, headers)
+    set_col_widths(ws7, [4, 20, 40, 30, 50, 8, 35, 10, 30])
+    ws7.freeze_panes = "A2"
+
+    total = len(all_rows)
+    all_ratings = []
+
+    for i, (num, cat, q_en, q_ja) in enumerate(all_rows, 1):
+        label = f"[{i}/{total}] Q{num}"
+        print(f"{label}: {q_en[:55]}...", flush=True)
+        response = get_bot_response(q_en)
+        time.sleep(0.3)
+        rating, comment = evaluate_response(q_en, response, cat or "")
+        time.sleep(0.3)
+        mark = {"◎": "◎", "○": "○", "△": "△", "✕": "✕"}.get(rating, rating)
+        print(f"  -> {mark}", flush=True)
+        all_ratings.append((cat, rating))
+        ws7.append([num, cat, q_en, q_ja, response, rating, comment, "", ""])
+        apply_row_style(ws7, ws7.max_row, cat or "", rating, len(headers))
+        wb.save(results_file)
+
+    # カテゴリ別サマリー
+    ws_cat = wb.create_sheet("Round7カテゴリ別")
+    cat_headers = ["カテゴリ", "◎", "○", "△", "✕", "合計", "良評価率(◎+○)"]
+    style_header(ws_cat, cat_headers, "1A3A5C")
+    set_col_widths(ws_cat, [22, 8, 8, 8, 8, 8, 16])
+
+    cat_ratings = defaultdict(list)
+    for cat, rating in all_ratings:
+        cat_ratings[cat or "未分類"].append(rating)
+
+    thin = Side(style="thin", color="CCCCCC")
+    border = Border(left=thin, right=thin, top=thin, bottom=thin)
+
+    print(f"\n=== Round7 カテゴリ別サマリー ===")
+    for cat in sorted(cat_ratings.keys()):
+        cnt = Counter(cat_ratings[cat])
+        total_cat = sum(cnt.values())
+        good = cnt.get("◎", 0) + cnt.get("○", 0)
+        good_rate = f"{round(good/total_cat*100, 1)}%" if total_cat else "0%"
+        print(f"  {cat}: ◎{cnt.get('◎',0)} ○{cnt.get('○',0)} △{cnt.get('△',0)} ✕{cnt.get('✕',0)} -> {good_rate}")
+        ws_cat.append([cat, cnt.get("◎", 0), cnt.get("○", 0), cnt.get("△", 0), cnt.get("✕", 0), total_cat, good_rate])
+        row_idx = ws_cat.max_row
+        for col in range(1, 8):
+            cell = ws_cat.cell(row=row_idx, column=col)
+            cell.font = Font(name="Arial", size=10)
+            cell.alignment = Alignment(horizontal="center", vertical="center")
+            cell.border = border
+        ws_cat.row_dimensions[row_idx].height = 22
+
+    r7_count = Counter(r for _, r in all_ratings)
+    total_all = sum(r7_count.values())
+    good_all = r7_count.get("◎", 0) + r7_count.get("○", 0)
+    good_rate_all = f"{round(good_all/total_all*100, 1)}%" if total_all else "0%"
+    ws_cat.append(["【合計】", r7_count.get("◎", 0), r7_count.get("○", 0), r7_count.get("△", 0), r7_count.get("✕", 0), total_all, good_rate_all])
+    row_idx = ws_cat.max_row
+    for col in range(1, 8):
+        cell = ws_cat.cell(row=row_idx, column=col)
+        cell.fill = PatternFill("solid", start_color="DDDDDD", end_color="DDDDDD")
+        cell.font = Font(name="Arial", size=10, bold=True)
+        cell.alignment = Alignment(horizontal="center", vertical="center")
+        cell.border = border
+    ws_cat.row_dimensions[row_idx].height = 25
+
+    wb.save(results_file)
+
+    print(f"\n=== 全体 {total_all}問 ===")
+    print(f"◎:{r7_count.get('◎',0)} ○:{r7_count.get('○',0)} △:{r7_count.get('△',0)} ✕:{r7_count.get('✕',0)}")
+    print(f"良評価率: {good_rate_all}")
+    print(f"\nExcel保存完了: {results_file}")
+
+
+if __name__ == "__main__":
+    main()
