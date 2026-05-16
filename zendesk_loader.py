@@ -19,13 +19,17 @@ CACHE = Path(__file__).parent / "zendesk_cache.json"
 
 
 def _get_auth_header() -> dict:
+    """Returns Authorization header (API token) or Cookie header, whichever is set."""
     email = os.getenv("ZENDESK_EMAIL", "")
     token = os.getenv("ZENDESK_API_TOKEN", "")
-    if not email or not token:
-        return {}
-    credentials = f"{email}/token:{token}"
-    encoded = base64.b64encode(credentials.encode()).decode()
-    return {"Authorization": f"Basic {encoded}"}
+    if email and token:
+        credentials = f"{email}/token:{token}"
+        encoded = base64.b64encode(credentials.encode()).decode()
+        return {"Authorization": f"Basic {encoded}"}
+    cookie = os.getenv("ZENDESK_SESSION_COOKIE", "")
+    if cookie:
+        return {"Cookie": f"_zendesk_session={cookie}"}
+    return {}
 
 
 def _fetch_api(url: str) -> dict | None:
@@ -59,12 +63,15 @@ def build_knowledge_base(force_refresh: bool = False) -> list[dict]:
 
     email = os.getenv("ZENDESK_EMAIL", "")
     token = os.getenv("ZENDESK_API_TOKEN", "")
+    cookie = os.getenv("ZENDESK_SESSION_COOKIE", "")
 
-    if not email or not token:
+    if not (email and token) and not cookie:
         print(
-            "WARNING: ZENDESK_EMAIL / ZENDESK_API_TOKEN not set in .env.\n"
-            "  Cannot refresh Zendesk cache. Using existing cache if available.\n"
-            "  To enable: add credentials to .env and restart."
+            "WARNING: No Zendesk credentials in .env.\n"
+            "  Set either:\n"
+            "    ZENDESK_EMAIL + ZENDESK_API_TOKEN  (permanent, recommended)\n"
+            "    ZENDESK_SESSION_COOKIE             (temporary, browser cookie)\n"
+            "  Using existing cache if available."
         )
         if CACHE.exists():
             return json.loads(CACHE.read_text(encoding="utf-8"))
