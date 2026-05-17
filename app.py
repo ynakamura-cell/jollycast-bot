@@ -309,6 +309,29 @@ Say: "I have completed all 8 dishes as promised. Thank you — I will be leaving
 Q: Customer asks you to do extra cooking or cleaning since "you have time left"
 → Politely decline: "I'm sorry, this package plan is specifically for preparing the 8 set dishes. I'm not able to provide additional cooking or cleaning under this plan."
 
+=== CLEANING SERVICE — LATE ARRIVAL (遅刻) ===
+Source: CaSy Zendesk — サービスに遅刻した、予定より早く退出した
+
+STEP 1 — Apologize sincerely to the customer.
+
+STEP 2 — Ask if the end time can be pushed back (後ろ倒し):
+"I'm very sorry for being late. Would it be possible to push the end time back so I can provide the full service?"
+- If YES (customer agrees to extend): provide the full service as booked. Thank the customer for their flexibility.
+- If NO (customer has plans and cannot extend end time): proceed to Step 3.
+
+STEP 3 — If end time cannot be extended:
+Do your best until the ORIGINAL scheduled end time. Re-confirm priorities with the customer and focus on the most important areas.
+
+PENALTY (applies to the cast — deducted from pay):
+- Time not provided (rounded up to 15-minute units) → pay deducted
+- Fixed penalty: 500 yen deducted
+- Example: 2-hour service, arrived 10 min late, customer cannot extend → pay for 1h45m (rounded up) minus 500 yen
+⚠️ JollyCast has NO substitute cast — do NOT offer to send a replacement.
+
+REPORT: After service → inquiry form (問い合わせフォーム)
+- お問い合わせ内容: 9: トラブルが起きた
+- トラブルの内容: サービスに遅刻した
+
 === COOKING SERVICE — LATE ARRIVAL (遅刻) ===
 Source: CaSy Zendesk — パッケージ料理サービス遅刻時の対応
 Service time is NEVER extended at the end to compensate for late arrival.
@@ -793,15 +816,20 @@ IMPORTANT: In ALL cases, clearly inform the customer upfront that a 2-cast fee w
 === SCHEDULE CHANGES (日程変更) ===
 Source: CaSy Zendesk — お客様から日程変更をお願いされたが応じられない
 
-CUSTOMER REQUESTS RESCHEDULE:
-- Before 2 days 18:00: Cast cannot accommodate → offer customer 2 options:
-  ① Find a different/substitute cast (only possible if no key deposit arrangement)
-  ② Cancel the service (free cancellation)
-- After 2 days 18:00: Cancellation policy applies. Customer should either proceed as scheduled or cancel (full cancellation fee).
-- Cast MAY choose to accommodate the change as a goodwill gesture (optional, cast's decision only).
-  WARNING: If cast accepts the change and customer then cancels before 2-day deadline → treated as FREE cancellation (cast receives NO pay).
+CUSTOMER REQUESTS RESCHEDULE (date or time change):
+⛔ JollyCast casts CANNOT agree to any schedule change on their own.
+- JollyCast casts are employed staff — their schedule is managed by the company.
+- Do NOT agree to "come earlier next time" or any other date/time change directly with the customer.
+- Other services are already booked in the alternative time slots; changes are not possible.
+- Tell the customer: "I'm sorry, I'm unable to change the schedule on my own. Please contact CaSy via the app to request a change."
+  → For a one-time date/time change: customer contacts CaSy via app.
+  → For a permanent recurring service time change: cancel entire recurring service + re-book. See PERMANENT DAY/TIME CHANGE below.
 
-JOLLYCAST-SPECIFIC NOTE: JollyCast casts CANNOT offer to reschedule to another date — other services are already booked for alternative time slots. Rescheduling is not possible. The service will be cancelled.
+NOTE on the "goodwill gesture" option: This is available for FREELANCE CaSy casts only — NOT for JollyCast casts. Do NOT apply this to JollyCast situations.
+
+IF the customer cannot reschedule and wants to cancel:
+- Before 2 days 18:00: free cancellation → guide customer to cancel through the app; no substitute cast (JollyCast-specific)
+- After 2 days 18:00: cancellation fee applies; customer should proceed as scheduled or cancel with fee.
 
 CAST requests own schedule change (taking time off / 休暇):
 - If the cast wants to take a PLANNED day off next month → follow the PLANNED VACATION procedure (Google Form):
