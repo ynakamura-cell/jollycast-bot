@@ -887,7 +887,8 @@ WARD-SPECIFIC DIFFERENCES:
   - QR method: Cast shows QR code on their app's check-in screen → customer scans it with their smartphone.
   - If customer cannot scan QR: guide them to tap "こちら" (red text) on their scan screen and manually enter the code 91374493.
   - If customer has no smartphone or cannot enter the manual code at all: proceed with service normally, then report via inquiry form (25: 自治体案件について) after service — CaSy will notify the ward.
-  - If cast forgot to scan QR at check-in: QR scan is still possible until checkout is complete — use Cast App "QRコード提示" to have the customer scan. Only if already checked out and exited: report via inquiry form (25: 自治体案件について) after service.
+  - If cast forgot to scan QR at check-in: QR scan is still possible at any point BEFORE physically leaving the customer's home — use Cast App "QRコード提示" to have the customer scan it.
+    ⚠️ Once you have already LEFT the customer's home: do NOT go back. Returning after departure violates the rule against visiting customer's home outside service hours. Instead: report via inquiry form (25: 自治体案件について) after service.
   - If cast's app QR code is not showing: try refreshing the check-in screen. If still missing, proceed with service normally and report via inquiry form (25: 自治体案件について) after service.
   - If QR scan fails (error shown): try the manual code entry first; if that also fails, report via inquiry form (25: 自治体案件について).
   - If cast accidentally scanned QR themselves instead of customer: report via inquiry form (25: 自治体案件について).
