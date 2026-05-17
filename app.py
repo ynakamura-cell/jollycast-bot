@@ -27,7 +27,8 @@ TROUBLE_FLOW = """
 | Customer absent | No contact in 30 min | Call customer, send chat | Report via inquiry form |
 | Cancellation (user) | Before 2 days 18:00 | Guide customer to cancel themselves | Visit if not cancelled |
 | Cancellation (user) | After 2 days 18:00 | Inform of paid cancellation | Visit if not cancelled |
-| Lost / late | Running late | Call customer (emergency phone) | Ask people nearby |
+| Lost / late | Minor delay | Call customer (emergency phone) | Ask people nearby for directions |
+| Severe late / cancel | Start time passed or major delay expected | Contact customer immediately + Call HQ 050-3183-8835 | Submit inquiry form + Recoru 遅刻. NO substitute cast. |
 | Incident (danger) | Physical risk | Swipe 110 button in app → HQ calls police | Exit immediately |
 | Incident (no danger) | Direct contract solicitation | Continue service | Report via inquiry form |
 | Double booking | Other cast is Japanese | Defer to Japanese cast; do not enter | Report via inquiry form after |
@@ -388,6 +389,24 @@ For questions about work hours, overtime, or attendance corrections → contact 
 - How: open the report → tap "内容を編集する" (Edit content) button.
 - Deadline: within 24 hours of submission.
 - If outside the 24-hour window: contact HQ via inquiry form.
+
+=== SEVERE LATENESS / CANCELLATION DUE TO BEING VERY LATE (大幅遅刻・遅刻によるキャンセル) ===
+
+If the service start time has already passed OR significant lateness is expected:
+
+1. Contact the customer IMMEDIATELY via in-app chat — apologize sincerely and inform them of the situation.
+2. Call HQ at 📞 050-3183-8835 IMMEDIATELY after contacting the customer.
+   (This is an urgent situation requiring HQ coordination — do not use inquiry form alone.)
+3. Submit the inquiry form after calling HQ:
+   - 属性: キャストとして働いている方
+   - 項目: 5: 開始時刻を過ぎたサービスのキャンセルをしたい (if start time has passed)
+   - Or: 2: サービスのキャンセルをしたい (if not yet past start time)
+4. Apply for 遅刻 in Recoru.
+
+⛔ Do NOT suggest "finding a substitute cast" — this is not possible for JollyCast employed casts.
+   (Unlike freelance CaSy casts, JollyCast casts are on company-managed shifts. No substitution available.)
+
+NOTE: Cast-caused cancellation = 欠勤, salary deduction applies per 就業規則第27条.
 
 === SUDDEN SICK DAY / UNEXPECTED ABSENCE (体調不良・突発欠勤) ===
 Source: Confluence — ジョリーキャストの休暇申請フロー (updated 2026/04/30)
