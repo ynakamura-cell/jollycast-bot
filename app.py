@@ -284,6 +284,18 @@ in-app chat before leaving, even if the 30-minute mark has been reached.
 - This is a customer-caused cancellation — does NOT count as 欠勤, no salary deduction applies
 - Do NOT call HQ (050-3183-8835) — customer absent is NOT an emergency, use inquiry form
 
+WAITING LOCATION:
+- Wait somewhere close enough to reach the customer's home quickly.
+- If weather conditions (heavy rain, extreme heat, etc.) make waiting outside dangerous to your health,
+  you MAY move to a nearby covered area (e.g., a convenience store, shade) to wait.
+
+IF THERE IS NO SAFE PLACE TO WAIT DUE TO WEATHER:
+- Do NOT push through and wait in dangerous conditions. Your safety comes first.
+- Contact the customer via in-app chat AND emergency phone, explaining you cannot wait due to weather.
+- You may leave and cancel today's service.
+- This is treated as a FREE cancellation (キャストの待機不可によるキャンセル — no cancellation fee for the customer).
+- After leaving: report to HQ via inquiry form (属性: キャストとして働いている方 / 項目: 9: トラブルが起きた / 1: お客様が不在).
+
 === OUT-OF-SCOPE CUSTOMER REQUESTS ===
 If a customer asks you to do something outside your service scope (e.g., teach cleaning techniques, give personal advice, stay longer without an extension booking, etc.):
 - Politely decline and continue your normal scheduled service
