@@ -355,7 +355,8 @@ IF CUSTOMER SAYS "YOU CAN FINISH EARLY / SHORTEN THE SERVICE":
    → End the service and leave.
    → Report BOTH: (a) daily report (日報), AND (b) inquiry form (select: 9: トラブルが起きた)
 3. Do NOT leave early without first telling the customer the fee does not change.
-   (Leaving early without this explanation = cast-caused early departure = penalty applies.)
+   (Leaving early without this explanation = cast-caused early departure = subject to consequences per 就業規則.)
+   ⚠️ The freelance penalty structure (time deduction + 500 yen) does NOT apply to JollyCast employees.
 
 FOR COOKING SERVICE — customer requests to shorten the end time:
 → See COOKING SERVICE — LATE ARRIVAL section. Apply the same dish-count rules based on time lost.
@@ -645,9 +646,13 @@ IF YOU HAVE NO AFTERNOON SERVICES (or schedule is cancelled):
 - Basically go to the CaSy office. Do NOT go home unless HQ specifically tells you to.
 - If unsure what to do: contact HQ via inquiry form or 050-3183-8835.
 
-IF A SERVICE ENDS EARLIER THAN SCHEDULED:
-- You may leave once the service is complete. Do not wait at the customer's home until the original end time.
-- Do not wait at any office for the remaining time.
+IF A CLEANING SERVICE FINISHES PLANNED AREAS BEFORE THE END TIME:
+⚠️ Do NOT leave early on your own. Time remaining = your responsibility.
+- Proactively propose additional cleaning tasks: "I have finished the planned areas. Is there anything else you'd like me to clean?"
+- Keep cleaning until the scheduled end time.
+- You may only leave early if the customer EXPLICITLY says to finish early → follow the SERVICE SHORTENING procedure (inform them the fee does not change first).
+
+FOR COOKING SERVICE: When all 8 dishes are completed, you may leave immediately (see COOKING SERVICE — PACKAGE PLAN section).
 
 BETWEEN TWO SERVICES (gap time):
 - You may use the gap time freely (rest, eat, use a café, etc.) MINUS travel time to the next service.
@@ -1147,10 +1152,26 @@ EFFECTIVE CLEANING TECHNIQUE:
 - Always work top to bottom, inside (far from entrance) to outside (toward entrance).
 
 === NOT APPLICABLE TO JOLLYCAST (フリープラン・業務委託向け機能) ===
-JollyCast cast members are EMPLOYEES (雇用). The following features/services exist in CaSy but do NOT apply to JollyCast:
-- 報酬前払いサービス (advance salary payment) — for freelance cast only
-- 買物代行 (shopping proxy option) — for free-plan cooking service only; JollyCast provides package-plan cooking only
-- 特別報酬制度 (special incentive bonus system) — for freelance cast only
+JollyCast cast members are EMPLOYEES (雇用). The following rules/features exist in CaSy for FREELANCE (業務委託) casts but do NOT apply to JollyCast employees:
+
+SERVICE RULES (not applicable to JollyCast):
+- 後ろ倒し (pushing back end time when late) — JollyCast cannot extend service end time under any circumstances
+- 代理キャスト (substitute cast) — JollyCast has no substitute; service is cancelled if cast cannot attend
+- スケジュール自己変更 (cast self-managing own schedule changes) — JollyCast schedule is managed by the company
+- 時間延長 (on-site time extension at customer request) — JollyCast cannot extend service on-site
+- 「善意での対応」goodwill gesture rescheduling — freelance cast option only; JollyCast cannot agree to changes independently
+
+PENALTY / DISCIPLINARY (freelance-only structures that do NOT apply to JollyCast):
+- 時間控除 + 違約金500円 (time deduction + 500 yen penalty for late arrival / early departure) — freelance only
+- 1,000円/回 cancellation penalty — freelance only
+- 診断書提出でペナルティ免除 (medical certificate waiving cancellation penalty) — freelance only
+- Contract termination process — JollyCast uses 就業規則 (employment rules / 懲戒) instead
+
+FEATURES / OPTIONS (not available for JollyCast):
+- 報酬前払いサービス (advance salary payment) — freelance cast only
+- 買物代行 (shopping proxy option) — free-plan cooking service only; JollyCast provides package-plan cooking only
+- 特別報酬制度 (special incentive bonus system) — freelance cast only
+- フリープラン料理 (free-plan cooking) — JollyCast uses package plan only
 - 確定申告・インボイス (tax filing, invoice system) — for freelance (業務委託) cast only; JollyCast are employees and CaSy handles withholding
 - キャストセッション / CACACAコミュニティ — freelance cast community platform, not used by JollyCast
 
