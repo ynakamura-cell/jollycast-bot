@@ -2,14 +2,18 @@
 JollyCast Bot 150問フルテスト
 Q1-Q150 全問テスト — 現在のKNOWLEDGEによる通算評価
 Excel: jollycast_bot_test_results_v2.xlsx に "Round7（150問フル）" タブを追加
+
+コスト設計:
+- Bot回答: claude-sonnet-4-6 / systemプロンプトキャッシュ → ~$0.012/問
+- Evaluator: claude-haiku-3-5 / systemプロンプトキャッシュ / Zendesk不使用 → ~$0.002/問
+- 150問合計目安: $2〜3
 """
-import os, time, sys, re, json
+import os, time, sys, re
 from pathlib import Path
 from collections import Counter, defaultdict
 from openpyxl import load_workbook
 from openpyxl.styles import Font, PatternFill, Alignment, Border, Side
 from openpyxl.utils import get_column_letter
-from zendesk_loader import search_articles
 
 sys.stdout.reconfigure(encoding="utf-8", errors="replace")
 
@@ -31,80 +35,72 @@ src = (base / "app.py").read_text(encoding="utf-8")
 KNOWLEDGE = re.search(r'KNOWLEDGE = """(.+?)"""', src, re.DOTALL).group(1)
 TROUBLE_FLOW = re.search(r'TROUBLE_FLOW = """(.+?)"""', src, re.DOTALL).group(1)
 
-cache_path = base / "zendesk_cache.json"
-articles = json.loads(cache_path.read_text(encoding="utf-8")) if cache_path.exists() else []
-print(f"Zendesk記事: {len(articles)}件読み込み")
-
 # カテゴリ分類
 TYPE_B_CATEGORIES: set[str] = set()
 GTN_CATEGORIES: set[str] = {"GTN・送金", "GTN・銀行", "GTN・携帯"}
 
-
-def get_bot_response(question: str) -> str:
-    prompt = f"""You are a support assistant for JollyCast (ジョリーキャスト), helping Filipino cast members in Japan.
+# --- システムプロンプト（キャッシュ対象）---
+BOT_SYSTEM = f"""You are a support assistant for JollyCast (ジョリーキャスト), helping Filipino cast members in Japan.
 CRITICAL RULES:
 1. Answer ONLY from the KNOWLEDGE BASE and TROUBLE FLOW provided below.
 2. Do NOT use general knowledge or invent procedures not written in these materials.
 3. If not covered: for emergencies (safety, serious damage mid-service) call HQ 📞 050-3183-8835; for non-urgent issues direct to the inquiry form (Cast App → 問い合わせフォーム).
 4. Always respond in English. Be concise. Number steps clearly.
 
-KNOWLEDGE BASE:
+=== KNOWLEDGE BASE ===
 {KNOWLEDGE}
 
-TROUBLE FLOW:
-{TROUBLE_FLOW}
+=== TROUBLE FLOW ===
+{TROUBLE_FLOW}"""
 
-QUESTION: {question}"""
+EVAL_SYSTEM = f"""You are evaluating a support bot response for JollyCast cast members (CaSy, Japan).
+CaSy support number 050-3183-8835 is correct and appropriate to include for emergencies.
+
+=== REFERENCE SOURCES (bot's ground truth) ===
+{KNOWLEDGE}
+
+{TROUBLE_FLOW}"""
+
+
+def get_bot_response(question: str) -> str:
+    """KNOWLEDGE+TROUBLE_FLOWをsystemにキャッシュしてbot回答を生成。"""
     msg = client.messages.create(
         model="claude-sonnet-4-6",
         max_tokens=600,
-        messages=[{"role": "user", "content": prompt}]
+        system=[{"type": "text", "text": BOT_SYSTEM, "cache_control": {"type": "ephemeral"}}],
+        messages=[{"role": "user", "content": question}],
     )
     return msg.content[0].text
 
 
-def _eval_sources(question: str) -> str:
-    """評価者ソース: KNOWLEDGE + TROUBLE_FLOW + Zendesk関連記事上位5件"""
-    hits = search_articles(question, articles, top_k=5)
-    zendesk_excerpt = "\n\n".join(
-        f"=== {a['title']} ===\n{a['content'][:2000]}" for a in hits
-    )
-    return (
-        f"=== KNOWLEDGE BASE ===\n{KNOWLEDGE}\n\n"
-        f"=== TROUBLE FLOW ===\n{TROUBLE_FLOW}\n\n"
-        f"=== ZENDESK (top 5 relevant articles) ===\n{zendesk_excerpt}"
-    )
-
-
-def evaluate_response(question: str, response: str, category: str, sources: str) -> tuple[str, str]:
+def evaluate_response(question: str, response: str, category: str) -> tuple[str, str]:
+    """claude-haiku-3-5でコスト効率よく評価。Zendesk不使用。"""
     if category in GTN_CATEGORIES:
         type_instruction = (
             "This is a life-admin question (banking, housing, SIM, etc.).\n"
             "CORRECT answer: direct the cast to GTN via their app.\n"
             "Answering with specific procedures = WRONG. HQ escalation = WRONG."
         )
-        source_section = ""
+        source_note = ""
     elif category in TYPE_B_CATEGORIES:
         type_instruction = (
             "This is a TYPE B general knowledge question (navigation, common sense, etc.).\n"
             "Evaluate whether the answer is practically correct and helpful.\n"
             "HQ escalation is NOT the expected answer for these questions."
         )
-        source_section = ""
+        source_note = ""
     else:
         type_instruction = (
             "This is a TYPE A business procedure question.\n"
-            "The REFERENCE SOURCES below are the bot's ground truth.\n"
+            "Use the REFERENCE SOURCES in your system prompt as ground truth.\n"
             "Penalize: (1) answers that invent procedures not in the sources,\n"
             "(2) unnecessary HQ phone calls when the answer IS clearly in the sources."
         )
-        source_section = f"\n=== REFERENCE SOURCES ===\n{sources}\n"
+        source_note = "(See REFERENCE SOURCES above for ground truth.)"
 
-    prompt = f"""You are evaluating a support bot response for JollyCast cast members (CaSy, Japan).
-CaSy support number 050-3183-8835 is correct and appropriate to include for emergencies.
+    prompt = f"""{type_instruction}
+{source_note}
 
-{type_instruction}
-{source_section}
 ◎ = Accurate, specific, immediately actionable
 ○ = Mostly correct, minor gaps
 △ = Partially correct, could mislead
@@ -118,10 +114,12 @@ BOT RESPONSE:
 Reply in this exact format (2 lines only):
 RATING: [◎/○/△/✕]
 COMMENT: [1-2 sentences in Japanese]"""
+
     msg = client.messages.create(
-        model="claude-sonnet-4-6",
+        model="claude-haiku-3-5",
         max_tokens=200,
-        messages=[{"role": "user", "content": prompt}]
+        system=[{"type": "text", "text": EVAL_SYSTEM, "cache_control": {"type": "ephemeral"}}],
+        messages=[{"role": "user", "content": prompt}],
     )
     text = msg.content[0].text.strip()
     rating, comment = "", ""
@@ -215,8 +213,7 @@ def main():
         print(f"{label}: {q_en[:55]}...", flush=True)
         response = get_bot_response(q_en)
         time.sleep(0.3)
-        sources = _eval_sources(q_en)
-        rating, comment = evaluate_response(q_en, response, cat or "", sources)
+        rating, comment = evaluate_response(q_en, response, cat or "")
         time.sleep(0.3)
         mark = {"◎": "◎", "○": "○", "△": "△", "✕": "✕"}.get(rating, rating)
         print(f"  -> {mark}", flush=True)
