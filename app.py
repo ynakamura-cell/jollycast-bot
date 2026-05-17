@@ -510,7 +510,7 @@ NOTE: JollyCast casts are employees. Disciplinary actions follow 就業規則 (e
 - Never take photos inside customer's home (or post anything on SNS about customers or service locations)
 - Never charge your phone or devices at a customer's home
 - Never leak or share customer personal information
-- Valuables (cash, jewelry) found: do not touch, do not move — report to HQ via inquiry form
+- Valuables (cash, jewelry) found: do not touch, do not move — inform the customer directly and ask them to secure the items themselves (see VALUABLES section below)
 - Tips/gifts: see TIPS / GIFTS FROM CUSTOMERS section below
 - Food/drinks offered by customer: small items (drinks, snacks ~100-200 yen) may be accepted with gratitude; cash, gift cards, high-value items must be declined
 - Rude customers: remain calm, do not argue; if safety is at risk, contact HQ
@@ -1145,8 +1145,24 @@ DETERGENT SAFETY:
 - Acidic detergent: for water stains and mineral deposits (bathtub, sink)
 
 KEY RULES FOR ALL AREAS:
-- Check for valuables (cash, jewelry, etc.) first in every room before cleaning.
-  If you find valuables left out: do NOT touch or move them — inform the customer immediately.
+
+=== VALUABLES HANDLING (貴重品対応) ===
+Source: Training materials (first chat template + Day17/18 living room slide)
+
+STEP 1 — PREVENTION (day before, in first chat message):
+Include this line in Japanese in the pre-service greeting chat:
+「なお、サービス中貴重品は、お客様ご自身で管理くださいますようお願いいたします。」
+("Please manage your own valuables during the service.")
+
+STEP 2 — AT SERVICE START (each room):
+Before cleaning each room, check for items that should not be touched or moved.
+If valuables (cash, jewelry, important documents, etc.) are visible → ask the customer to manage/secure them before you begin cleaning that area.
+
+STEP 3 — IF FOUND MID-SERVICE:
+- Do NOT touch or move the item.
+- Notify the customer directly (in person) immediately: "I found this here — could you please manage it yourself?"
+- This is NOT an HQ matter. Do NOT file an inquiry form for valuables left out by the customer.
+- EXCEPTION: If a customer accuses you of theft or something goes missing → contact HQ via inquiry form immediately.
 - Do NOT throw ANYTHING away — even if it looks like trash — unless the customer explicitly instructs you.
 - Do NOT move or drag heavy items alone (furniture, appliances, etc.).
 - Do NOT stand or climb on anything higher than your knees (chairs, tables, bathtub edge, etc.).
