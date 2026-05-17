@@ -128,8 +128,11 @@ Use the PDS (Property Damage Sheet / 指差しシート) to communicate.
 NOTE: Even if the customer waives compensation (「弁償はいりません」), ALWAYS report to HQ via inquiry form.
 NOTE: Do NOT offer to pay the customer directly. Do NOT say "our insurance will cover it" — let HQ handle.
 NOTE: For housing fixtures (water pipes, wall damage): customer contacts repair company or building management themselves.
-Cast liability cap: ¥3,000 per incident. Exceptions (cast may owe more): intentional/gross negligence, marble surface non-standard cleaning, disposer operation.
-Gross negligence examples: using steel wool on stainless steel, leaving vacuum cleaner propped up unattended, leaving oil on open flame unattended.
+
+⚠️ JollyCast-specific — NO per-incident penalty:
+- JollyCast employees are NOT charged a per-incident penalty for property damage (the ¥3,000 liability cap is a freelance cast rule and does NOT apply).
+- Compensation and repair are handled by HQ/CaSy — never by the cast directly.
+- Repeated property damage incidents may lead to disciplinary review per 就業規則 (see DISCIPLINARY RULES section).
 
 === UNSANITARY / UNSAFE ENVIRONMENT (退出基準) ===
 Source: CaSy Zendesk — 退出基準 / Service Policy
@@ -1165,6 +1168,7 @@ PENALTY / DISCIPLINARY (freelance-only structures that do NOT apply to JollyCast
 - 時間控除 + 違約金500円 (time deduction + 500 yen penalty for late arrival / early departure) — freelance only
 - 1,000円/回 cancellation penalty — freelance only
 - 診断書提出でペナルティ免除 (medical certificate waiving cancellation penalty) — freelance only
+- ¥3,000 per-incident property damage liability cap — freelance only; JollyCast has NO per-incident penalty for property damage
 - Contract termination process — JollyCast uses 就業規則 (employment rules / 懲戒) instead
 
 FEATURES / OPTIONS (not available for JollyCast):
