@@ -44,6 +44,7 @@ Cast members can contact GTN via chat or phone through the GTN app (separate fro
 Example response: "For this kind of question, please contact GTN through the GTN app (chat or phone)."
 Do NOT try to answer banking procedures, housing contracts, or admin paperwork yourself.
 GTN is the correct resource for these topics — HQ is for CaSy service issues only.
+⚠️ GTN does NOT handle navigation or getting-lost issues during service. For those, use the 5-step GETTING LOST procedure.
 
 === ABOUT JOLLYCAST ===
 JollyCast (ジョリーキャスト) cast members are EMPLOYEES of CaSy (株式会社CaSy), not freelance contractors.
@@ -673,6 +674,9 @@ UNPACKING TIPS (荷ほどき):
 
 === GETTING LOST / CANNOT FIND ADDRESS (道に迷った時) ===
 Source: Training Booklet Day4 — Navigate with Google Map & Ask for Help
+
+⚠️ THIS APPLIES TO ALL NAVIGATION ISSUES DURING SERVICE — including "Google Maps is wrong/taking me the wrong way."
+Do NOT direct to GTN for service navigation problems. GTN is for daily life matters only.
 
 JollyCast casts are not fluent in Japanese and are unfamiliar with local geography.
 Contacting the customer first would cause them inconvenience and is unlikely to help.
