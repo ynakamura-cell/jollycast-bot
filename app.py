@@ -91,35 +91,41 @@ HQ CONTACT — 2 PATTERNS (CRITICAL RULE):
 - Include: Service ID, date/time, description of what happened
 
 === PROPERTY DAMAGE REPORTING PROCEDURE ===
+Source: Training Booklet Day22 + Property Damage Sheet (PDS)
 
-CASE A — Life-impacting damage (broken toilet, water leak, major appliance):
-1. Apologize sincerely to customer
-2. Call HQ IMMEDIATELY at 050-3183-8835 during service (do not wait until after)
-3. Take photos of the damage (with customer's permission) — include maker name, model number
-4. Send photo + details to HQ (by email or inquiry form)
-5. Continue service as scheduled (do NOT add extra time — extensions require a CaSy booking)
-6. Write daily report noting "called and reported to support"
+⚠️ DO NOT DECIDE URGENCY YOURSELF — CONFIRM WITH THE CUSTOMER:
+Show the damaged item to the customer and ask whether it disrupts their daily life.
+Use the PDS (Property Damage Sheet / 指差しシート) to communicate.
+- Urgent = damage that disrupts daily life (broken toilet, water leak, essential appliance, etc.)
+- Non-urgent = does not disrupt daily life (scratched floor, broken glass, minor item, etc.)
 
-CASE B — Non-life-impacting damage (scratched floor, broken glass, minor item):
-1. Apologize sincerely to customer; tell them you will report to HQ after service
-2. Ask the customer's permission to take photos of the damage — photograph the item/area, including maker name and model number if applicable (required for the report)
-3. Continue service as scheduled
-4. After service: submit inquiry form with PHOTO attached
+9 STEPS — NON-URGENT:
+1. Inform the customer immediately with a sincere apology
+2. Show the customer the damaged property
+3. Ask the customer for permission to take a photo ("写真を撮らせてください" — PDS)
+4. Take a photo (include maker name and model number)
+5. Ask the customer if they want compensation — use PDS: A「弁償してください」/ B「弁償はいりません」
+6. Clean up the damage
+7. Continue service until the scheduled end time
+8. Apologize again before leaving
+9. After service: report via inquiry form + upload photo + write daily report
    - 属性: キャストとして働いている方 / 項目: 9: トラブルが起きた / トラブルの内容: 4: 物損
    - Include: service ID, date/time, customer name, description, maker/model number, photo
-5. Write daily report noting "reported to support via inquiry form"
 
-CASE C — Minor damage, customer waived compensation:
-1. Apologize sincerely; tell customer you will still report to HQ
-2. Ask the customer's permission to take photos of the damage (required for the report even if customer waived compensation)
-3. Continue service as scheduled
-4. After service: submit inquiry form (even if customer said it's OK — always report)
-5. Write daily report noting "reported to support"
+9 STEPS — URGENT:
+1. Inform the customer immediately with a sincere apology
+2. Show the customer the damaged property
+3. Ask the customer for permission to take a photo ("写真を撮らせてください" — PDS)
+4. Take a photo (include maker name and model number)
+5. Call HQ at 📞 050-3183-8835 immediately and explain the situation
+6. Clean up the damage
+7. Continue service until the scheduled end time
+8. Apologize again before leaving
+9. After service: report via inquiry form + upload photo + write daily report
 
-NOTE: PHOTOS ARE REQUIRED IN ALL CASES (A, B, C). Always ask the customer's permission before photographing. Do not skip this step even if the customer says it is fine or waives compensation.
-NOTE: Even if the customer forgives the damage, ALWAYS report to HQ. HQ will follow up with the customer directly.
-NOTE: Do NOT offer to pay the customer directly. Do NOT say "our insurance will cover it" — let HQ handle compensation.
-NOTE: For housing fixtures (water pipes, wall damage): customer should contact repair company or building management themselves.
+NOTE: Even if the customer waives compensation (「弁償はいりません」), ALWAYS report to HQ via inquiry form.
+NOTE: Do NOT offer to pay the customer directly. Do NOT say "our insurance will cover it" — let HQ handle.
+NOTE: For housing fixtures (water pipes, wall damage): customer contacts repair company or building management themselves.
 Cast liability cap: ¥3,000 per incident. Exceptions (cast may owe more): intentional/gross negligence, marble surface non-standard cleaning, disposer operation.
 Gross negligence examples: using steel wool on stainless steel, leaving vacuum cleaner propped up unattended, leaving oil on open flame unattended.
 
@@ -276,6 +282,8 @@ Some customers use a physical key box (combination lock box) outside their home 
 - Note: CaSy does not officially recommend key handover outside of 鍵預かりオプション — if the customer insists on non-standard methods, inform HQ via inquiry form.
 
 === CUSTOMER ABSENT (お客様不在) ===
+⛔ Do NOT enter the building by following someone else in (tailgating) — this is considered TRESPASSING.
+
 PROCEDURE (do these steps IN ORDER during the 30-minute wait):
 1. Ring the doorbell / knock when you arrive
 2. Send a chat message via the in-app chat
