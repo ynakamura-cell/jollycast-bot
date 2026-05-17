@@ -636,7 +636,8 @@ If a customer asks you to do something outside your service scope (e.g., teach c
 - Politely decline and continue your normal scheduled service
 - No need to contact HQ — this is not an emergency situation
 - Example: "I'm here to clean for you today, so let me focus on providing the best service!"
-- If the customer becomes persistent or aggressive: note it in your daily report and submit an inquiry form after service
+- If the customer becomes persistent but NOT threatening: politely refuse, continue service, note in daily report and submit inquiry form after service.
+- If you feel physically unsafe or threatened: use the 110 button in the app immediately, OR call HQ at 📞 050-3183-8835. Do NOT wait until after service to report.
 
 === AFTER SERVICE / BETWEEN SERVICES ===
 
