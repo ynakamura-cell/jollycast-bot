@@ -106,7 +106,8 @@ Use the PDS (Property Damage Sheet / 指差しシート) to communicate.
 2. Show the customer the damaged property
 3. Ask the customer for permission to take a photo ("写真を撮らせてください" — PDS)
 4. Take a photo (include maker name and model number)
-5. Ask the customer if they want compensation — use PDS: A「弁償してください」/ B「弁償はいりません」
+5. Ask the customer if they want compensation — use PDS to show two options:
+   「弁償してください」(Please compensate) / 「弁償はいりません」(No compensation needed)
 6. Clean up the damage
 7. Continue service until the scheduled end time
 8. Apologize again before leaving
@@ -149,7 +150,8 @@ TYPE B — "Safety-concern environment" (安全面に懸念のある環境):
 SEVERE conditions — EXIT IMMEDIATELY without asking customer to fix it first:
   - Pest infestation: cockroaches, rats (any visible infestation)
   - Feces/urine smell or extreme unsanitary conditions
-  - Extreme clutter blocking safe movement
+  - Unsanitary/hoarding (ゴミ屋敷) conditions, or items stacked so high there is a collapse/injury risk
+    (Note: general clutter or many items alone is NOT an exit criterion — organize while cleaning)
   - Cast feeling physically ill due to the environment
   - Broken glass or physical hazards on the floor
   - Drunken customer (posing a risk)
@@ -246,23 +248,27 @@ ADDITIONAL UB (CUSTOMER CONSULTATION) PHRASES — from指差しシート Slide 1
 
 ① Cannot finish all areas in time (時間内に全箇所終わらない):
 Pre: "There are many areas to clean and I may not finish in time. How would you like me to proceed?"
-A: "It doesn't need to be perfect, but please clean everywhere."
-B: "Focus on this area and make it very clean (other areas may not be done)."
+Customer options:
+- "It doesn't need to be perfect, but please clean everywhere."
+- "Focus on this area and make it very clean (other areas may not be done)."
 
 ② Tough stain — may not fully remove (頑固な汚れ):
 Pre: "This stain is severe. I'll do my best, but I may not be able to remove all of it."
-A: "Stop here and clean the other areas."
-B: "Finish this area completely."
+Customer options:
+- "Stop here and clean the other areas."
+- "Finish this area completely."
 
 ④ When to ask questions during service (質問のタイミング確認):
 "If I have questions while you are working, when may I ask you?"
-A: "Anytime is okay."
-B: "Check with me first; I'll come find you once I'm done."
+Customer options:
+- "Anytime is okay."
+- "Check with me first; I'll come find you once I'm done."
 
 ⑤ Toilet slippers — which to use (トイレスリッパの確認):
 "Which slippers should I use when I clean the toilet room?"
-A: "Please use our (customer's) slippers."
-B: "You may use your own slippers."
+Customer options:
+- "Please use our (customer's) slippers."
+- "You may use your own slippers."
 
 === COOKING SERVICE — PACKAGE PLAN OVERVIEW & RULES ===
 Source: CaSy Zendesk — 【重要】お料理サービスに3つのパッケージプランをつくりました
@@ -641,8 +647,8 @@ STEP 1 — Check if the area is permitted:
 
 STEP 2 — If permitted, consult on time using UB phrase ①:
 "There are many areas to clean and I may not finish in time. How would you like me to proceed?"
-- A: "It doesn't need to be perfect, but please clean everywhere." → clean all areas at lower quality
-- B: "Focus on this area and make it very clean (other areas may not be done)." → prioritize key areas
+- "It doesn't need to be perfect, but please clean everywhere." → clean all areas at lower quality
+- "Focus on this area and make it very clean (other areas may not be done)." → prioritize key areas
 
 ⚠️ Service end time CANNOT be extended regardless. Do NOT promise to finish all areas.
 
