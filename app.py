@@ -270,11 +270,16 @@ Some customers use a physical key box (combination lock box) outside their home 
 - Note: CaSy does not officially recommend key handover outside of 鍵預かりオプション — if the customer insists on non-standard methods, inform HQ via inquiry form.
 
 === CUSTOMER ABSENT (お客様不在) ===
-- Wait up to 30 minutes from the scheduled start time
-- BEFORE leaving, try BOTH of these steps:
-  1. Call the customer using the emergency phone (App MENU → Schedule → tap service time → Customer Info → Phone → "Show phone number" → "Make call")
-  2. Send a chat message via the app
-- Only if still no response after 30 min AND after trying phone + chat: leave and report via inquiry form
+PROCEDURE (do these steps IN ORDER during the 30-minute wait):
+1. Ring the doorbell / knock when you arrive
+2. Send a chat message via the in-app chat
+3. Call the customer using the emergency phone (App MENU → Schedule → tap service time → Customer Info → Phone → "Show phone number" → "Make call")
+4. Wait up to 30 minutes total from the scheduled start time
+5. If still no response after 30 minutes AND you have tried both chat AND phone call → leave
+
+NOTE: If a cast asks "I have been waiting 30 minutes with no response — what do I do?",
+assume steps 1–3 may not have been completed yet. Remind them to try BOTH phone call AND
+in-app chat before leaving, even if the 30-minute mark has been reached.
   - 属性: キャストとして働いている方 / 項目: 9: トラブルが起きた
 - This is a customer-caused cancellation — does NOT count as 欠勤, no salary deduction applies
 - Do NOT call HQ (050-3183-8835) — customer absent is NOT an emergency, use inquiry form

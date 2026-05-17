@@ -1,11 +1,14 @@
 """
-JollyCast Bot スポットテスト
-Part A: 20問 KNOWLEDGE方式（修正内容の検証・高速）
-Part B:  5問 全Zendesk方式（新アーキテクチャ検証・低速・150秒間隔）
+JollyCast Bot スポットテスト（2026-05-17 新アーキテクチャ対応）
+Part A: 20問 既存KNOWLEDGEシナリオ検証
+Part B:  8問 新規追加KNOWLEDGEセクション検証（仕上がり不満・引越し・住所相違・パッケージプラン等）
+Part C:  3問 GTN案内検証
 
+全パート共通: KNOWLEDGE + TROUBLE_FLOW のみ（Zendesk不使用）
 Excel: jollycast_bot_test_results_v2.xlsx に以下のタブを追加
-  - Spot-A（KNOWLEDGE検証20問）
-  - Spot-B（Zendesk参照検証5問）
+  - Spot-A（既存KNOWLEDGE20問）
+  - Spot-B（新規KNOWLEDGE8問）
+  - Spot-C（GTN3問）
 """
 import os, time, sys, re, json
 from pathlib import Path
@@ -78,13 +81,18 @@ QUESTIONS_C = [
     ("GTN・携帯", "My phone SIM card is not working. Who should I contact?"),
 ]
 
-# ── Part B: 5問（Zendeskにあり・KNOWLEDGEにない） ────────────
+# ── Part B: 新KNOWLEDGE検証（2026-05-17追記セクション） ────────
 QUESTIONS_B = [
+    # 既存（KNOWLEDGEに追記済みを確認）
     ("自治体バウチャー",   "I'm doing a service in Musashino-shi (武蔵野市). The customer has municipal vouchers. What do I do with them?"),
     ("アプリ操作・報告",   "I made a mistake in my daily report after submitting it. Can I correct it, and how?"),
     ("鍵・入室トラブル",   "The customer has a key box (キーボックス) outside their home. How do I access it and return the key after service?"),
-    ("スケジュール変更",   "The customer wants to extend the service by 30 minutes and says they will pay extra directly. What do I say?"),
-    ("物損・事故",         "I accidentally used the wrong cleaning product on a surface and the customer is worried about damage. What do I do?"),
+    # 新追記セクションの検証
+    ("仕上がり不満",       "After I finished cleaning, the customer said they are not happy with my work. What should I do?"),
+    ("引越しサポート",     "The customer asked me to help them pack boxes because they are moving next week. Can I do this, and are there any restrictions?"),
+    ("住所相違",           "When I arrived, the customer asked me to go to a different address nearby — their friend's apartment. Can I do this?"),
+    ("パッケージプラン",   "The customer is asking me to make the seasoning lighter because their child doesn't like strong flavors. What do I say?"),
+    ("フリープラン混同",   "I heard there is a shopping proxy service (買物代行). Can I use this option for today's cooking service?"),
 ]
 
 # ── カテゴリ分類 ─────────────────────────────────────────────
@@ -131,31 +139,8 @@ QUESTION: {question}"""
 
 
 def get_bot_response_b(question: str) -> str:
-    """Part B: KNOWLEDGE + TROUBLE_FLOW + 全Zendesk記事"""
-    system_text = f"""You are a support assistant for JollyCast (ジョリーキャスト) cast members working in Japan.
-
-CRITICAL RULES — FOLLOW THESE STRICTLY:
-1. Answer ONLY from the KNOWLEDGE BASE, TROUBLE FLOW, and ZENDESK MANUAL provided below.
-2. Do NOT use general knowledge, assumptions, or invent procedures not written in these materials.
-3. If not covered: for emergencies (safety, serious damage mid-service) call HQ 📞 050-3183-8835; for non-urgent issues direct to the inquiry form (Cast App → 問い合わせフォーム).
-4. Always respond in English. Be concise — cast members are often mid-service.
-5. Number steps clearly. Include 050-3183-8835 when the situation is urgent.
-6. When materials conflict, prioritize: KNOWLEDGE BASE > TROUBLE FLOW > ZENDESK MANUAL.
-
-=== KNOWLEDGE BASE ===
-{KNOWLEDGE}
-
-=== TROUBLE FLOW ===
-{TROUBLE_FLOW}
-
-=== ZENDESK MANUAL ({len(articles)} articles) ===
-{ZENDESK_CONTENT}"""
-    return api_call_with_retry(lambda: client.messages.create(
-        model="claude-sonnet-4-6",
-        max_tokens=600,
-        system=[{"type": "text", "text": system_text, "cache_control": {"type": "ephemeral"}}],
-        messages=[{"role": "user", "content": question}]
-    ).content[0].text)
+    """Part B: KNOWLEDGE + TROUBLE_FLOW のみ（新アーキテクチャ・Botと同一）"""
+    return get_bot_response_a(question)
 
 
 def _eval_sources_a() -> str:
@@ -164,16 +149,8 @@ def _eval_sources_a() -> str:
 
 
 def _eval_sources_b(question: str) -> str:
-    """Part B 評価者ソース: KNOWLEDGE + TROUBLE_FLOW + Zendesk関連記事上位5件"""
-    hits = search_articles(question, articles, top_k=5)
-    zendesk_excerpt = "\n\n".join(
-        f"=== {a['title']} ===\n{a['content'][:2000]}" for a in hits
-    )
-    return (
-        f"=== KNOWLEDGE BASE ===\n{KNOWLEDGE}\n\n"
-        f"=== TROUBLE FLOW ===\n{TROUBLE_FLOW}\n\n"
-        f"=== ZENDESK (top 5 relevant articles) ===\n{zendesk_excerpt}"
-    )
+    """Part B 評価者ソース: KNOWLEDGE + TROUBLE_FLOW のみ（新アーキテクチャ）"""
+    return _eval_sources_a()
 
 
 def evaluate_response(question: str, response: str, category: str, sources: str) -> tuple[str, str]:

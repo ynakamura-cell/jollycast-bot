@@ -3,12 +3,13 @@ JollyCast Bot 150問フルテスト
 Q1-Q150 全問テスト — 現在のKNOWLEDGEによる通算評価
 Excel: jollycast_bot_test_results_v2.xlsx に "Round7（150問フル）" タブを追加
 """
-import os, time, sys, re
+import os, time, sys, re, json
 from pathlib import Path
 from collections import Counter, defaultdict
 from openpyxl import load_workbook
 from openpyxl.styles import Font, PatternFill, Alignment, Border, Side
 from openpyxl.utils import get_column_letter
+from zendesk_loader import search_articles
 
 sys.stdout.reconfigure(encoding="utf-8", errors="replace")
 
@@ -30,11 +31,22 @@ src = (base / "app.py").read_text(encoding="utf-8")
 KNOWLEDGE = re.search(r'KNOWLEDGE = """(.+?)"""', src, re.DOTALL).group(1)
 TROUBLE_FLOW = re.search(r'TROUBLE_FLOW = """(.+?)"""', src, re.DOTALL).group(1)
 
+cache_path = base / "zendesk_cache.json"
+articles = json.loads(cache_path.read_text(encoding="utf-8")) if cache_path.exists() else []
+print(f"Zendesk記事: {len(articles)}件読み込み")
+
+# カテゴリ分類
+TYPE_B_CATEGORIES: set[str] = set()
+GTN_CATEGORIES: set[str] = {"GTN・送金", "GTN・銀行", "GTN・携帯"}
+
 
 def get_bot_response(question: str) -> str:
     prompt = f"""You are a support assistant for JollyCast (ジョリーキャスト), helping Filipino cast members in Japan.
-Always respond in English. Be concise and action-oriented — cast members are often mid-service.
-Number steps clearly. Always end with CaSy support number if urgent: 050-3183-8835.
+CRITICAL RULES:
+1. Answer ONLY from the KNOWLEDGE BASE and TROUBLE FLOW provided below.
+2. Do NOT use general knowledge or invent procedures not written in these materials.
+3. If not covered: for emergencies (safety, serious damage mid-service) call HQ 📞 050-3183-8835; for non-urgent issues direct to the inquiry form (Cast App → 問い合わせフォーム).
+4. Always respond in English. Be concise. Number steps clearly.
 
 KNOWLEDGE BASE:
 {KNOWLEDGE}
@@ -51,59 +63,52 @@ QUESTION: {question}"""
     return msg.content[0].text
 
 
-def evaluate_response(question: str, response: str, category: str) -> tuple[str, str]:
-    # カテゴリごとの追加コンテキスト
-    cat_context = {
-        "Recoru・勤怠管理": """
-Key facts about JollyCast Recoru usage:
-- Casts do NOT manually clock in or out (no daily check-in/check-out required)
-- Shifts are pre-registered in Recoru by CaSy staff
-- Casts only use Recoru to apply for: 遅刻 (late arrival), 早退 (early leave), 欠勤 (absence)
-- Planned vacations use Google Form only — CaSy staff updates Recoru (casts don't touch Recoru for planned leave)
-- Questions about "forgetting to log attendance" or "entering wrong check-in time" have false premises""",
-        "自治体バウチャー": """
-Key facts about municipal vouchers (自治体バウチャー):
-- Supported wards: 墨田区, 葛飾区, 台東区, 豊島区 (others not supported)
-- Paper vouchers: customer fills in details, hands to cast at end of service; cast keeps it and submits to CaSy HQ
-- Digital vouchers (QR): cast scans QR code in the JollyCast app during or after service
-- If voucher is expired: cannot accept it, customer must pay by regular method
-- Lost voucher: immediately report to HQ via inquiry form (050-3183-8835)
-- Cast cannot accept partial payments (voucher + cash) unless CaSy confirms it's allowed
-- Cast does NOT sign or stamp vouchers themselves""",
-        "キャンセル詳細": """
-Key facts about JollyCast cancellation policy:
-- Cast cancellation limit: 3 times per quarter (3ヶ月に3回まで) before disciplinary action
-- Same-day cast cancellation: cast MUST contact customer directly first, then submit form, then apply in Recoru
-- Customer cancellation with less than 24h notice: cast receives 50% compensation (補償あり)
-- Customer cancellation 24h+ before: no compensation for cast
-- "At-door" cancellation (customer not home): cast waits 10 min, contacts via app chat, calls HQ
-- Verbal notice of cancellation is NOT valid — must go through proper channels""",
-        "不衛生・退出判断": """
-Key facts about unsanitary/unsafe conditions exit:
-- Two types: Type A (can clean and continue), Type B (must exit immediately)
-- Type B conditions: cockroach infestation, severe feces/urine odor, aggressive animals, hoarding blocking movement, visible pest infestation
-- Exit procedure: 1) Politely explain cannot continue, 2) Leave service, 3) Report to HQ immediately via inquiry form
-- Do NOT argue with customer — just calmly explain and leave
-- Cast gets paid for time already worked before exit""",
-        "料理サービス・返金": """
-Key facts about cooking service:
-- Late arrival thresholds: <30min late = provide 8 dishes (full), 30-90min late = 4 dishes + 50% refund, 90min+ late = cancel + full refund
-- Taste complaints do NOT qualify for refund — quality/taste is subjective
-- Refunds are processed by CaSy HQ, not by cast directly
-- Cast should not promise refunds on their own""",
-    }
+def _eval_sources(question: str) -> str:
+    """評価者ソース: KNOWLEDGE + TROUBLE_FLOW + Zendesk関連記事上位5件"""
+    hits = search_articles(question, articles, top_k=5)
+    zendesk_excerpt = "\n\n".join(
+        f"=== {a['title']} ===\n{a['content'][:2000]}" for a in hits
+    )
+    return (
+        f"=== KNOWLEDGE BASE ===\n{KNOWLEDGE}\n\n"
+        f"=== TROUBLE FLOW ===\n{TROUBLE_FLOW}\n\n"
+        f"=== ZENDESK (top 5 relevant articles) ===\n{zendesk_excerpt}"
+    )
 
-    extra = cat_context.get(category, "")
 
-    prompt = f"""You are evaluating a support bot response for JollyCast cast members working for CaSy in Japan.
-JollyCast is CaSy's employed cast program — CaSy support number (050-3183-8835) is correct and appropriate.
-{extra}
+def evaluate_response(question: str, response: str, category: str, sources: str) -> tuple[str, str]:
+    if category in GTN_CATEGORIES:
+        type_instruction = (
+            "This is a life-admin question (banking, housing, SIM, etc.).\n"
+            "CORRECT answer: direct the cast to GTN via their app.\n"
+            "Answering with specific procedures = WRONG. HQ escalation = WRONG."
+        )
+        source_section = ""
+    elif category in TYPE_B_CATEGORIES:
+        type_instruction = (
+            "This is a TYPE B general knowledge question (navigation, common sense, etc.).\n"
+            "Evaluate whether the answer is practically correct and helpful.\n"
+            "HQ escalation is NOT the expected answer for these questions."
+        )
+        source_section = ""
+    else:
+        type_instruction = (
+            "This is a TYPE A business procedure question.\n"
+            "The REFERENCE SOURCES below are the bot's ground truth.\n"
+            "Penalize: (1) answers that invent procedures not in the sources,\n"
+            "(2) unnecessary HQ phone calls when the answer IS clearly in the sources."
+        )
+        source_section = f"\n=== REFERENCE SOURCES ===\n{sources}\n"
 
-Evaluation criteria:
+    prompt = f"""You are evaluating a support bot response for JollyCast cast members (CaSy, Japan).
+CaSy support number 050-3183-8835 is correct and appropriate to include for emergencies.
+
+{type_instruction}
+{source_section}
 ◎ = Accurate, specific, immediately actionable
-○ = Mostly correct but missing some details
-△ = Partially correct but could mislead or missing key steps
-✕ = Wrong, irrelevant, or unable to answer
+○ = Mostly correct, minor gaps
+△ = Partially correct, could mislead
+✕ = Wrong or unable to answer
 
 QUESTION: {question}
 
@@ -111,8 +116,8 @@ BOT RESPONSE:
 {response}
 
 Reply in this exact format (2 lines only):
-RATING: [◎ or ○ or △ or ✕]
-COMMENT: [1-2 sentences in Japanese explaining the rating]"""
+RATING: [◎/○/△/✕]
+COMMENT: [1-2 sentences in Japanese]"""
     msg = client.messages.create(
         model="claude-sonnet-4-6",
         max_tokens=200,
@@ -210,7 +215,8 @@ def main():
         print(f"{label}: {q_en[:55]}...", flush=True)
         response = get_bot_response(q_en)
         time.sleep(0.3)
-        rating, comment = evaluate_response(q_en, response, cat or "")
+        sources = _eval_sources(q_en)
+        rating, comment = evaluate_response(q_en, response, cat or "", sources)
         time.sleep(0.3)
         mark = {"◎": "◎", "○": "○", "△": "△", "✕": "✕"}.get(rating, rating)
         print(f"  -> {mark}", flush=True)
