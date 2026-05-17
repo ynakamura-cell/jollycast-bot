@@ -709,6 +709,27 @@ STEP 4 — Call the customer using the emergency phone in the app
 STEP 5 — Contact CaSy trainer / HQ
 - If still stuck after steps 1–4: contact HQ via inquiry form or trainer directly
 
+VARIATION — CANNOT FIND THE ROOM INSIDE THE BUILDING (部屋番号がわからない・ドアに番号がない):
+Source: Training Booklet Day9 — Arrive at the Correct Building
+Follow the same 4-step order — ask people in the building BEFORE contacting the customer:
+
+STEP 1 — Confirm by yourself
+- Re-check the app booking: apartment name, floor, room number
+- Check the intercom panel or mailboxes near the entrance — room numbers / names are usually listed
+- Confirm you are in the correct building (large complexes may have multiple buildings: 1号棟, 2号棟, etc.)
+
+STEP 2 — Ask the building receptionist or people nearby
+  "Sumimasen, tasukete kudasai. [ROOM#]-kai ni ikitai desu. Dono erebeetaa wo tsukaeba ii desu ka?"
+  すみません、たすけてください。＃かいに行きたいです。どのエレベーターを、つかえばいいですか？
+  "Excuse me, please help me. I want to go to floor #. Which elevator should I use?"
+
+STEP 3 — Send a chat message to the customer
+  Ask via in-app chat: "I have arrived at the building. Could you tell me which floor and room number?"
+  (Chat before calling — less disruptive to the customer)
+
+STEP 4 — Call the customer using the emergency phone in the app
+- Only if chat does not resolve it
+
 === SERVICE ADDRESS MISMATCH (住所が違う時) ===
 Source: CaSy Zendesk — サービスを実施する住所が違う時
 
