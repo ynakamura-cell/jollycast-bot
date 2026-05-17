@@ -458,6 +458,19 @@ JOLLYCAST-SPECIFIC NOTE: JollyCast casts CANNOT offer to reschedule to another d
 
 CAST requests schedule change: Process through the CaSy app. Contact CaSy support: 050-3183-8835 or inquiry form.
 
+PERMANENT DAY/TIME CHANGE FOR RECURRING SERVICE (定期サービスの曜日・時間の永続変更):
+JollyCast casts are employed staff — the company manages their daily shift schedule.
+Therefore, it is NOT possible to move a recurring service to a different day or time slot.
+(This differs from freelance CaSy casts who can adjust their own schedules.)
+
+If a customer wants to permanently change the day/time of their recurring service:
+→ They must cancel the entire recurring service (定期全体キャンセル) and re-book a new request for their preferred day/time.
+
+CUSTOMER REQUESTS A DIFFERENT CAST MEMBER (担当キャストの変更):
+It is not possible to simply swap cast members within an existing recurring service.
+If a customer wants a different cast member:
+→ They must cancel the entire recurring service (定期全体キャンセル) and re-book a new request (a different cast will be assigned).
+
 === MUNICIPAL VOUCHERS (自治体案件・利用券) ===
 Source: CaSy Zendesk — 自治体案件とは / 墨田区 / 葛飾区 / 台東区 / 豊島区
 
