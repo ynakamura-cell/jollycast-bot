@@ -339,6 +339,97 @@ IMPORTANT on refunds:
 - Customer wants FULL refund for completed service: do not agree on the spot — tell them HQ will contact them.
 - NEVER handle money or refunds directly with the customer.
 
+=== COOKING SERVICE — BURNED FOOD ===
+Source: 指差しシート 料理 Layout 6 (Trouble/Incident)
+
+If you burn food during service:
+1. Apologize immediately: "I'm sorry, I burned the food."
+2. Tell the customer: "HQ will contact you regarding this."
+3. Do NOT attempt to redo the dish on your own.
+4. Report via inquiry form after service (select: 9: トラブルが起きた).
+
+=== COOKING SERVICE — ALLERGY HANDLING ===
+Source: 指差しシート 料理 Layout 5 (Allergy/Ingredient Check)
+
+STEP 1 — ALLERGY CONFIRMATION (at the START of service):
+Ask: "Do you have any allergies?"
+- YES → Cancel the service immediately. Tell customer: "HQ will contact you." Do NOT cook. Report via inquiry form.
+- NO → Proceed to Step 2.
+
+STEP 2 — CONFIRM PACKAGE:
+Confirm with customer: Are we doing Package A, B, or C?
+
+STEP 3 — INGREDIENT CHECK:
+Check all required ingredients and seasonings together with the customer.
+- If an ingredient is MISSING: "There are some dishes I can't make. I will skip this dish."
+- If a SEASONING is missing: "I can cook up to before the seasoning step. Please add the seasoning yourself."
+
+STEP 4 — ALLERGY RE-CONFIRMATION:
+Before cooking, re-confirm once more: "Are you sure there are no allergies to the ingredients we have confirmed?"
+
+=== COOKING SERVICE — PRE-SERVICE MEETING CHECKLIST (打ち合わせシート) ===
+Source: 指差しシート 料理 Layouts 7/11/12 (打ち合わせシート)
+
+At the START of every cooking service, go through this 16-item checklist with the customer:
+
+1. ✅ Allergy confirmation (アレルギー) → Ask "Do you have any food allergies?"
+2. ✅ Package confirmation (パッケージ) → Confirm Package A, B, or C
+3. ✅ Ingredients location (食材の場所) → "Where are the ingredients?"
+4. ✅ Seasonings location (調味料の場所) → "Where are the seasonings?"
+5. ✅ Tools location (道具の場所) → "Where are the cooking tools (pots, pans, knives, etc.)?"
+6. ✅ Cloth types — confirm 3 types:
+   - Dish cloth (食器用)
+   - Counter/surface cloth (台拭き)
+   - Floor cloth (床拭き)
+7. ✅ Cutting boards — confirm 2 types:
+   - Vegetable board (野菜用)
+   - Meat/fish board (肉・魚用)
+8. ✅ Food storage method (保存方法) → "How should I store the completed dishes?" (fridge, containers, etc.)
+9. ✅ Cleaning sponge (スポンジ) → "Which sponge should I use?"
+10. ✅ Water usage (水) → "May I use water freely during cooking?"
+11. ✅ Disposer (ディスポーザー) → "Is there a garbage disposer? May I use it?" (Many buildings prohibit disposer use)
+12. ✅ Stove/ignition method (コンロの点火) → "Please show me how to ignite the stove."
+13. ✅ Ventilation fan (換気扇) → "Please show me how to operate the ventilation fan."
+14. ✅ Microwave (電子レンジ) → "Please show me how to use the microwave."
+15. ✅ Oven (オーブン) → "Please show me how to use the oven." (if needed for recipe)
+16. ✅ Water heater (給湯器) → "Please show me how to turn on the hot water."
+After checklist: confirm trash disposal method (ゴミの捨て方).
+
+=== COOKING SERVICE — LATE ARRIVAL COMMUNICATION SCRIPTS (コミュニケーションシート) ===
+Source: 指差しシート 料理 Layouts 1/2/3/4
+
+These are the EXACT scripts to use with the customer when you arrive late.
+
+コミュニケーションシート① — LESS THAN 30 MINUTES LATE:
+Say to customer: "I will prepare all 8 dishes as planned."
+(No refund. Proceed with normal service.)
+
+コミュニケーションシート② — 30 TO UNDER 90 MINUTES LATE:
+Say to customer: "I will prepare 4 dishes, which is half of the standard number, and 50% of the fee will be refunded. Which would you prefer, the 4 dishes from option ① or the 4 dishes from option ②? Please choose."
+(HQ will process the 50% refund. Cast does NOT handle money.)
+
+コミュニケーションシート③ — 90 MINUTES OR MORE LATE:
+Say to customer: "In accordance with our policy, today's service will be treated as a free cancellation and a full refund will be issued. I have come here because I wanted to apologize to you in person first and foremost. HQ will contact you again."
+(Full refund. Service is cancelled. Report via inquiry form.)
+
+=== COOKING SERVICE — PACKAGE DISH MENUS ===
+Source: 指差しシート 料理 Layouts 8/9/10
+
+PACKAGE A (8 dishes):
+主菜: ガリバタ鮭ムニエル / 甘辛ジューシー照り焼きチキン / 味しみ豚バラ大根
+副菜: 4 side dishes (set by CaSy instructors)
+汁もの: 三種の野菜コンソメスープ
+
+PACKAGE B (8 dishes):
+主菜: パリパリ食感のカレー春巻き / 鶏レンコンの粒マスタード炒め / 大きめそぼろの炒り豆腐
+副菜: 4 side dishes (set by CaSy instructors)
+汁もの: たっぷり具だくさん豚汁
+
+PACKAGE C (8 dishes):
+主菜: 和風仕立てのめかじきキノコあん / 鶏ももと卵のじっくり煮込み / シャキシャキ筍のチンジャオロース
+副菜: 4 side dishes (set by CaSy instructors)
+汁もの: ふんわり卵の豆腐スープ
+
 === LAUNDRY SERVICE ===
 Source: Training Booklet Day19 Part 2 (Slides 51-52) — LCS (Laundry Check Sheet)
 
