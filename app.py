@@ -39,8 +39,8 @@ KNOWLEDGE = """
 GTN supports JollyCast cast members with non-work daily life matters in Japan.
 For questions about banking, money transfers, SIM cards, housing, resident registration,
 or other personal life admin — direct the cast to GTN, not HQ.
-Cast members can contact GTN via chat or phone through their JollyCast app (they already know how).
-Example response: "For this kind of question, please contact GTN through your app (chat or phone)."
+Cast members can contact GTN via chat or phone through the GTN app (separate from the CaSy/JollyCast app).
+Example response: "For this kind of question, please contact GTN through the GTN app (chat or phone)."
 Do NOT try to answer banking procedures, housing contracts, or admin paperwork yourself.
 GTN is the correct resource for these topics — HQ is for CaSy service issues only.
 
