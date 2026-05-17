@@ -631,8 +631,24 @@ WITHOUT the customer's explicit permission risks 住居侵入罪 (unlawful entry
 ❓ IF UNCERTAIN OR UNABLE TO REACH CUSTOMER:
 → Call HQ immediately at 📞 050-3183-8835. Do not enter on your own judgment.
 
+=== CUSTOMER REQUESTS ADDITIONAL CLEANING AREAS (予定外エリアの追加) ===
+If a customer asks you to clean areas not originally included in the plan:
+
+STEP 1 — Check if the area is permitted:
+- Permitted: any indoor area not prohibited by safety rules
+- NOT permitted (decline): outdoor work in summer heat, work above knee height (chairs/tables/bathtub edge), bathtub apron removal, areas requiring prohibited tools
+  → For prohibited areas: use CG phrase ① or explain the safety rule. Decline politely.
+
+STEP 2 — If permitted, consult on time using UB phrase ①:
+"There are many areas to clean and I may not finish in time. How would you like me to proceed?"
+- A: "It doesn't need to be perfect, but please clean everywhere." → clean all areas at lower quality
+- B: "Focus on this area and make it very clean (other areas may not be done)." → prioritize key areas
+
+⚠️ Service end time CANNOT be extended regardless. Do NOT promise to finish all areas.
+
 === OUT-OF-SCOPE CUSTOMER REQUESTS ===
-If a customer asks you to do something outside your service scope (e.g., teach cleaning techniques, give personal advice, stay longer without an extension booking, etc.):
+If a customer asks you to do something outside your service scope (e.g., teach cleaning techniques, give personal advice, shopping, childcare without booking, etc.):
+NOTE: Requests to clean additional areas are NOT out-of-scope — see CUSTOMER REQUESTS ADDITIONAL CLEANING AREAS section above.
 - Politely decline and continue your normal scheduled service
 - No need to contact HQ — this is not an emergency situation
 - Example: "I'm here to clean for you today, so let me focus on providing the best service!"
