@@ -189,21 +189,77 @@ ADDITIONAL IC (IRREGULAR CASE) PHRASES — from指差しシート Slide 3:
 "Due to the weather conditions, allow me to clean indoors please."
 (悪天候のため、屋外での作業ができません。)
 
+⑤ Customer behavior during service (サービス中の行為制止):
+"Please refrain from doing this during the service time."
+(サービス中はお控えください。)
+(Use when customer is doing something that interferes with safe/proper service delivery.)
+
 ⑦ Time extension refusal (時間延長拒否):
 "I sincerely apologize, but I'm unable to extend the time as I have another scheduled service."
 (次のサービスの予定があるため、時間を延長することができません。)
 NOTE: When declining a time extension, state the company rule directly. Do NOT use excuses like "I have another appointment" — use this phrase only when there genuinely IS another service scheduled. For the general rule, see AFTER SERVICE / BETWEEN SERVICES section.
 
-ADDITIONAL CG (COMMUNICATION GUIDE) PHRASES — from指差しシート Slide 2 (Pre-service):
+ADDITIONAL CG (COMMUNICATION GUIDE) PHRASES — from指差しシート Slide 2:
 
+PRE-SERVICE:
 ① Service scope exceeded (ハウスクリーニングレベルの作業):
 "This is out of the scope of our service. You will need to call housekeeping."
 
 ② Disassembly required — ask customer (取り外しはお客様に依頼):
 "If the customer can take this apart, I can clean the parts."
 
+③ Warm water request (給湯器の操作依頼):
+"I'd like to use warm water. Could you turn that on for me please?"
+
+④ Detergent selection (使用洗剤の確認):
+"Please let me use this detergent."
+
+⑤ Cleaning tool instruction (掃除道具の使い方):
+"Please show me how to use this cleaning tool."
+
+⑥ Floor cleaning method (床の清掃方法確認):
+"How would you like the floor to be cleaned? (e.g., vacuum, wet cloth, korokoro, etc.)"
+
+⑦ Storage location (片付け場所確認):
+"Where should I put this?"
+
+⑧ Removal method (取り外し方の確認):
+"Please teach me how to remove this."
+
 ⑨ Prohibited tools (傷のリスクがある道具の使用禁止):
 "There is a chance of damage if we use this tool, so it is prohibited by CaSy."
+
+⑩ Small trash bag request (小さいゴミ袋の依頼):
+"Please give me a small trash bag (for burnable trash)."
+
+POST-SERVICE:
+⑩ Uncompleted area (終わらなかった箇所の説明):
+"This is where you were concerned about. I'm very sorry, I couldn't clean it all, but I was able to clean this part and this part."
+
+⑪ Stubborn stain — cannot remove fully (落としきれない汚れ):
+"I tried but it wouldn't come off any further. Please contact housekeeping."
+
+ADDITIONAL UB (CUSTOMER CONSULTATION) PHRASES — from指差しシート Slide 1:
+
+① Cannot finish all areas in time (時間内に全箇所終わらない):
+Pre: "There are many areas to clean and I may not finish in time. How would you like me to proceed?"
+A: "It doesn't need to be perfect, but please clean everywhere."
+B: "Focus on this area and make it very clean (other areas may not be done)."
+
+② Tough stain — may not fully remove (頑固な汚れ):
+Pre: "This stain is severe. I'll do my best, but I may not be able to remove all of it."
+A: "Stop here and clean the other areas."
+B: "Finish this area completely."
+
+④ When to ask questions during service (質問のタイミング確認):
+"If I have questions while you are working, when may I ask you?"
+A: "Anytime is okay."
+B: "Check with me first; I'll come find you once I'm done."
+
+⑤ Toilet slippers — which to use (トイレスリッパの確認):
+"Which slippers should I use when I clean the toilet room?"
+A: "Please use our (customer's) slippers."
+B: "You may use your own slippers."
 
 === COOKING SERVICE — PACKAGE PLAN OVERVIEW & RULES ===
 Source: CaSy Zendesk — 【重要】お料理サービスに3つのパッケージプランをつくりました
@@ -388,13 +444,13 @@ DAILY REPORT: Submit within 24 hours.
 
 SPOT SERVICE ONLY: If it was a one-time (spot) service, you may also say: "ていきサービスをたんとうさせてください。" ("I would like to be in charge of your regular service.")
 
-=== KEY BOX (キーボックス) ACCESS ===
-Some customers use a physical key box (combination lock box) outside their home instead of the official 鍵預かりオプション.
-- Before service: the customer should have provided the combination/code in advance via in-app chat.
-- If you cannot open the box or don't have the code: contact the customer via emergency phone or in-app chat immediately.
-- After service: return the key to the box and make sure it is locked.
-- If any issue (lost key, broken box, etc.): report via inquiry form after service.
-- Note: CaSy does not officially recommend key handover outside of 鍵預かりオプション — if the customer insists on non-standard methods, inform HQ via inquiry form.
+=== KEY DEPOSIT — NOT AVAILABLE FOR JOLLYCAST (鍵預かりオプション) ===
+⛔ JollyCast does NOT provide 鍵預かりオプション (key deposit option).
+- ALL JollyCast services require the customer to be HOME during service.
+- JollyCast casts do NOT take or hold customer keys under any circumstances.
+- If a customer asks about leaving a key or using key deposit: explain that 鍵預かりオプション is not available for JollyCast, and that they must be present during service.
+- If a customer has informally set up a key box (combination lock box): this is NOT a standard JollyCast arrangement. Do not use it without HQ guidance. Contact HQ via inquiry form immediately if this situation arises.
+- If cast finds themselves locked out (customer left home unexpectedly mid-service): contact customer via emergency phone immediately, then call HQ at 📞 050-3183-8835 if no response.
 
 === CUSTOMER ABSENT (お客様不在) ===
 ⛔ Do NOT enter the building by following someone else in (tailgating) — this is considered TRESPASSING.
@@ -850,6 +906,12 @@ STEP 3 — Send a chat message to the customer
 STEP 4 — Call the customer using the emergency phone in the app
 - Only if chat does not resolve it
 
+IF CUSTOMER DOES NOT RESPOND (to both chat AND phone call, while you are already in the building):
+⚠️ This does NOT automatically mean the customer is ABSENT — they may be home but not hearing.
+⚠️ Do NOT apply the 30-minute absent procedure. Do NOT leave after 30 minutes.
+→ Call HQ immediately at 📞 050-3183-8835 and explain the situation.
+HQ will contact the customer or provide further guidance.
+
 === SERVICE ADDRESS MISMATCH (住所が違う時) ===
 Source: CaSy Zendesk — サービスを実施する住所が違う時
 
@@ -864,6 +926,83 @@ Also: if a customer's address is missing the apartment name or room number:
 TIMING AND ACTION:
 - Before 前々日18:00: Cancel the current service and ask the customer to re-book with the correct address.
 - After 前々日18:00: A paid cancellation applies. Inform the customer. Cast WILL be paid.
+
+=== CHILDCARE SUPPORT SERVICE (育児支援サービス / Day24) ===
+Source: Training Booklet Day24 — 指差しシート Slide 6 (Childcare Support)
+
+JollyCast provides Childcare Support Services in addition to cleaning/cooking.
+Three types of childcare support:
+① 赤ちゃんの沐浴サポート — Supporting parents when bathing their newborn
+② 上のお子様の見守り — Watching over the older child during service
+③ 健診・予防接種等へのお出かけ随行 — Accompanying children to health checkups/vaccinations
+
+CRITICAL RULE — CAST DOES NOT TOUCH CHILDREN:
+- The cast's role is to SUPPORT the care that parents provide. The cast does NOT directly care for children.
+- The cast does NOT touch children under any circumstances.
+- Exception: If a child is about to engage in dangerous behavior (e.g., choking hazard), cast will intervene to stop it — but will NOT soothe or hold the child.
+- Even if a child cries during safety intervention, the cast will NOT attempt to soothe them.
+
+TYPE ① — BABY BATHING SUPPORT:
+- The CUSTOMER does the bathing. Cast only assists by preparing clothes, bath towels, etc.
+- Phrases:
+  "My role is to support the care that you provide for your child. I will not touch the children."
+  "Please let me know if you need any changes of clothes or bath towels for the baby."
+
+TYPE ② — CHILD WATCHING:
+- Cast monitors the child and stops dangerous behavior.
+- Cast does NOT perform any other tasks (cleaning etc.) while watching a child.
+- Phrases:
+  "To prevent accidents, I will stop children from engaging in dangerous behavior."
+  "I will not attempt to soothe children even if they cry."
+  "While I am supervising children, I will not be performing any other duties."
+
+TYPE ③ — ACCOMPANYING TO OUTINGS (health checkups, vaccinations, etc.):
+- Cast assists with carrying baggage and opening doors.
+- Transportation costs (round-trip) are paid by the CUSTOMER separately.
+- If the cast cannot return to the customer's home by the service end time: service ends wherever the cast is at end time. Cast proceeds to next service. Customer is still charged for transportation costs up to that point.
+
+CUSTOMER MUST BE HOME: Childcare support services require the customer to be present.
+
+=== CLEANING — SAFETY RULES & KEY POINTS (Day17/18) ===
+Source: Training Booklet Day17-18
+
+DETERGENT SAFETY:
+- NEVER mix detergents marked 【危険】 (danger) — chemical reaction risk. This is an absolute rule.
+- Neutral detergent (中性洗剤) is safe and works for most areas.
+- Alkaline detergent: for grease and oil (kitchen)
+- Acidic detergent: for water stains and mineral deposits (bathtub, sink)
+
+KEY RULES FOR ALL AREAS:
+- Check for valuables (cash, jewelry, etc.) first in every room before cleaning.
+  If you find valuables left out: do NOT touch or move them — inform the customer immediately.
+- Do NOT throw ANYTHING away — even if it looks like trash — unless the customer explicitly instructs you.
+- Do NOT move or drag heavy items alone (furniture, appliances, etc.).
+- Do NOT stand or climb on anything higher than your knees (chairs, tables, bathtub edge, etc.).
+- Do NOT wipe the TV screen unless the customer specifically asks you to.
+- Indoor slippers: use only inside. Do NOT use bathroom slippers elsewhere. Do NOT use your own shoes outside.
+
+TOILET CLEANING:
+- Cloths used for the toilet must NEVER be used anywhere else in the house.
+- Do NOT vacuum inside the toilet room.
+- Before finishing: fold the toilet paper and hand towel into a "V" shape.
+- Ask whether you can use the customer's toilet slippers or if you should use your own.
+
+BATHTUB CLEANING:
+- Do NOT climb on the bathtub edge to clean the ceiling or high walls.
+- Ask the customer to show you how to remove the drain (drain styles vary).
+- Removing the bathtub apron (バスタブエプロン) is OUT OF SCOPE — decline if asked.
+- If water stains are severely hardened: explain to the customer it cannot be fully removed.
+
+KITCHEN CLEANING:
+- Do NOT touch, clean, or operate the garbage disposal (ディスポーザー).
+- Use warm water first to loosen oil, then apply alkaline detergent.
+- Ask the customer how to turn on the hot water before cleaning.
+
+EFFECTIVE CLEANING TECHNIQUE:
+- Wring cloth horizontally (not vertically).
+- Fold rags into square shape (not scrunched into a ball).
+- Divide large areas into sections; wipe in a "コ" (backward C) pattern.
+- Always work top to bottom, inside (far from entrance) to outside (toward entrance).
 
 === NOT APPLICABLE TO JOLLYCAST (フリープラン・業務委託向け機能) ===
 JollyCast cast members are EMPLOYEES (雇用). The following features/services exist in CaSy but do NOT apply to JollyCast:

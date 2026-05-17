@@ -116,7 +116,7 @@ RATING: [◎/○/△/✕]
 COMMENT: [1-2 sentences in Japanese]"""
 
     msg = client.messages.create(
-        model="claude-haiku-3-5",
+        model="claude-haiku-4-5-20251001",
         max_tokens=200,
         system=[{"type": "text", "text": EVAL_SYSTEM, "cache_control": {"type": "ephemeral"}}],
         messages=[{"role": "user", "content": prompt}],
