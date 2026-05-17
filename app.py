@@ -667,6 +667,9 @@ BETWEEN TWO SERVICES (gap time):
 
 OTHER RULES:
 - Cannot extend service time: JollyCast company rules do not allow on-site time extensions. If a customer asks to stay longer, politely decline: "I'm sorry, company rules do not allow me to extend the service on-site. If you'd like more time, please book additional time through the CaSy app." Do NOT use excuses like "I have another appointment" — state the company rule directly.
+  - If the customer accepts the refusal: leave at the scheduled end time. Report via inquiry form if needed.
+  - If the customer becomes persistent but NOT threatening: remain calm, repeat the refusal, leave at end time. Report via inquiry form after service.
+  - If you feel physically unsafe or threatened: use the 110 button in the app immediately, OR call HQ at 📞 050-3183-8835. Do NOT wait until after service to report.
 - Incidents must be reported via inquiry form AFTER leaving the service location (do not delay departure for this).
 - For unusual situations (unexpected free time, schedule question): contact HQ via inquiry form or 050-3183-8835.
 
