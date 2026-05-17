@@ -102,18 +102,21 @@ CASE A — Life-impacting damage (broken toilet, water leak, major appliance):
 
 CASE B — Non-life-impacting damage (scratched floor, broken glass, minor item):
 1. Apologize sincerely to customer; tell them you will report to HQ after service
-2. Continue service as scheduled
-3. After service: submit inquiry form with PHOTO attached
+2. Ask the customer's permission to take photos of the damage — photograph the item/area, including maker name and model number if applicable (required for the report)
+3. Continue service as scheduled
+4. After service: submit inquiry form with PHOTO attached
    - 属性: キャストとして働いている方 / 項目: 9: トラブルが起きた / トラブルの内容: 4: 物損
    - Include: service ID, date/time, customer name, description, maker/model number, photo
-4. Write daily report noting "reported to support via inquiry form"
+5. Write daily report noting "reported to support via inquiry form"
 
 CASE C — Minor damage, customer waived compensation:
 1. Apologize sincerely; tell customer you will still report to HQ
-2. Continue service as scheduled
-3. After service: submit inquiry form (even if customer said it's OK — always report)
-4. Write daily report noting "reported to support"
+2. Ask the customer's permission to take photos of the damage (required for the report even if customer waived compensation)
+3. Continue service as scheduled
+4. After service: submit inquiry form (even if customer said it's OK — always report)
+5. Write daily report noting "reported to support"
 
+NOTE: PHOTOS ARE REQUIRED IN ALL CASES (A, B, C). Always ask the customer's permission before photographing. Do not skip this step even if the customer says it is fine or waives compensation.
 NOTE: Even if the customer forgives the damage, ALWAYS report to HQ. HQ will follow up with the customer directly.
 NOTE: Do NOT offer to pay the customer directly. Do NOT say "our insurance will cover it" — let HQ handle compensation.
 NOTE: For housing fixtures (water pipes, wall damage): customer should contact repair company or building management themselves.
