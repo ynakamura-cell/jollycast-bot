@@ -161,6 +161,54 @@ SPECIAL CASES (where asking for a fix first makes sense before exiting):
 
 IMPORTANT: Customer-caused exit (unsanitary/unsafe conditions) does NOT count as cast 欠勤. No Recoru application or salary deduction applies in these cases.
 
+=== COOKING SERVICE — PACKAGE PLAN OVERVIEW & RULES ===
+Source: CaSy Zendesk — 【重要】お料理サービスに3つのパッケージプランをつくりました
+
+JollyCast provides ONLY the package-plan cooking service (not the free-plan / フリープラン).
+
+WHAT THE PACKAGE PLAN IS:
+- Fixed menu of 8 dishes: 主菜3品 (main dishes) + 副菜4品 (side dishes) + 汁もの1品 (soup) = 8 total
+- 3 plan options: Package A, B, or C (each has its own set of 8 dishes)
+- Ingredients and seasonings are prepared by the customer, NOT the cast
+- Serves 4 people (4名分)
+- Recipes are fixed by CaSy instructors — casts prepare in advance; no menu discussion with customer needed
+
+REQUIREMENTS:
+- Customer must have AT LEAST 2 gas/IH burners (コンロ2口以上). If only 1 burner: service cannot be provided.
+- Customer must be HOME during service (no key deposit option for package plan).
+
+OPTIONS NOT AVAILABLE WITH PACKAGE PLAN:
+- 買物代行 (shopping proxy) — NOT available
+- 鍵預かりオプション (key deposit) — NOT available
+
+⛔ STRICT RULES — NEVER deviate from the recipe:
+Menu changes and flavor adjustments are PROHIBITED. This is treated as a "serious incident."
+- Disciplinary: 3 violations in 3 months → 厳重注意 + suspended from package plan
+- 4th violation or more → banned from ALL cooking services (including package plan)
+
+HANDLING COMMON SITUATIONS:
+
+Q: Customer asks to change flavor ("make it less salty", "make it sweeter")
+→ Politely decline: "I'm sorry, the seasoning is fixed for this package to ensure consistent quality. I'm unable to adjust the flavor."
+
+Q: Customer asks to change a specific dish or substitute an ingredient
+→ Decline: "This package provides a set of 8 dishes with a fixed menu. I'm unable to make changes to the ingredients or dishes."
+
+Q: A required ingredient is missing when you arrive
+→ Do NOT substitute. Skip that dish.
+Say: "I'm sorry, the required ingredient is missing, so I will not be able to prepare this dish today."
+
+Q: Basic seasonings (e.g., soy sauce, sugar) are insufficient
+→ Complete all cooking steps up to the point of seasoning. Ask customer to finish the seasoning.
+Say: "I'm sorry, the seasoning is insufficient. I will prepare everything up to this point, and could you please add the final seasoning yourself?"
+
+Q: You finish all 8 dishes before the scheduled end time
+→ Exit immediately after completing the dishes. Do NOT offer additional cooking or cleaning.
+Say: "I have completed all 8 dishes as promised. Thank you — I will be leaving now."
+
+Q: Customer asks you to do extra cooking or cleaning since "you have time left"
+→ Politely decline: "I'm sorry, this package plan is specifically for preparing the 8 set dishes. I'm not able to provide additional cooking or cleaning under this plan."
+
 === COOKING SERVICE — LATE ARRIVAL (遅刻) ===
 Source: CaSy Zendesk — パッケージ料理サービス遅刻時の対応
 Service time is NEVER extended at the end to compensate for late arrival.
@@ -498,6 +546,75 @@ APRON CHALLENGE (rank system):
 CONTRACT:
 - Initial contract: 3 years
 - Maximum total: 5 years (employment ends after 5 years maximum)
+
+=== CLEANING SERVICE — CUSTOMER DISSATISFACTION (仕上がり不満) ===
+Source: CaSy Zendesk — 仕上がりにご満足いただけなかった時
+
+If a customer is not satisfied with your cleaning result:
+1. Apologize sincerely and wholeheartedly — do not argue or make excuses.
+2. Ask for honest feedback: "What went well? What could I do better next time?"
+   - At end-of-service walkthrough: ask directly what they felt was good/not good.
+   - Let them know they can also note it in the app evaluation form under "気になった点・改善要望等"
+     (their written comments are NOT shown directly to you — they are reviewed by an instructor who may follow up with you separately)
+3. If the customer is very angry or you cannot handle the situation: contact HQ 📞 050-3183-8835
+
+NOTE: A dissatisfied customer does NOT automatically entitle them to a refund. If they ask for a refund, tell them HQ will contact them — do not promise any refund yourself.
+
+=== MOVING SUPPORT (引越しサポート / 荷造り・荷ほどきサポート) ===
+Source: CaSy Zendesk — お引越し時の「荷造り、荷ほどきサポート」について
+
+If a customer asks you to help with packing (荷造り) or unpacking (荷ほどき) for a move:
+- This is ACCEPTED by CaSy. You may help with simple items like clothes, dishes, books, small items.
+- CaSy does NOT provide specialist training for this — do your best within your capability.
+- Always discuss scope with the customer at the start of service.
+
+IMPORTANT RESTRICTIONS — the following are PROHIBITED and you must NOT do them:
+- Heavy lifting: sofas, appliances, or anything you cannot carry alone
+- High-location work: standing on a table or anything higher than knee height
+- Handling high-value/fragile specialized items (expensive furniture, delicate antiques)
+NOTE: CaSy is NOT responsible for breakages during packing. Customers are informed of this in advance.
+
+Also confirm with customer:
+- All packing materials (cardboard boxes, tape, bubble wrap, newspaper) must be prepared by the customer.
+- Trash removal is not included.
+- If volume is large and cannot be completed in one session, recommend the customer book multiple sessions.
+
+PACKING TIPS (荷造り):
+- Start from rooms farthest from the entrance.
+- Label boxes with contents and "すぐに使う物" (immediately needed) on the outside.
+- Books: pack in small boxes (20–30 paperbacks or 15–20 magazines per box — heavier than they look).
+- Dishes: wrap each piece individually in newspaper; never stack unwrapped dishes.
+- Clothes: pack in large boxes; pack off-season items first.
+
+UNPACKING TIPS (荷ほどき):
+- Unpack immediately needed items first: futon, curtains, toiletries, toilet paper, clothes.
+- Open one box at a time; flatten empty boxes immediately.
+
+=== SERVICE ADDRESS MISMATCH (住所が違う時) ===
+Source: CaSy Zendesk — サービスを実施する住所が違う時
+
+If a customer asks you to perform the service at a DIFFERENT address than what is shown in your app:
+- You CANNOT do so. Politely explain that you can only work at the registered service address.
+- Even if it is in the same building (different room) or very nearby — you cannot move to a different location.
+- Reason: insurance/liability coverage, 110 emergency button accuracy, and legal risk (住居侵入).
+
+Also: if a customer's address is missing the apartment name or room number:
+- Ask the customer to update their address in the app BEFORE 前々日18:00 (2 days before, 6 PM).
+
+TIMING AND ACTION:
+- Before 前々日18:00: Cancel the current service and ask the customer to re-book with the correct address.
+- After 前々日18:00: A paid cancellation applies. Inform the customer. Cast WILL be paid.
+
+=== NOT APPLICABLE TO JOLLYCAST (フリープラン・業務委託向け機能) ===
+JollyCast cast members are EMPLOYEES (雇用). The following features/services exist in CaSy but do NOT apply to JollyCast:
+- 報酬前払いサービス (advance salary payment) — for freelance cast only
+- 買物代行 (shopping proxy option) — for free-plan cooking service only; JollyCast provides package-plan cooking only
+- 特別報酬制度 (special incentive bonus system) — for freelance cast only
+- 確定申告・インボイス (tax filing, invoice system) — for freelance (業務委託) cast only; JollyCast are employees and CaSy handles withholding
+- キャストセッション / CACACAコミュニティ — freelance cast community platform, not used by JollyCast
+
+If a cast member asks about any of the above:
+Respond: "This feature is for freelance CaSy casts and does not apply to JollyCast employees. For questions about your employment terms or benefits, please contact HQ via inquiry form or 📞 050-3183-8835."
 """
 
 # ── 回答生成関数（UI より先に定義） ───────────────────────────
@@ -676,16 +793,11 @@ def generate_mock_response(question: str, relevant_articles: list) -> str:
             """)
 
 
-def generate_claude_response(question: str, articles: list[dict]):
-    """Streams response text chunks. Uses ALL Zendesk articles + KNOWLEDGE as context."""
+def generate_claude_response(question: str):
+    """Streams response text chunks. Uses KNOWLEDGE BASE + TROUBLE FLOW only (no Zendesk)."""
     try:
         import anthropic
         client = anthropic.Anthropic(api_key=ANTHROPIC_API_KEY)
-
-        zendesk_content = "\n\n".join(
-            f"=== {a['title']} ===\n{a['content']}"
-            for a in articles
-        )
 
         system_text = f"""You are a support assistant for JollyCast (ジョリーキャスト) cast members working in Japan.
 
@@ -693,7 +805,7 @@ RESPONSE RULES:
 
 【TYPE A — Work procedure questions】
 Anything related to CaSy/JollyCast operations: cancellations, vouchers, app usage, incidents, schedules, Recoru, payments, customer trouble, etc.
-1. Answer ONLY from the KNOWLEDGE BASE, TROUBLE FLOW, and ZENDESK MANUAL provided below.
+1. Answer ONLY from the KNOWLEDGE BASE and TROUBLE FLOW provided below.
 2. Do NOT use general knowledge or invent procedures not written in these materials.
 3. If not covered in the materials: respond with "This situation is not covered in my manual. Please report via the inquiry form or contact CaSy HQ: 📞 050-3183-8835"
 
@@ -705,16 +817,13 @@ Navigation, train directions, room/floor numbering, Japanese customs, addresses,
 【ALL questions】
 6. Always respond in English. Be concise — cast members are often mid-service.
 7. Number steps clearly. For urgent work situations (safety, serious damage, on-site emergency), include 📞 050-3183-8835.
-8. When materials conflict, prioritize: KNOWLEDGE BASE > TROUBLE FLOW > ZENDESK MANUAL.
+8. When materials conflict, prioritize: KNOWLEDGE BASE > TROUBLE FLOW.
 
 === KNOWLEDGE BASE (JollyCast-specific curated rules) ===
 {KNOWLEDGE}
 
 === TROUBLE FLOW ===
-{TROUBLE_FLOW}
-
-=== ZENDESK MANUAL ({len(articles)} articles) ===
-{zendesk_content}"""
+{TROUBLE_FLOW}"""
 
         with client.messages.stream(
             model="claude-sonnet-4-6",
@@ -731,6 +840,58 @@ Navigation, train directions, room/floor numbering, Japanese customs, addresses,
 
     except Exception as e:
         yield f"Error connecting to Claude API: {e}\n\nPlease contact CaSy Support: 📞 **050-3183-8835**"
+
+
+def send_slack_log(question: str, response: str):
+    """質問とBot回答をSlack Incoming Webhookに投稿する。SLACK_WEBHOOK_URL未設定時はスキップ。"""
+    import urllib.request as _req
+    import json as _json
+    import datetime
+
+    webhook_url = _secret("SLACK_WEBHOOK_URL", "")
+    if not webhook_url:
+        return
+
+    now = datetime.datetime.now(
+        datetime.timezone(datetime.timedelta(hours=9))
+    ).strftime("%Y-%m-%d %H:%M JST")
+
+    # Slackの文字数制限（3000文字）に合わせてトリミング
+    q_text = question[:800]
+    r_text = response[:2000]
+
+    payload = {
+        "blocks": [
+            {
+                "type": "header",
+                "text": {"type": "plain_text", "text": "📝 JollyCast Bot — Question Log", "emoji": True}
+            },
+            {
+                "type": "context",
+                "elements": [{"type": "mrkdwn", "text": f"🕐 {now}"}]
+            },
+            {
+                "type": "section",
+                "text": {"type": "mrkdwn", "text": f"*Question:*\n{q_text}"}
+            },
+            {"type": "divider"},
+            {
+                "type": "section",
+                "text": {"type": "mrkdwn", "text": f"*Bot Answer:*\n{r_text}"}
+            },
+            {"type": "divider"}
+        ]
+    }
+    try:
+        data = _json.dumps(payload).encode("utf-8")
+        req = _req.Request(
+            webhook_url, data=data,
+            headers={"Content-Type": "application/json"},
+            method="POST"
+        )
+        _req.urlopen(req, timeout=5)
+    except Exception:
+        pass  # ログ失敗はサイレントに無視（本体機能に影響させない）
 
 
 # ── パスワード認証 ────────────────────────────────────────────
@@ -787,15 +948,11 @@ def load_kb():
 articles = load_kb()
 
 with st.sidebar:
-    st.markdown(f"📚 **Knowledge base**: {len(articles)} articles loaded from Zendesk")
-    st.markdown("**Sources:**\n- CaSy Zendesk manual\n- Trouble flow guide\n- Training booklet (Day 1-24)")
+    st.markdown("📚 **Knowledge base**: JollyCast KNOWLEDGE + Trouble Flow")
+    st.markdown("**Sources:**\n- JollyCast curated KNOWLEDGE BASE\n- Trouble flow guide")
     st.divider()
     st.markdown("🆘 **Emergency**: CaSy Support")
     st.markdown("📞 `050-3183-8835`")
-    if len(articles) > 0:
-        with st.expander("Loaded articles"):
-            for a in articles:
-                st.markdown(f"- {a['title'][:50]}")
 
 # ── チャット履歴 ──────────────────────────────────────────────
 
@@ -824,13 +981,16 @@ if prompt := st.chat_input("Type your question here (English OK)..."):
             # Streaming: show text as it generates
             placeholder = st.empty()
             chunks = []
-            for chunk in generate_claude_response(prompt, articles):
+            for chunk in generate_claude_response(prompt):
                 chunks.append(chunk)
                 placeholder.markdown("".join(chunks) + "▌")
             response = "".join(chunks)
             placeholder.markdown(response)
 
             with st.expander("📖 Source", expanded=False):
-                st.markdown(f"Based on CaSy Zendesk manual ({len(articles)} articles) + JollyCast KNOWLEDGE")
+                st.markdown("Based on JollyCast KNOWLEDGE BASE + Trouble Flow")
+
+            # Slackにログ送信（失敗しても無視）
+            send_slack_log(prompt, response)
 
     st.session_state.messages.append({"role": "assistant", "content": response})
