@@ -756,8 +756,10 @@ Source: CaSy Zendesk "お客様からチップやお品物をいただいた"
 === APP OPERATIONS (チェックイン・チェックアウト・日報) ===
 - For detailed app operation steps (check-in, check-out, daily report, schedule viewing), refer to the training video: https://casy.zendesk.com/hc/ja/articles/31405614157209
 - If the app is not working or you cannot check in: call HQ immediately at 050-3183-8835
-- If you forgot to check out: contact HQ via support phone or inquiry form to correct it
-- If the app crashes and you lose your service record: contact HQ at 050-3183-8835
+- If you forgot to check out: this is NOT an emergency. Contact HQ via inquiry form to correct it.
+- If the app crashes and you lose your service record:
+  - If it affects your next service (e.g., cannot check in for the next service) → this IS urgent: call HQ at 📞 050-3183-8835 immediately.
+  - If it does NOT affect any upcoming service → use the inquiry form to report and resolve.
 
 === CANCELLATION POLICY (キャンセルポリシー) ===
 Source: CaSy Zendesk — お客様からキャンセルをしたいと言われた / キャンセル数の制限について
