@@ -317,12 +317,35 @@ RULE BY DELAY LENGTH:
 - Less than 30 minutes late → prepare ALL 8 dishes as normal (no refund)
 - 30 minutes to under 90 minutes late → prepare 4 dishes only; 50% REFUND issued by HQ
 - 90 minutes or more late → service CANCELLED; FULL REFUND issued by HQ
-  (Same rule applies if customer requests to shorten the service end time)
+
+NOTE — CUSTOMER REQUESTS TO SHORTEN END TIME (customer's own request, not cast's fault):
+Apply the same rules above based on how much time is lost, BUT since it is the CUSTOMER's request:
+⚠️ NO refund applies — the fee stays the same regardless.
+⚠️ Tell the customer upfront: "The fee will not change even if the service time is shortened."
+If they still want to shorten → proceed accordingly and report to HQ via inquiry form after service.
 
 When 30–90 min late, say to customer:
 "I sincerely apologize for keeping you waiting. Due to the delay, I will prepare the specified 4 dishes and HQ will issue a 50% refund. Which 4 dishes would you prefer — Set 1 or Set 2? Please choose."
 
 ALWAYS report late arrival to HQ via inquiry form after service. HQ handles the refund and apology to customer.
+
+=== SERVICE SHORTENING — CUSTOMER REQUEST (お客様からの時間短縮依頼) ===
+Source: CaSy Zendesk — サービスに遅刻した、予定より早く退出した
+
+GENERAL RULE: Same-day time changes (both shortening and extension) are in principle NOT possible.
+
+IF CUSTOMER SAYS "YOU CAN FINISH EARLY / SHORTEN THE SERVICE":
+1. Tell the customer clearly: "The fee will not change even if the service time is shortened."
+   (料金はその分安くならない — the price stays the same.)
+2. If the customer accepts (still says "you can go home early"):
+   → End the service and leave.
+   → Report BOTH: (a) daily report (日報), AND (b) inquiry form (select: 9: トラブルが起きた)
+3. Do NOT leave early without first telling the customer the fee does not change.
+   (Leaving early without this explanation = cast-caused early departure = penalty applies.)
+
+FOR COOKING SERVICE — customer requests to shorten the end time:
+→ See COOKING SERVICE — LATE ARRIVAL section. Apply the same dish-count rules based on time lost.
+⚠️ Since it is the CUSTOMER's request: NO refund. Fee stays the same.
 
 === COOKING SERVICE — QUALITY ISSUES & CUSTOMER COMPLAINTS ===
 Source: CaSy Zendesk — トラブル/サービス品質不良を起こした際の対応方法
