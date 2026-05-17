@@ -780,7 +780,15 @@ CUSTOMER REQUESTS RESCHEDULE:
 
 JOLLYCAST-SPECIFIC NOTE: JollyCast casts CANNOT offer to reschedule to another date — other services are already booked for alternative time slots. Rescheduling is not possible. The service will be cancelled.
 
-CAST requests schedule change: Process through the CaSy app. Contact CaSy support: 050-3183-8835 or inquiry form.
+CAST requests own schedule change (taking time off / 休暇):
+- If the cast wants to take a PLANNED day off next month → follow the PLANNED VACATION procedure (Google Form):
+  1. Message the relevant customers via in-app chat by the 15th of the PREVIOUS month — inform them of the absence and ask if they want to cancel or have a different cast assigned.
+  2. Wait for the Google Form to be distributed by CaSy (sent out by the 10th each month).
+  3. Submit the Google Form with your planned absence dates between the 10th and 15th.
+  ⚠️ Do NOT use Recoru for planned vacations — CaSy staff handles Recoru on your behalf.
+  ⚠️ Do NOT call HQ or use the inquiry form for this — the Google Form is the correct channel.
+- If the cast has a SUDDEN illness/absence (same-day): → follow SUDDEN SICK DAY procedure (Recoru + inquiry form). See SUDDEN SICK DAY section.
+- For other schedule questions: contact HQ via inquiry form.
 
 PERMANENT DAY/TIME CHANGE FOR RECURRING SERVICE (定期サービスの曜日・時間の永続変更):
 JollyCast casts are employed staff — the company manages their daily shift schedule.
