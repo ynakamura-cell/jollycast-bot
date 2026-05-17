@@ -27,7 +27,7 @@ TROUBLE_FLOW = """
 | Customer absent | No contact in 30 min | Call customer, send chat | Report via inquiry form |
 | Cancellation (user) | Before 2 days 18:00 | Guide customer to cancel themselves | Visit if not cancelled |
 | Cancellation (user) | After 2 days 18:00 | Inform of paid cancellation | Visit if not cancelled |
-| Lost / late | Minor delay | Call customer (emergency phone) | Ask people nearby for directions |
+| Lost / late | Minor delay | #1 Figure out yourself → #2 Ask people nearby → #3 Chat customer w/ screenshot | #4 Call customer → #5 Contact HQ/trainer |
 | Severe late / cancel | Start time passed or major delay expected | Contact customer immediately + Call HQ 050-3183-8835 | Submit inquiry form + Recoru 遅刻. NO substitute cast. |
 | Incident (danger) | Physical risk | Swipe 110 button in app → HQ calls police | Exit immediately |
 | Incident (no danger) | Direct contract solicitation | Continue service | Report via inquiry form |
@@ -670,6 +670,40 @@ PACKING TIPS (荷造り):
 UNPACKING TIPS (荷ほどき):
 - Unpack immediately needed items first: futon, curtains, toiletries, toilet paper, clothes.
 - Open one box at a time; flatten empty boxes immediately.
+
+=== GETTING LOST / CANNOT FIND ADDRESS (道に迷った時) ===
+Source: Training Booklet Day4 — Navigate with Google Map & Ask for Help
+
+JollyCast casts are not fluent in Japanese and are unfamiliar with local geography.
+Contacting the customer first would cause them inconvenience and is unlikely to help.
+Follow the 5 STEPS BELOW IN ORDER:
+
+STEP 1 — Figure it out yourself
+- Re-check Google Maps carefully: correct start point, destination, and travel method
+- If the Google Maps arrow moves in the opposite direction → you are going the wrong way; turn around
+- For large stations (Shinjuku, Shibuya): allow at least 40 minutes extra; exit the station building for better GPS signal
+
+STEP 2 — Ask people nearby (DO THIS BEFORE contacting the customer)
+Use these Japanese phrases:
+- "Sumimasen. Michi ni mayoimashita. [ADDRESS] ni ikitai desu. Oshiete kudasai."
+  すみません。みちにまよいました。〇〇に行きたいです。おしえてください。
+  "Excuse me. I'm lost. I want to go to [ADDRESS]. Please tell me how."
+- If they don't speak English: show them the address on your phone screen
+- "Nihongo ga wakaranai node, chatto de oshiete kudasai."
+  日本語がわからないので、チャットでおしえてください。
+  "I don't understand Japanese, so please tell me via chat."
+
+STEP 3 — Send a chat message to the customer (with screenshot of your current location)
+- Take a screenshot of your Google Maps location
+- Send via in-app chat: "I'm sorry, I seem to be lost. I am at [screenshot location]. I am on my way."
+- Do NOT call yet — chat first to minimize inconvenience
+
+STEP 4 — Call the customer using the emergency phone in the app
+- Only if chat does not resolve it
+- App MENU → Schedule → tap service time → Customer Info → Phone → "Show phone number" → "Make call"
+
+STEP 5 — Contact CaSy trainer / HQ
+- If still stuck after steps 1–4: contact HQ via inquiry form or trainer directly
 
 === SERVICE ADDRESS MISMATCH (住所が違う時) ===
 Source: CaSy Zendesk — サービスを実施する住所が違う時
