@@ -310,27 +310,18 @@ Q: Customer asks you to do extra cooking or cleaning since "you have time left"
 → Politely decline: "I'm sorry, this package plan is specifically for preparing the 8 set dishes. I'm not able to provide additional cooking or cleaning under this plan."
 
 === CLEANING SERVICE — LATE ARRIVAL (遅刻) ===
-Source: CaSy Zendesk — サービスに遅刻した、予定より早く退出した
 
-STEP 1 — Apologize sincerely to the customer.
+⛔ JollyCast-specific rules:
+- Service end time is NEVER extended — JollyCast company rules do not allow on-site time extensions.
+- There is NO substitute cast — do not offer to send a replacement.
+- The time deduction + 500 yen penalty structure applies to freelance (業務委託) casts ONLY. It does NOT apply to JollyCast employees.
 
-STEP 2 — Ask if the end time can be pushed back (後ろ倒し):
-"I'm very sorry for being late. Would it be possible to push the end time back so I can provide the full service?"
-- If YES (customer agrees to extend): provide the full service as booked. Thank the customer for their flexibility.
-- If NO (customer has plans and cannot extend end time): proceed to Step 3.
-
-STEP 3 — If end time cannot be extended:
-Do your best until the ORIGINAL scheduled end time. Re-confirm priorities with the customer and focus on the most important areas.
-
-PENALTY (applies to the cast — deducted from pay):
-- Time not provided (rounded up to 15-minute units) → pay deducted
-- Fixed penalty: 500 yen deducted
-- Example: 2-hour service, arrived 10 min late, customer cannot extend → pay for 1h45m (rounded up) minus 500 yen
-⚠️ JollyCast has NO substitute cast — do NOT offer to send a replacement.
-
-REPORT: After service → inquiry form (問い合わせフォーム)
-- お問い合わせ内容: 9: トラブルが起きた
-- トラブルの内容: サービスに遅刻した
+PROCEDURE:
+1. Apologize sincerely to the customer.
+2. Do your best until the ORIGINAL scheduled end time. Confirm priorities with the customer and focus on the most important areas first.
+3. After service: apply for 遅刻 in Recoru.
+4. After service: report via inquiry form (9: トラブルが起きた → サービスに遅刻した).
+Consequences for JollyCast employees are handled per 就業規則 (employment rules) — not the freelance penalty.
 
 === COOKING SERVICE — LATE ARRIVAL (遅刻) ===
 Source: CaSy Zendesk — パッケージ料理サービス遅刻時の対応
