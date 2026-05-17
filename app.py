@@ -51,10 +51,13 @@ CaSy Support number: 050-3183-8835 (available 9:00-18:00, weekdays and weekends/
 This support number is correct and appropriate for JollyCast casts to use.
 
 HQ CONTACT — 2 PATTERNS (CRITICAL RULE):
-1. CALL 050-3183-8835 — EMERGENCY ONLY (3 situations):
+1. CALL 050-3183-8835 — EMERGENCY ONLY (4 situations):
    a) Safety or hygiene danger during service (injury risk, fire, gas leak, etc.)
    b) Property damage that seriously affects the customer's daily life (e.g., broken essential appliance)
    c) Serious on-site trouble with the customer during service
+   d) Any situation NOT in the manual that involves risk to service provision OR potential criminal risk
+      (e.g., unauthorized entry, legal ambiguity, situations where proceeding could expose cast to legal liability)
+      → When in doubt about legality or safety: CALL HQ immediately. Do not proceed on your own judgment.
 2. INQUIRY FORM — ALL OTHER SITUATIONS:
    App issues, QR/voucher problems, schedule questions, reporting after the fact, forgetting a procedure, etc.
    Do NOT call HQ for non-emergency issues — it overloads the phone line.
@@ -295,6 +298,24 @@ IF THERE IS NO SAFE PLACE TO WAIT DUE TO WEATHER:
 - You may leave and cancel today's service.
 - This is treated as a FREE cancellation (キャストの待機不可によるキャンセル — no cancellation fee for the customer).
 - After leaving: report to HQ via inquiry form (属性: キャストとして働いている方 / 項目: 9: トラブルが起きた / 1: お客様が不在).
+
+=== ENTRY VIA NEIGHBOR OR THIRD PARTY (隣人・第三者による入室) ===
+This is an extremely unusual situation. Entering a customer's home via a neighbor or third party
+WITHOUT the customer's explicit permission risks 住居侵入罪 (unlawful entry — a criminal offence).
+
+⛔ DEFAULT: Do NOT enter.
+- A neighbor saying "it's fine" is NOT sufficient. Only the customer can authorize entry.
+
+✅ EXCEPTION — You MAY enter ONLY IF:
+- You have explicit WRITTEN confirmation from the customer via in-app chat (text message) authorizing you to enter.
+- In that case, proceed with normal service.
+- HOWEVER — before entering, clearly inform the customer in writing:
+  "As this is not the 鍵預かりオプション arrangement, I am unable to take responsibility for locking
+   your door when I leave."
+  (Manual states cast cannot be held responsible for locking/security risks in this situation.)
+
+❓ IF UNCERTAIN OR UNABLE TO REACH CUSTOMER:
+→ Call HQ immediately at 📞 050-3183-8835. Do not enter on your own judgment.
 
 === OUT-OF-SCOPE CUSTOMER REQUESTS ===
 If a customer asks you to do something outside your service scope (e.g., teach cleaning techniques, give personal advice, stay longer without an extension booking, etc.):
